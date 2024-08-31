@@ -1,0 +1,2 @@
+# Working but slow. Took 34 min on gpu to output 30sec clip
+TrackNet: https://github.com/weekenddeeplearning/TrackNet
