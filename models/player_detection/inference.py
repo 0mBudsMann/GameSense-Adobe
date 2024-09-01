@@ -1,7 +1,8 @@
 from ultralytics import YOLO
 
-model = YOLO('weights/shuttle_player_racquet/last.pt')
-
+# model = YOLO('weights/only_player/best.pt')
+# pose yolo model
+model = YOLO('yolov8m-pose')
 result = model.predict('../../utils/footages/12sec.mp4', save=True)
 
 print(result)

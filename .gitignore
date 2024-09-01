@@ -2,3 +2,4 @@ utils/footages/
 .DS_Store
 .idea/
 .vscode/
+models/player_detection/yolov8m-pose.pt
