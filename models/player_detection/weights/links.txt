@@ -1,0 +1,10 @@
+// download and put the weights in the respective folders
+
+// only_player
+last.pt - https://mega.nz/file/6lk3UawY#ndydTgmrSpdiHSK8wcyfuf_SY8Bd1SLf_ARHOYOQqyc
+best.pt - https://mega.nz/file/SgNFzSJK#2cWSOMqG3VM5beTuapqiSLDiIM5Q7ZgoyB34SqKtvFA
+
+// shuttle_player_racquet
+
+best.pt - https://mega.nz/file/XlVHDTba#NjpoQWNJA0poT8aX99G2o94Ta72SmEUFzXHdMYAy4Y8 (not working)
+last.pt - https://mega.nz/file/ysNFQLZb#oJlU5Mnk_avQnkN-QJzGu63rwGFkbDWxxoV-dg8oSBU
