@@ -1,0 +1,5 @@
+// download and put the weights in this folder
+
+last.pt - https://mega.nz/file/6lk3UawY#ndydTgmrSpdiHSK8wcyfuf_SY8Bd1SLf_ARHOYOQqyc
+
+best.pt - https://mega.nz/file/SgNFzSJK#2cWSOMqG3VM5beTuapqiSLDiIM5Q7ZgoyB34SqKtvFA
