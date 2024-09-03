@@ -3,3 +3,4 @@ utils/footages/
 .idea/
 .vscode/
 models/player_detection/yolov8m-pose.pt
+output.mp4
