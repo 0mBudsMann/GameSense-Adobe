@@ -1,0 +1,4 @@
+# Download and put in this folder
+
+best.pt - https://drive.google.com/file/d/1wT6zbOz8UsEG0yizwUnJ3kLedQdIhfZg/view
+last.pt - https://drive.google.com/file/d/1bpq3JqETZGsBhMxy6RshvXD30Qwvt1mN/view

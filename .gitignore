@@ -3,4 +3,6 @@ utils/footages/
 .idea/
 .vscode/
 models/player_detection/yolov8m-pose.pt
+models/shuttle_detection/weights/best.pt
+models/shuttle_detection/weights/last.pt
 output.mp4

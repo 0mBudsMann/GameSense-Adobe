@@ -34,7 +34,7 @@ class SpeedAndDistance_Estimator():
                     continue
 
                 speed_meters_per_second = distance_covered / time_elapsed
-                speed_km_per_hour = speed_meters_per_second * 5 / 18
+                speed_km_per_hour = speed_meters_per_second * 3.6
 
                 if player_id not in total_distance:
                     total_distance[player_id] = 0
@@ -70,8 +70,8 @@ class SpeedAndDistance_Estimator():
 
                     position = tuple(map(int, position))
                     cv2.putText(frame, f"{speed:.2f} km/h", position, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-                    cv2.putText(frame, f"{distance:.2f} m", (position[0], position[1] + 20),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                    cv2.putText(frame, f"{distance:.2f} m", (position[0], position[1] + 20), cv2.FONT_HERSHEY_SIMPLEX,
+                                0.5, (0, 0, 0), 2)
             output_frames.append(frame)
 
         return output_frames
