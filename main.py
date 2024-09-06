@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 from utils.video_utils import (read_video, write_video)
-from trackers import (PlayerTracker)
+from trackers import (PlayerTracker, ShuttleTracker)
 import argparse
 import cv2
 import copy
@@ -14,17 +13,16 @@ from models.court_and_net_detection.src.tools.utils import write_json, clear_fil
 
 from models.court_and_net_detection.src.models.CourtDetect import CourtDetect
 from models.court_and_net_detection.src.models.NetDetect import NetDetect
-import argparse
+
 import logging
 import traceback
 import warnings
 
-=======
-from utils import (read_video, write_video)
-from trackers import (PlayerTracker, ShuttleTracker)
-import argparse
+
+
+
+
 from speed_distance_estimator import SpeedAndDistance_Estimator
->>>>>>> df297e212a0645d9f42a5a81657eb70f229385bf
 
 def main():
     
@@ -45,10 +43,7 @@ def main():
     # Players
     track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
     detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
-<<<<<<< HEAD
-    
-=======
-    print(detected_players)
+
 
     # ShuttleCock
     track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
@@ -59,7 +54,7 @@ def main():
     speed_and_distance_estimation.speed_n_distance(detected_players)
     speed_and_distance_estimation.speed_n_distance(detected_shuttle)
 
->>>>>>> df297e212a0645d9f42a5a81657eb70f229385bf
+
     # Save Player Data
     track_players.save_player_data( detected_players, "result/player_data/player_data.json")
 
