@@ -40,14 +40,7 @@ net_info=[
         1460,
         1198
     ],
-    [
-        1488,
-        1198
-    ],
-    [
-        1488,
-        811
-    ]
+   
 ]
 # Load the video file
 video_path = './videos/short.mp4'  # Replace with your video path
