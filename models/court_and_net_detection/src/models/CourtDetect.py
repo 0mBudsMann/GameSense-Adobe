@@ -7,12 +7,11 @@ from PIL import Image
 from torchvision.transforms import transforms
 from torchvision.transforms import functional as F
 import os
-import sys
-
-sys.path.append("src/tools")
-sys.path.append("src/models")
 
 import json
+
+print(os.getcwd())
+print(os.path.exists("./models/court_and_net_detection/src/models/weights"))
 
 class CourtDetect(object):
     '''
@@ -30,7 +29,7 @@ class CourtDetect(object):
         self.normal_court_info = None
 
     def setup_RCNN(self):
-        self.__court_kpRCNN = torch.load('src/models/weights/court_kpRCNN.pth', map_location=torch.device('cpu'))
+        self.__court_kpRCNN = torch.load('./models/court_and_net_detection/src/models/weights/court_kpRCNN.pth', map_location=torch.device('cpu'))
         self.__court_kpRCNN.to(self.device).eval()
 
     def del_RCNN(self):

@@ -7,10 +7,7 @@ from PIL import Image
 from torchvision.transforms import transforms
 from torchvision.transforms import functional as F
 import os
-import sys
 
-sys.path.append("src/tools")
-sys.path.append("src/models")
 
 
 
@@ -30,7 +27,7 @@ class NetDetect(object):
         self.normal_net_info = None
 
     def setup_RCNN(self):
-        self.__net_kpRCNN = torch.load('src/models/weights/net_kpRCNN.pth', map_location=torch.device('cpu'))
+        self.__net_kpRCNN = torch.load('./models/court_and_net_detection/src/models/weights/net_kpRCNN.pth', map_location=torch.device('cpu'))
         self.__net_kpRCNN.to(self.device).eval()
 
     def del_RCNN(self):

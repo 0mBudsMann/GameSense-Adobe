@@ -3,7 +3,7 @@ import numpy as np
 import json
 
 def draw_court_and_net_on_frames(frames):
-    with open('./res/courts/courts_kp/coordinates.json', 'r') as file:
+    with open('./result/court_and_net/courts/court_kp/coordinates.json', 'r') as file:
         data = json.load(file)
 
     court_info = data['court_info']

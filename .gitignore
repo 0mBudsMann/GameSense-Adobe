@@ -6,3 +6,6 @@ models/player_detection/yolov8m-pose.pt
 models/shuttle_detection/weights/best.pt
 models/shuttle_detection/weights/last.pt
 output.mp4
+models/court_and_net_detection/src/models/weights/
+models/court_and_net_detection/videos/
+venv/
