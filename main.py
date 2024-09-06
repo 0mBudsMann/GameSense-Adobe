@@ -13,7 +13,7 @@ from models.court_and_net_detection.src.tools.utils import write_json, clear_fil
 
 from models.court_and_net_detection.src.models.CourtDetect import CourtDetect
 from models.court_and_net_detection.src.models.NetDetect import NetDetect
-
+from models.court_and_net_detection.om import draw_court_and_net_on_frames
 import logging
 import traceback
 import warnings
@@ -46,13 +46,13 @@ def main():
 
 
     # ShuttleCock
-    track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
-    detected_shuttle = track_shuttle.detect_frames(frames, read_from_record, record_path="record/shuttle_detections.pkl")
+    # track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
+    # detected_shuttle = track_shuttle.detect_frames(frames, read_from_record, record_path="record/shuttle_detections.pkl")
 
     # Detect speed and distance
     speed_and_distance_estimation = SpeedAndDistance_Estimator()
     speed_and_distance_estimation.speed_n_distance(detected_players)
-    speed_and_distance_estimation.speed_n_distance(detected_shuttle)
+    # speed_and_distance_estimation.speed_n_distance(detected_shuttle)
 
 
     # Save Player Data
@@ -60,37 +60,35 @@ def main():
 
     # Draw Boxes
     output_frames = track_players.draw_boxes(frames, detected_players)
-    output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
+    # output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
 
-    output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
-    output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
+    # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
+    # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
 
-    write_video(output_frames, output_video, 60)
 
     #for court and net detection
     # Clear the polyfit RankWarning
     warnings.simplefilter('ignore', np.RankWarning)
 
-    parser = argparse.ArgumentParser(description='para transfer')
-    parser.add_argument('--folder_path',
-                        type=str,
-                        default="utils/footages/short.mp4",
-                        help='folder_path -> str type.')
-    parser.add_argument('--result_path',
-                        type=str,
-                        default="result/court_and_net/court_net_deta.json",
-                        help='result_path -> str type.')
-    parser.add_argument('--force',
-                        action='store_true',
-                        default=False,
-                        help='force -> bool type.')
+    # parser = argparse.ArgumentParser(description='para transfer')
+    # parser.add_argument('--folder_path',
+    #                     type=str,
+    #                     default="utils/footages/short.mp4",
+    #                     help='folder_path -> str type.')
+    # parser.add_argument('--result_path',
+    #                     type=str,
+    #                     default="result/court_and_net/court_net_deta.json",
+    #                     help='result_path -> str type.')
+    # parser.add_argument('--force',
+    #                     action='store_true',
+    #                     default=False,
+    #                     help='force -> bool type.')
 
-    args = parser.parse_args()
-    print(args)
+    
 
-    folder_path = args.folder_path
-    force = args.force
-    result_path = args.result_path
+    folder_path = "utils/footages/"
+    force = False
+    result_path = "result/court_and_net/"
 
     for root, dirs, files in os.walk(folder_path):
         for file in files:
@@ -177,26 +175,18 @@ def main():
                     "net_info": normal_net_info,
                 }
 
-                write_json(court_dict, video_name,
+                write_json(court_dict, "coordinates",
                         f"{result_path}/courts/court_kp", "w")
 
                 # Release the video capture object after processing the first frame
                 video.release()
+    output_frames = draw_court_and_net_on_frames(output_frames)
 
-                try:
-                    # Code block that may raise exceptions
-                    print("-" * 10 + "Ball Detection is not included in this version" + "-" * 10)
-                except KeyboardInterrupt:
-                    print("Caught exception type on main.py ball_detect:",
-                        type(KeyboardInterrupt).__name__)
-                    logging.basicConfig(filename='logs/error.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
-                    logging.error(traceback.format_exc())
-                    exit()
-                except Exception:
-                    print("Caught exception type on main.py ball_detect:",
-                        type(Exception).__name__)
-                    logging.basicConfig(filename='logs/error.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
-                    logging.error(traceback.format_exc())
+
+    write_video(output_frames, output_video, 60)
+
+                
+                
 
 
 if __name__ == "__main__":
