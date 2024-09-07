@@ -285,13 +285,14 @@ def real_time_detection_and_tracking(frames):
     coord_counter = Counter()  # Directly maintain a counter for coordinates
     frame_count = 0
 
-    black_list = [(2477.4579819544147, 1486.213537329001),(1529.9303159460558, 326.81500203630566),
-                  (1285.9160690307617, 848.287064022488), (2700.828621018101, 594.6784457354479),
-                  (904.2800679524739, 558.4161139594185), (1285.8978812081473, 849.1556815011161),
-                  (2701.013951455393, 595.3080670756679)]
+    black_list = [(1894.7992769129137, 303.175568075741), (2333.0154160860784, 1482.0646242436044), (1008.7924158432904, 313.01178965849033)]
+    lastx = None
+    lasty = None
+    lastframeno = None
 
+    listt = {}
+    speed_history = []
     shuttle_coordinates_frames = []
-
 
     for frame in frames:
         # Run object detection on the current frame (replace with your model inference)
@@ -317,19 +318,48 @@ def real_time_detection_and_tracking(frames):
 
         # Initialize a list to collect the current frame's coordinates for grouping
         current_coords = []
+        if frame_count not in listt:
+            listt[frame_count] = []
 
         for _, row in df_current.iterrows():
             coord = [(row['xmin'] + row['xmax']) / 2, (row['ymin'] + row['ymax']) / 2]  # Object center coordinates
 
             # Only track specific class (e.g., class_id == 0 for a ball/shuttlecock)
             if row['class_id'] == 0:
-                if not is_close_to_blacklist(coord, black_list, threshold=1):
+                if not is_close_to_blacklist(coord, black_list, threshold=15):
                     current_coords.append(coord)
-                    print(coord)
-                    tracking_data[f"{frame_count}_{_}"] = {
+
+                    if lastx is None:
+                        speed = 0
+                    else:
+                        speed = np.sqrt((coord[0] - lastx) ** 2 + (coord[1] - lasty) ** 2) / (frame_count - lastframeno)
+                    listt[frame_count].append({
                         'x_center': coord[0],
-                        'y_center': coord[1]
-                    }
+                        'y_center': coord[1],
+                        'speed': speed
+                    })
+                    print(coord[0], coord[1], speed)
+                    lastx = coord[0]
+                    lasty = coord[1]
+                    lastframeno = frame_count
+
+        for frame_count, detections in listt.items():
+           if len(detections) == 1:
+              speed_history.append(detections[0]['speed'])
+              if len(speed_history) > 5:  # You can adjust the window size
+                        speed_history.pop(0)
+              smoothed_speed = np.mean(speed_history)
+              tracking_data[f"{frame_count}"] = {
+                  'x_center': detections[0]['x_center'],
+                  'y_center': detections[0]['y_center'],
+                  'smoothened_speed': smoothed_speed
+              }
+           else:
+                tracking_data[f"{frame_count}"] = {
+                    'x_center': None,
+                    'y_center': None,
+                    'smoothened_speed': None
+                }
 
         # Combine previous frequencies with current frame's coordinates
         grouped_coords = group_similar_coordinates(current_coords, threshold=100)
@@ -340,6 +370,8 @@ def real_time_detection_and_tracking(frames):
             coord_counter[coord] += count
 
         shuttle_coordinates_frames.append(current_coords)
+        print("cordinates: ")
+        print(current_coords)
 
         # Visualize the tracking (optional)
         # tmp_img = frame.copy()
@@ -360,6 +392,7 @@ def real_time_detection_and_tracking(frames):
         # out.write(tmp_img)
 
         # Increment frame count
+        print(frame_count)
         frame_count += 1
 
     out.release()
@@ -374,18 +407,18 @@ def real_time_detection_and_tracking(frames):
     print("Stationary coordinates detected:")
     print(stationary_coords)
 
-    return black_list, shuttle_coordinates_frames
+    return tracking_data
 
 # Example usage
 # real_time_detection_and_tracking("video.mp4", "shuttle_data.json")
 
 # real_time_detection_and_tracking('../utils/footages/12sec.mp4')
 
-def draw_shuttle_predictions(shuttle_coordinates_frames, frames, black_list):
+def draw_shuttle_predictions(frames, tracking_data):
     output_frames = []
     i = 0
     for frame in frames:
-        output_frame = draw_shuttle_predictions_frame(shuttle_coordinates_frames[i], frame, black_list)
+        output_frame = draw_shuttle_predictions_frame(frame, tracking_data, i)
         i = i + 1
 
         output_frames.append(output_frame)
@@ -393,22 +426,55 @@ def draw_shuttle_predictions(shuttle_coordinates_frames, frames, black_list):
     return output_frames
 
 
-def draw_shuttle_predictions_frame(current_coords, frame, black_list):
+def draw_shuttle_predictions_frame(frame, tracking_data, i):
     dummy = 15
-    for x, y in current_coords:
+
+    # Check if the current frame number is in tracking_data
+    if i in tracking_data:
+        # Get the x and y coordinates from tracking_data
+        x = tracking_data[i]['x_center']
+        y = tracking_data[i]['y_center']
+        speed = tracking_data[i]['smoothened_speed']
+
+        print("lol")
+        print(x, y)
+        # Draw the bounding box around the detected object
         cv2.rectangle(frame, (int(x) - dummy, int(y) - dummy),
                       (int(x) + dummy, int(y) + dummy), (0, 255, 0), 2)
-    # Save or display the frame with detection and tracking
-    dummy = 20
-    for x, y in black_list:
-        cv2.rectangle(frame, (int(x) - dummy, int(y) - dummy),
-                      (int(x) + dummy, int(y) + dummy), (0, 140, 255), 5)
 
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(frame, 'stationary', (int(x) - dummy, int(y) - dummy - 10), font, 1, (0, 140, 255), 3)
-    cv2.imwrite("garbage/tmp_img.jpg", frame)
+        # Display the speed on the frame
+        speed_text = f"Speed: {speed:.2f}"
+        cv2.putText(frame, speed_text, (int(x) - dummy, int(y) - dummy - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 140, 255), 3)
 
+    # Return the frame with shuttle predictions drawn
     return frame
+
+def interpolate_shuttle_tracking(tracking_data):
+    # with open(json_path, 'r') as file:
+    #     tracking_data = json.load(file)
+
+    # Extract the x and y coordinates for each frame from the JSON data
+    shuttle_coordinates_frames = [
+        (frame_data['x_center'], frame_data['y_center'], frame_data['smoothened_speed'])
+        for frame_data in tracking_data.values()
+    ]
+
+    print(len(shuttle_coordinates_frames))
+
+    # Convert the coordinates into a pandas DataFrame
+    df_shuttle_positions = pd.DataFrame(shuttle_coordinates_frames, columns=['x_center', 'y_center', 'smoothened_speed'])
+
+    # Interpolate missing values
+    df_shuttle_positions = df_shuttle_positions.interpolate(method='linear')
+    df_shuttle_positions = df_shuttle_positions.bfill()
+
+    tracking_data = df_shuttle_positions.to_dict(orient='index')
+
+    with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
+        json.dump(tracking_data, json_file, indent=4)
+
+    return tracking_data
 
 def identify_stationary_objects(threshold=10):
     """

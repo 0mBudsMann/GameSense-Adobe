@@ -1,5 +1,5 @@
 from utils import (read_video, write_video)
-from trackers import (PlayerTracker, ShuttleTracker, real_time_detection_and_tracking, draw_shuttle_predictions)
+from trackers import (PlayerTracker, ShuttleTracker, real_time_detection_and_tracking, draw_shuttle_predictions, interpolate_shuttle_tracking)
 import argparse
 import cv2
 import copy
@@ -30,7 +30,7 @@ def main():
 
     read_from_record = args.buffer
     # input_video = args.video_path  # Get video from the user
-    input_video = 'utils/footages/short.mp4'
+    input_video = 'utils/footages/10sec.mp4'
 
     # Read Video
     frames = read_video(input_video)
@@ -44,7 +44,12 @@ def main():
     # ShuttleCock
     # track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
     # detected_shuttle = track_shuttle.detect_frames(frames, read_from_record, record_path="record/shuttle_detections.pkl")
-    blacklisted_shuttles, detected_shuttle = real_time_detection_and_tracking(frames)
+    shuttle_tracking_data = real_time_detection_and_tracking(frames)
+    print(shuttle_tracking_data)
+
+    # Interpolate Shuttle Tracking
+    shuttle_tracking_data = interpolate_shuttle_tracking(shuttle_tracking_data)
+    print(shuttle_tracking_data)
 
     # Detect speed and distance
     speed_and_distance_estimation = SpeedAndDistance_Estimator()
@@ -149,7 +154,7 @@ def main():
     video.release()
 
     output_frames = draw_court_and_net_on_frames(output_frames)
-    output_frames = draw_shuttle_predictions(detected_shuttle, output_frames, blacklisted_shuttles)
+    output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data)
     write_video(output_frames, output_video, 60)
 
 
