@@ -10,3 +10,4 @@ models/court_and_net_detection/src/models/weights/
 models/court_and_net_detection/videos/
 venv/
 trackers/garbage/
+output.mp4
