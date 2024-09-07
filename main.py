@@ -45,11 +45,11 @@ def main():
     # track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
     # detected_shuttle = track_shuttle.detect_frames(frames, read_from_record, record_path="record/shuttle_detections.pkl")
     shuttle_tracking_data = real_time_detection_and_tracking(frames)
-    print(shuttle_tracking_data)
+    # print(shuttle_tracking_data)
 
     # Interpolate Shuttle Tracking
-    shuttle_tracking_data = interpolate_shuttle_tracking(shuttle_tracking_data)
-    print(shuttle_tracking_data)
+    # shuttle_tracking_data = interpolate_shuttle_tracking(shuttle_tracking_data)
+    # print(shuttle_tracking_data)
 
     # Detect speed and distance
     speed_and_distance_estimation = SpeedAndDistance_Estimator()
@@ -63,7 +63,7 @@ def main():
     output_frames = track_players.draw_boxes(frames, detected_players)
     # output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
 
-    # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
+    output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
     # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
 
     # Court and Net Detection

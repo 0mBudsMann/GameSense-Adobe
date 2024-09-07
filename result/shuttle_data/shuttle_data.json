@@ -1,18 +1,18 @@
 {
     "0": {
-        "x_center": 1089.0440673828125,
-        "y_center": 781.8525085449219,
-        "smoothened_speed": 1.8319014227150707
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "1": {
-        "x_center": 1089.0440673828125,
-        "y_center": 781.8525085449219,
-        "smoothened_speed": 1.8319014227150707
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "2": {
-        "x_center": 1089.0440673828125,
-        "y_center": 781.8525085449219,
-        "smoothened_speed": 1.8319014227150707
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "3": {
         "x_center": 1089.0440673828125,
@@ -45,9 +45,9 @@
         "smoothened_speed": 26.16757252697216
     },
     "9": {
-        "x_center": 1079.3899536132812,
-        "y_center": 626.3089294433594,
-        "smoothened_speed": 28.679600428634437
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "10": {
         "x_center": 1077.8992919921875,
@@ -61,53 +61,53 @@
     },
     "12": {
         "x_center": 1077.678955078125,
-        "y_center": 558.4644775390625,
-        "smoothened_speed": 27.391739259609874
+        "y_center": 558.4644165039062,
+        "smoothened_speed": 27.391751466474204
     },
     "13": {
         "x_center": 1077.6743774414062,
         "y_center": 558.4644470214844,
-        "smoothened_speed": 27.38268211101588
+        "smoothened_speed": 27.382694317880215
     },
     "14": {
         "x_center": 1077.6768798828125,
         "y_center": 558.4407348632812,
-        "smoothened_speed": 13.583558068234836
+        "smoothened_speed": 13.583570275099168
     },
     "15": {
         "x_center": 1077.9034423828125,
         "y_center": 522.0115966796875,
-        "smoothened_speed": 15.842654365358015
+        "smoothened_speed": 15.842666572222345
     },
     "16": {
-        "x_center": 1077.8983154296875,
+        "x_center": 1077.8982543945312,
         "y_center": 522.0114440917969,
-        "smoothened_speed": 15.833743977134208
+        "smoothened_speed": 15.83376838569058
     },
     "17": {
         "x_center": 1077.6600341796875,
         "y_center": 489.81536865234375,
-        "smoothened_speed": 13.732070136770309
+        "smoothened_speed": 13.732082248132878
     },
     "18": {
         "x_center": 1077.662841796875,
         "y_center": 489.84278869628906,
-        "smoothened_speed": 13.736667270912694
+        "smoothened_speed": 13.73667938227526
     },
     "19": {
         "x_center": 1077.6610107421875,
         "y_center": 489.7868194580078,
-        "smoothened_speed": 13.743098339525432
+        "smoothened_speed": 13.743110450887997
     },
     "20": {
         "x_center": 1077.8920288085938,
         "y_center": 464.828369140625,
-        "smoothened_speed": 11.449033690596274
+        "smoothened_speed": 11.449045801958842
     },
     "21": {
         "x_center": 1077.8961181640625,
         "y_center": 464.82666015625,
-        "smoothened_speed": 11.44889426470775
+        "smoothened_speed": 11.448894174378276
     },
     "22": {
         "x_center": 1078.5947875976562,
@@ -145,19 +145,19 @@
         "smoothened_speed": 6.632354201150578
     },
     "29": {
-        "x_center": 1080.6502532958984,
-        "y_center": 409.6308937072754,
-        "smoothened_speed": 5.879542108451632
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "30": {
-        "x_center": 1081.5357971191406,
-        "y_center": 405.50926971435547,
-        "smoothened_speed": 5.1267300157526865
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "31": {
-        "x_center": 1082.4213409423828,
-        "y_center": 401.38764572143555,
-        "smoothened_speed": 4.373917923053741
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "32": {
         "x_center": 1083.306884765625,
@@ -205,79 +205,79 @@
         "smoothened_speed": 1.1748219286058585
     },
     "41": {
-        "x_center": 1090.2902870178223,
-        "y_center": 402.2549476623535,
-        "smoothened_speed": 1.2088947547155529
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "42": {
-        "x_center": 1091.9264602661133,
-        "y_center": 407.94986724853516,
-        "smoothened_speed": 1.2429675808252472
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "43": {
-        "x_center": 1093.5626335144043,
-        "y_center": 413.6447868347168,
-        "smoothened_speed": 1.2770404069349417
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "44": {
-        "x_center": 1095.1988067626953,
-        "y_center": 419.33970642089844,
-        "smoothened_speed": 1.311113233044636
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "45": {
-        "x_center": 1096.8349800109863,
-        "y_center": 425.0346260070801,
-        "smoothened_speed": 1.3451860591543303
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "46": {
-        "x_center": 1098.4711532592773,
-        "y_center": 430.7295455932617,
-        "smoothened_speed": 1.3792588852640246
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "47": {
-        "x_center": 1100.1073265075684,
-        "y_center": 436.42446517944336,
-        "smoothened_speed": 1.413331711373719
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "48": {
-        "x_center": 1101.7434997558594,
-        "y_center": 442.119384765625,
-        "smoothened_speed": 1.4474045374834135
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "49": {
-        "x_center": 1103.3796730041504,
-        "y_center": 447.81430435180664,
-        "smoothened_speed": 1.4814773635931078
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "50": {
-        "x_center": 1105.0158462524414,
-        "y_center": 453.5092239379883,
-        "smoothened_speed": 1.515550189702802
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "51": {
-        "x_center": 1106.6520195007324,
-        "y_center": 459.2041435241699,
-        "smoothened_speed": 1.5496230158124964
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "52": {
-        "x_center": 1108.2881927490234,
-        "y_center": 464.89906311035156,
-        "smoothened_speed": 1.5836958419221907
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "53": {
-        "x_center": 1109.9243659973145,
-        "y_center": 470.5939826965332,
-        "smoothened_speed": 1.6177686680318852
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "54": {
-        "x_center": 1111.5605392456055,
-        "y_center": 476.28890228271484,
-        "smoothened_speed": 1.6518414941415793
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "55": {
-        "x_center": 1113.1967124938965,
-        "y_center": 481.9838218688965,
-        "smoothened_speed": 1.6859143202512739
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "56": {
         "x_center": 1114.8328857421875,
@@ -291,233 +291,233 @@
     },
     "58": {
         "x_center": 1117.1912841796875,
-        "y_center": 505.9398956298828,
-        "smoothened_speed": 5.400519911313438
+        "y_center": 505.93992614746094,
+        "smoothened_speed": 5.400525963931368
     },
     "59": {
         "x_center": 1117.1910400390625,
         "y_center": 505.9320526123047,
-        "smoothened_speed": 4.872391421082568
+        "smoothened_speed": 4.872403574272629
     },
     "60": {
         "x_center": 1119.4495849609375,
         "y_center": 526.6076812744141,
-        "smoothened_speed": 9.031553981027594
+        "smoothened_speed": 9.031566134217655
     },
     "61": {
         "x_center": 1119.44970703125,
         "y_center": 526.6120758056641,
-        "smoothened_speed": 7.847373362973068
+        "smoothened_speed": 7.847385516163129
     },
     "62": {
         "x_center": 1119.4407348632812,
         "y_center": 526.6630859375,
-        "smoothened_speed": 7.854782312550455
+        "smoothened_speed": 7.8547944657405155
     },
     "63": {
-        "x_center": 1126.926299124053,
-        "y_center": 536.4008113976681,
-        "smoothened_speed": 7.8176376484439425
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "64": {
-        "x_center": 1134.4118633848248,
-        "y_center": 546.1385368578361,
-        "smoothened_speed": 7.78049298433743
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "65": {
-        "x_center": 1141.8974276455965,
-        "y_center": 555.8762623180043,
-        "smoothened_speed": 7.743348320230918
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "66": {
-        "x_center": 1149.3829919063683,
-        "y_center": 565.6139877781724,
-        "smoothened_speed": 7.706203656124406
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "67": {
-        "x_center": 1156.8685561671402,
-        "y_center": 575.3517132383404,
-        "smoothened_speed": 7.669058992017893
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "68": {
-        "x_center": 1164.354120427912,
-        "y_center": 585.0894386985085,
-        "smoothened_speed": 7.631914327911381
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "69": {
-        "x_center": 1171.8396846886837,
-        "y_center": 594.8271641586766,
-        "smoothened_speed": 7.594769663804868
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "70": {
-        "x_center": 1179.3252489494555,
-        "y_center": 604.5648896188447,
-        "smoothened_speed": 7.557624999698357
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "71": {
-        "x_center": 1186.8108132102273,
-        "y_center": 614.3026150790128,
-        "smoothened_speed": 7.520480335591844
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "72": {
-        "x_center": 1194.296377470999,
-        "y_center": 624.0403405391809,
-        "smoothened_speed": 7.483335671485332
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "73": {
-        "x_center": 1201.7819417317708,
-        "y_center": 633.778065999349,
-        "smoothened_speed": 7.446191007378819
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "74": {
-        "x_center": 1209.2675059925425,
-        "y_center": 643.515791459517,
-        "smoothened_speed": 7.409046343272307
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "75": {
-        "x_center": 1216.7530702533145,
-        "y_center": 653.2535169196851,
-        "smoothened_speed": 7.371901679165795
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "76": {
-        "x_center": 1224.2386345140862,
-        "y_center": 662.9912423798532,
-        "smoothened_speed": 7.3347570150592825
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "77": {
-        "x_center": 1231.724198774858,
-        "y_center": 672.7289678400214,
-        "smoothened_speed": 7.29761235095277
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "78": {
-        "x_center": 1239.2097630356297,
-        "y_center": 682.4666933001894,
-        "smoothened_speed": 7.260467686846257
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "79": {
-        "x_center": 1246.6953272964015,
-        "y_center": 692.2044187603575,
-        "smoothened_speed": 7.223323022739746
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "80": {
-        "x_center": 1254.1808915571733,
-        "y_center": 701.9421442205256,
-        "smoothened_speed": 7.186178358633233
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "81": {
-        "x_center": 1261.666455817945,
-        "y_center": 711.6798696806936,
-        "smoothened_speed": 7.149033694526721
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "82": {
-        "x_center": 1269.1520200787168,
-        "y_center": 721.4175951408617,
-        "smoothened_speed": 7.111889030420208
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "83": {
-        "x_center": 1276.6375843394885,
-        "y_center": 731.1553206010299,
-        "smoothened_speed": 7.074744366313696
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "84": {
-        "x_center": 1284.1231486002605,
-        "y_center": 740.893046061198,
-        "smoothened_speed": 7.037599702207184
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "85": {
-        "x_center": 1291.6087128610322,
-        "y_center": 750.630771521366,
-        "smoothened_speed": 7.000455038100672
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "86": {
-        "x_center": 1299.094277121804,
-        "y_center": 760.3684969815341,
-        "smoothened_speed": 6.963310373994159
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "87": {
-        "x_center": 1306.5798413825758,
-        "y_center": 770.1062224417021,
-        "smoothened_speed": 6.926165709887647
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "88": {
-        "x_center": 1314.0654056433475,
-        "y_center": 779.8439479018703,
-        "smoothened_speed": 6.889021045781135
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "89": {
-        "x_center": 1321.5509699041193,
-        "y_center": 789.5816733620384,
-        "smoothened_speed": 6.851876381674622
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "90": {
-        "x_center": 1329.036534164891,
-        "y_center": 799.3193988222065,
-        "smoothened_speed": 6.81473171756811
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "91": {
-        "x_center": 1336.522098425663,
-        "y_center": 809.0571242823746,
-        "smoothened_speed": 6.777587053461597
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "92": {
-        "x_center": 1344.0076626864347,
-        "y_center": 818.7948497425426,
-        "smoothened_speed": 6.740442389355085
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "93": {
-        "x_center": 1351.4932269472065,
-        "y_center": 828.5325752027107,
-        "smoothened_speed": 6.703297725248573
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "94": {
-        "x_center": 1358.9787912079782,
-        "y_center": 838.2703006628788,
-        "smoothened_speed": 6.666153061142061
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "95": {
         "x_center": 1366.46435546875,
-        "y_center": 848.0080261230469,
-        "smoothened_speed": 6.629008397035548
+        "y_center": 848.0079650878906,
+        "smoothened_speed": 6.629014204335452
     },
     "96": {
-        "x_center": 1368.2398529052734,
-        "y_center": 830.8081359863281,
-        "smoothened_speed": 7.493180414517488
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "97": {
-        "x_center": 1370.0153503417969,
-        "y_center": 813.6082458496094,
-        "smoothened_speed": 8.357352431999427
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "98": {
-        "x_center": 1371.7908477783203,
-        "y_center": 796.4083557128906,
-        "smoothened_speed": 9.221524449481365
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "99": {
         "x_center": 1373.5663452148438,
         "y_center": 779.2084655761719,
-        "smoothened_speed": 10.085696466963304
+        "smoothened_speed": 10.085693138064036
     },
     "100": {
         "x_center": 1373.5615844726562,
         "y_center": 779.2029113769531,
-        "smoothened_speed": 5.927435280223775
+        "smoothened_speed": 5.927431951324509
     },
     "101": {
         "x_center": 1376.7073974609375,
         "y_center": 757.4923706054688,
-        "smoothened_speed": 10.314009601421613
+        "smoothened_speed": 10.314006272522347
     },
     "102": {
         "x_center": 1376.7027587890625,
         "y_center": 757.5128479003906,
-        "smoothened_speed": 10.307850188890226
+        "smoothened_speed": 10.307846859990958
     },
     "103": {
         "x_center": 1376.700927734375,
         "y_center": 757.5215454101562,
-        "smoothened_speed": 7.853150917911063
+        "smoothened_speed": 7.853147882284024
     },
     "104": {
         "x_center": 1379.0371704101562,
@@ -540,89 +540,89 @@
         "smoothened_speed": 6.4353496168465
     },
     "108": {
-        "x_center": 1383.6659342447917,
-        "y_center": 726.769521077474,
-        "smoothened_speed": 6.455411910377821
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "109": {
-        "x_center": 1385.219258626302,
-        "y_center": 727.7073771158854,
-        "smoothened_speed": 6.475474203909142
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "110": {
-        "x_center": 1386.7725830078125,
-        "y_center": 728.6452331542969,
-        "smoothened_speed": 6.4955364974404635
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "111": {
-        "x_center": 1388.325907389323,
-        "y_center": 729.5830891927084,
-        "smoothened_speed": 6.515598790971785
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "112": {
-        "x_center": 1389.8792317708333,
-        "y_center": 730.5209452311198,
-        "smoothened_speed": 6.535661084503106
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "113": {
-        "x_center": 1391.4325561523438,
-        "y_center": 731.4588012695312,
-        "smoothened_speed": 6.555723378034427
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "114": {
-        "x_center": 1392.9858805338542,
-        "y_center": 732.3966573079427,
-        "smoothened_speed": 6.575785671565749
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "115": {
-        "x_center": 1394.5392049153645,
-        "y_center": 733.3345133463541,
-        "smoothened_speed": 6.59584796509707
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "116": {
-        "x_center": 1396.092529296875,
-        "y_center": 734.2723693847656,
-        "smoothened_speed": 6.615910258628391
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "117": {
-        "x_center": 1397.6458536783855,
-        "y_center": 735.2102254231771,
-        "smoothened_speed": 6.635972552159712
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "118": {
-        "x_center": 1399.1991780598958,
-        "y_center": 736.1480814615885,
-        "smoothened_speed": 6.656034845691034
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "119": {
-        "x_center": 1400.7525024414062,
-        "y_center": 737.0859375,
-        "smoothened_speed": 6.676097139222355
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "120": {
-        "x_center": 1402.3058268229167,
-        "y_center": 738.0237935384115,
-        "smoothened_speed": 6.696159432753676
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "121": {
-        "x_center": 1403.859151204427,
-        "y_center": 738.9616495768229,
-        "smoothened_speed": 6.7162217262849975
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "122": {
-        "x_center": 1405.4124755859375,
-        "y_center": 739.8995056152344,
-        "smoothened_speed": 6.736284019816319
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "123": {
-        "x_center": 1406.965799967448,
-        "y_center": 740.8373616536459,
-        "smoothened_speed": 6.75634631334764
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "124": {
-        "x_center": 1408.5191243489583,
-        "y_center": 741.7752176920573,
-        "smoothened_speed": 6.776408606878961
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "125": {
         "x_center": 1410.0724487304688,
@@ -650,184 +650,184 @@
         "smoothened_speed": 3.3509430740848734
     },
     "130": {
-        "x_center": 1406.240071064717,
-        "y_center": 760.0484841836466,
-        "smoothened_speed": 3.382205336520833
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "131": {
-        "x_center": 1399.172952188028,
-        "y_center": 762.8387591387775,
-        "smoothened_speed": 3.413467598956792
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "132": {
-        "x_center": 1392.1058333113388,
-        "y_center": 765.6290340939083,
-        "smoothened_speed": 3.4447298613927515
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "133": {
-        "x_center": 1385.0387144346496,
-        "y_center": 768.4193090490393,
-        "smoothened_speed": 3.475992123828711
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "134": {
-        "x_center": 1377.9715955579602,
-        "y_center": 771.2095840041702,
-        "smoothened_speed": 3.5072543862646706
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "135": {
-        "x_center": 1370.904476681271,
-        "y_center": 773.9998589593012,
-        "smoothened_speed": 3.5385166487006297
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "136": {
-        "x_center": 1363.8373578045819,
-        "y_center": 776.790133914432,
-        "smoothened_speed": 3.569778911136589
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "137": {
-        "x_center": 1356.7702389278927,
-        "y_center": 779.5804088695629,
-        "smoothened_speed": 3.6010411735725487
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "138": {
-        "x_center": 1349.7031200512035,
-        "y_center": 782.3706838246939,
-        "smoothened_speed": 3.632303436008508
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "139": {
-        "x_center": 1342.6360011745144,
-        "y_center": 785.1609587798248,
-        "smoothened_speed": 3.6635656984444673
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "140": {
-        "x_center": 1335.5688822978252,
-        "y_center": 787.9512337349556,
-        "smoothened_speed": 3.694827960880427
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "141": {
-        "x_center": 1328.501763421136,
-        "y_center": 790.7415086900866,
-        "smoothened_speed": 3.726090223316386
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "142": {
-        "x_center": 1321.4346445444469,
-        "y_center": 793.5317836452175,
-        "smoothened_speed": 3.7573524857523455
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "143": {
-        "x_center": 1314.3675256677575,
-        "y_center": 796.3220586003484,
-        "smoothened_speed": 3.788614748188305
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "144": {
-        "x_center": 1307.3004067910683,
-        "y_center": 799.1123335554793,
-        "smoothened_speed": 3.819877010624264
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "145": {
-        "x_center": 1300.2332879143792,
-        "y_center": 801.9026085106102,
-        "smoothened_speed": 3.8511392730602236
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "146": {
-        "x_center": 1293.16616903769,
-        "y_center": 804.6928834657411,
-        "smoothened_speed": 3.882401535496183
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "147": {
-        "x_center": 1286.0990501610008,
-        "y_center": 807.4831584208721,
-        "smoothened_speed": 3.9136637979321427
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "148": {
-        "x_center": 1279.0319312843117,
-        "y_center": 810.2734333760029,
-        "smoothened_speed": 3.944926060368102
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "149": {
-        "x_center": 1271.9648124076225,
-        "y_center": 813.0637083311339,
-        "smoothened_speed": 3.9761883228040613
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "150": {
-        "x_center": 1264.8976935309333,
-        "y_center": 815.8539832862648,
-        "smoothened_speed": 4.00745058524002
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "151": {
-        "x_center": 1257.8305746542442,
-        "y_center": 818.6442582413957,
-        "smoothened_speed": 4.03871284767598
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "152": {
-        "x_center": 1250.763455777555,
-        "y_center": 821.4345331965266,
-        "smoothened_speed": 4.0699751101119395
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "153": {
-        "x_center": 1243.6963369008656,
-        "y_center": 824.2248081516575,
-        "smoothened_speed": 4.101237372547899
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "154": {
-        "x_center": 1236.6292180241765,
-        "y_center": 827.0150831067884,
-        "smoothened_speed": 4.1324996349838585
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "155": {
-        "x_center": 1229.5620991474873,
-        "y_center": 829.8053580619194,
-        "smoothened_speed": 4.163761897419818
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "156": {
-        "x_center": 1222.4949802707981,
-        "y_center": 832.5956330170502,
-        "smoothened_speed": 4.195024159855777
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "157": {
-        "x_center": 1215.427861394109,
-        "y_center": 835.3859079721811,
-        "smoothened_speed": 4.226286422291737
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "158": {
-        "x_center": 1208.3607425174198,
-        "y_center": 838.1761829273121,
-        "smoothened_speed": 4.257548684727696
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "159": {
-        "x_center": 1201.2936236407306,
-        "y_center": 840.966457882443,
-        "smoothened_speed": 4.288810947163656
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "160": {
-        "x_center": 1194.2265047640415,
-        "y_center": 843.756732837574,
-        "smoothened_speed": 4.320073209599615
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "161": {
-        "x_center": 1187.159385887352,
-        "y_center": 846.5470077927048,
-        "smoothened_speed": 4.351335472035574
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "162": {
-        "x_center": 1180.092267010663,
-        "y_center": 849.3372827478357,
-        "smoothened_speed": 4.382597734471533
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "163": {
-        "x_center": 1173.0251481339737,
-        "y_center": 852.1275577029667,
-        "smoothened_speed": 4.413859996907493
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "164": {
-        "x_center": 1165.9580292572846,
-        "y_center": 854.9178326580975,
-        "smoothened_speed": 4.445122259343452
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "165": {
-        "x_center": 1158.8909103805954,
-        "y_center": 857.7081076132284,
-        "smoothened_speed": 4.476384521779412
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "166": {
         "x_center": 1151.8237915039062,
@@ -840,19 +840,19 @@
         "smoothened_speed": 4.505590949574552
     },
     "168": {
-        "x_center": 1143.4143676757812,
-        "y_center": 873.2533493041992,
-        "smoothened_speed": 5.2688438170984595
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "169": {
-        "x_center": 1135.0077514648438,
-        "y_center": 886.0124664306641,
-        "smoothened_speed": 6.032096684622367
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "170": {
-        "x_center": 1126.6011352539062,
-        "y_center": 898.7715835571289,
-        "smoothened_speed": 6.795349552146275
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "171": {
         "x_center": 1118.1945190429688,
@@ -865,19 +865,19 @@
         "smoothened_speed": 4.580078437922521
     },
     "173": {
-        "x_center": 1110.5047149658203,
-        "y_center": 928.2297515869141,
-        "smoothened_speed": 5.4987885516006765
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "174": {
-        "x_center": 1102.8221130371094,
-        "y_center": 944.9317321777344,
-        "smoothened_speed": 6.417498665278831
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "175": {
-        "x_center": 1095.1395111083984,
-        "y_center": 961.6337127685547,
-        "smoothened_speed": 7.336208778956987
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "176": {
         "x_center": 1087.4569091796875,
@@ -885,184 +885,184 @@
         "smoothened_speed": 8.254918892635143
     },
     "177": {
-        "x_center": 1087.4510498046875,
+        "x_center": 1087.4509887695312,
         "y_center": 978.3363647460938,
-        "smoothened_speed": 6.736495809273569
+        "smoothened_speed": 6.736507937760477
     },
     "178": {
-        "x_center": 1081.0794474283855,
-        "y_center": 995.8504842122396,
-        "smoothened_speed": 7.357565627986652
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "179": {
-        "x_center": 1074.7078450520833,
-        "y_center": 1013.3646036783854,
-        "smoothened_speed": 7.978635446699736
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "180": {
-        "x_center": 1068.3362426757812,
-        "y_center": 1030.8787231445312,
-        "smoothened_speed": 8.599705265412819
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "181": {
-        "x_center": 1061.9646402994792,
-        "y_center": 1048.392842610677,
-        "smoothened_speed": 9.220775084125902
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "182": {
-        "x_center": 1055.593037923177,
-        "y_center": 1065.906962076823,
-        "smoothened_speed": 9.841844902838986
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "183": {
         "x_center": 1049.221435546875,
         "y_center": 1083.4210815429688,
-        "smoothened_speed": 10.46291472155207
+        "smoothened_speed": 10.462926154488418
     },
     "184": {
         "x_center": 1049.2391357421875,
         "y_center": 1083.3888549804688,
-        "smoothened_speed": 7.414347631601354
+        "smoothened_speed": 7.4143590645377015
     },
     "185": {
-        "x_center": 1043.6922353108723,
-        "y_center": 1103.2029622395833,
-        "smoothened_speed": 8.09995121595228
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "186": {
-        "x_center": 1038.1453348795574,
-        "y_center": 1123.017069498698,
-        "smoothened_speed": 8.785554800303206
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "187": {
-        "x_center": 1032.5984344482422,
-        "y_center": 1142.8311767578125,
-        "smoothened_speed": 9.471158384654133
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "188": {
-        "x_center": 1027.051534016927,
-        "y_center": 1162.645284016927,
-        "smoothened_speed": 10.15676196900506
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "189": {
-        "x_center": 1021.5046335856119,
-        "y_center": 1182.4593912760417,
-        "smoothened_speed": 10.842365553355986
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "190": {
         "x_center": 1015.9577331542969,
         "y_center": 1202.2734985351562,
-        "smoothened_speed": 11.527969137706913
+        "smoothened_speed": 11.527980570643262
     },
     "191": {
         "x_center": 1015.95068359375,
         "y_center": 1202.2911987304688,
-        "smoothened_speed": 7.854941145576798
+        "smoothened_speed": 7.8549525785131475
     },
     "192": {
-        "x_center": 1017.1811145600818,
-        "y_center": 1163.8225504557292,
-        "smoothened_speed": 8.22144041583535
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "193": {
-        "x_center": 1018.4115455264136,
-        "y_center": 1125.3539021809895,
-        "smoothened_speed": 8.587939686093902
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "194": {
-        "x_center": 1019.6419764927456,
-        "y_center": 1086.88525390625,
-        "smoothened_speed": 8.954438956352455
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "195": {
-        "x_center": 1020.8724074590774,
-        "y_center": 1048.4166056315105,
-        "smoothened_speed": 9.320938226611007
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "196": {
-        "x_center": 1022.1028384254092,
-        "y_center": 1009.9479573567708,
-        "smoothened_speed": 9.68743749686956
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "197": {
-        "x_center": 1023.333269391741,
-        "y_center": 971.4793090820312,
-        "smoothened_speed": 10.053936767128112
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "198": {
-        "x_center": 1024.563700358073,
-        "y_center": 933.0106608072916,
-        "smoothened_speed": 10.420436037386665
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "199": {
-        "x_center": 1025.7941313244048,
-        "y_center": 894.542012532552,
-        "smoothened_speed": 10.786935307645217
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "200": {
-        "x_center": 1027.0245622907366,
-        "y_center": 856.0733642578125,
-        "smoothened_speed": 11.15343457790377
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "201": {
-        "x_center": 1028.2549932570685,
-        "y_center": 817.6047159830729,
-        "smoothened_speed": 11.519933848162323
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "202": {
-        "x_center": 1029.4854242234003,
-        "y_center": 779.1360677083333,
-        "smoothened_speed": 11.886433118420875
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "203": {
-        "x_center": 1030.715855189732,
-        "y_center": 740.6674194335938,
-        "smoothened_speed": 12.252932388679428
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "204": {
-        "x_center": 1031.946286156064,
-        "y_center": 702.1987711588541,
-        "smoothened_speed": 12.61943165893798
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "205": {
-        "x_center": 1033.1767171223958,
-        "y_center": 663.7301228841145,
-        "smoothened_speed": 12.985930929196533
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "206": {
-        "x_center": 1034.4071480887276,
-        "y_center": 625.261474609375,
-        "smoothened_speed": 13.352430199455085
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "207": {
-        "x_center": 1035.6375790550596,
-        "y_center": 586.7928263346354,
-        "smoothened_speed": 13.718929469713638
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "208": {
-        "x_center": 1036.8680100213915,
-        "y_center": 548.3241780598958,
-        "smoothened_speed": 14.08542873997219
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "209": {
-        "x_center": 1038.0984409877233,
-        "y_center": 509.85552978515625,
-        "smoothened_speed": 14.451928010230743
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "210": {
-        "x_center": 1039.328871954055,
-        "y_center": 471.38688151041663,
-        "smoothened_speed": 14.818427280489296
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "211": {
-        "x_center": 1040.559302920387,
-        "y_center": 432.918233235677,
-        "smoothened_speed": 15.184926550747848
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "212": {
         "x_center": 1041.7897338867188,
         "y_center": 394.4495849609375,
-        "smoothened_speed": 15.5514258210064
+        "smoothened_speed": 15.551425125455841
     },
     "213": {
         "x_center": 1041.7958984375,
@@ -1105,19 +1105,19 @@
         "smoothened_speed": 11.596418983083533
     },
     "221": {
-        "x_center": 1054.757797241211,
-        "y_center": 295.48066902160645,
-        "smoothened_speed": 10.876082349035116
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "222": {
-        "x_center": 1057.0185241699219,
-        "y_center": 286.12887954711914,
-        "smoothened_speed": 10.1557457149867
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "223": {
-        "x_center": 1059.2792510986328,
-        "y_center": 276.77709007263184,
-        "smoothened_speed": 9.435409080938284
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "224": {
         "x_center": 1061.5399780273438,
@@ -1155,14 +1155,14 @@
         "smoothened_speed": 4.453660332235474
     },
     "231": {
-        "x_center": 1071.0602010091145,
-        "y_center": 242.99363454182944,
-        "smoothened_speed": 4.1472579430754735
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "232": {
-        "x_center": 1074.7576700846355,
-        "y_center": 239.9521509806315,
-        "smoothened_speed": 3.8408555539154734
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "233": {
         "x_center": 1078.4551391601562,
@@ -1206,108 +1206,108 @@
     },
     "241": {
         "x_center": 1091.3511352539062,
-        "y_center": 243.27352905273438,
-        "smoothened_speed": 2.0498391789870176
+        "y_center": 243.27354431152344,
+        "smoothened_speed": 2.0498361391683537
     },
     "242": {
         "x_center": 1091.39697265625,
         "y_center": 243.2774887084961,
-        "smoothened_speed": 2.0559029260205333
+        "smoothened_speed": 2.0558996240568095
     },
     "243": {
-        "x_center": 1094.7319259643555,
-        "y_center": 248.92183208465576,
-        "smoothened_speed": 2.099849400486031
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "244": {
-        "x_center": 1098.066879272461,
-        "y_center": 254.56617546081543,
-        "smoothened_speed": 2.1437958749515285
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "245": {
-        "x_center": 1101.4018325805664,
-        "y_center": 260.2105188369751,
-        "smoothened_speed": 2.187742349417026
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "246": {
-        "x_center": 1104.7367858886719,
-        "y_center": 265.85486221313477,
-        "smoothened_speed": 2.231688823882523
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "247": {
-        "x_center": 1108.0717391967773,
-        "y_center": 271.49920558929443,
-        "smoothened_speed": 2.275635298348021
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "248": {
-        "x_center": 1111.4066925048828,
-        "y_center": 277.1435489654541,
-        "smoothened_speed": 2.3195817728135184
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "249": {
-        "x_center": 1114.7416458129883,
-        "y_center": 282.78789234161377,
-        "smoothened_speed": 2.363528247279016
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "250": {
         "x_center": 1118.0765991210938,
         "y_center": 288.43223571777344,
-        "smoothened_speed": 2.4074747217445136
+        "smoothened_speed": 2.40747141978079
     },
     "251": {
         "x_center": 1118.0853881835938,
-        "y_center": 288.4269256591797,
-        "smoothened_speed": 2.4064677739867757
+        "y_center": 288.4269104003906,
+        "smoothened_speed": 2.406466051794549
     },
     "252": {
         "x_center": 1122.3130493164062,
         "y_center": 305.08106994628906,
-        "smoothened_speed": 4.764445863667811
+        "smoothened_speed": 4.764447099416393
     },
     "253": {
         "x_center": 1122.3258666992188,
         "y_center": 305.0901184082031,
-        "smoothened_speed": 4.762056778882527
+        "smoothened_speed": 4.762061054449774
     },
     "254": {
         "x_center": 1122.3199462890625,
         "y_center": 305.09410095214844,
-        "smoothened_speed": 4.754282208258392
+        "smoothened_speed": 4.754286745970697
     },
     "255": {
         "x_center": 1132.2987060546875,
         "y_center": 328.34979248046875,
-        "smoothened_speed": 8.504327867706937
+        "smoothened_speed": 8.504332405419243
     },
     "256": {
         "x_center": 1132.2967529296875,
         "y_center": 328.321533203125,
-        "smoothened_speed": 8.50793948410559
+        "smoothened_speed": 8.507942442046398
     },
     "257": {
-        "x_center": 1134.5781860351562,
-        "y_center": 340.0304311116536,
-        "smoothened_speed": 8.3328303975651
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "258": {
-        "x_center": 1136.859619140625,
-        "y_center": 351.7393290201823,
-        "smoothened_speed": 8.157721311024611
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "259": {
-        "x_center": 1139.1410522460938,
-        "y_center": 363.44822692871094,
-        "smoothened_speed": 7.9826122244841216
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "260": {
-        "x_center": 1141.4224853515625,
-        "y_center": 375.15712483723956,
-        "smoothened_speed": 7.807503137943632
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "261": {
-        "x_center": 1143.7039184570312,
-        "y_center": 386.86602274576825,
-        "smoothened_speed": 7.632394051403143
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "262": {
         "x_center": 1145.9853515625,
@@ -1360,49 +1360,49 @@
         "smoothened_speed": 12.655752112696234
     },
     "272": {
-        "x_center": 1160.0565856933595,
-        "y_center": 498.65484008789065,
-        "smoothened_speed": 12.253903715029436
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "273": {
-        "x_center": 1156.3213012695312,
-        "y_center": 513.320361328125,
-        "smoothened_speed": 11.852055317362638
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "274": {
-        "x_center": 1152.5860168457032,
-        "y_center": 527.9858825683593,
-        "smoothened_speed": 11.45020691969584
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "275": {
-        "x_center": 1148.850732421875,
-        "y_center": 542.6514038085937,
-        "smoothened_speed": 11.04835852202904
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "276": {
-        "x_center": 1145.1154479980469,
-        "y_center": 557.3169250488281,
-        "smoothened_speed": 10.64651012436224
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "277": {
-        "x_center": 1141.3801635742188,
-        "y_center": 571.9824462890625,
-        "smoothened_speed": 10.244661726695444
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "278": {
-        "x_center": 1137.6448791503906,
-        "y_center": 586.6479675292969,
-        "smoothened_speed": 9.842813329028644
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "279": {
-        "x_center": 1133.9095947265625,
-        "y_center": 601.3134887695312,
-        "smoothened_speed": 9.440964931361846
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "280": {
-        "x_center": 1130.1743103027343,
-        "y_center": 615.9790100097656,
-        "smoothened_speed": 9.039116533695047
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "281": {
         "x_center": 1126.4390258789062,
@@ -1420,14 +1420,14 @@
         "smoothened_speed": 3.0355084823447833
     },
     "284": {
-        "x_center": 1114.956075032552,
-        "y_center": 646.3006184895834,
-        "smoothened_speed": 4.330975641745505
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "285": {
-        "x_center": 1103.4462076822917,
-        "y_center": 661.9651285807291,
-        "smoothened_speed": 5.6264428011462275
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "286": {
         "x_center": 1091.9363403320312,
@@ -1440,29 +1440,29 @@
         "smoothened_speed": 6.920944838548769
     },
     "288": {
-        "x_center": 1085.5211181640625,
-        "y_center": 689.5536448160807,
-        "smoothened_speed": 6.86782393467953
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "289": {
-        "x_center": 1079.102294921875,
-        "y_center": 701.4756062825521,
-        "smoothened_speed": 6.814703030810292
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "290": {
-        "x_center": 1072.6834716796875,
-        "y_center": 713.3975677490234,
-        "smoothened_speed": 6.761582126941053
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "291": {
-        "x_center": 1066.2646484375,
-        "y_center": 725.3195292154948,
-        "smoothened_speed": 6.708461223071814
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "292": {
-        "x_center": 1059.8458251953125,
-        "y_center": 737.2414906819662,
-        "smoothened_speed": 6.655340319202576
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "293": {
         "x_center": 1053.427001953125,
@@ -1471,128 +1471,128 @@
     },
     "294": {
         "x_center": 1053.426025390625,
-        "y_center": 749.15087890625,
-        "smoothened_speed": 6.601640204452552
+        "y_center": 749.1509094238281,
+        "smoothened_speed": 6.601634119308516
     },
     "295": {
         "x_center": 1053.4347534179688,
         "y_center": 749.1492309570312,
-        "smoothened_speed": 6.60084099067233
+        "smoothened_speed": 6.600836048049999
     },
     "296": {
-        "x_center": 1049.1507432725693,
-        "y_center": 763.220228407118,
-        "smoothened_speed": 6.4957349926438095
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "297": {
-        "x_center": 1044.8667331271702,
-        "y_center": 777.2912258572048,
-        "smoothened_speed": 6.390628994615289
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "298": {
-        "x_center": 1040.5827229817708,
-        "y_center": 791.3622233072916,
-        "smoothened_speed": 6.285522996586769
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "299": {
-        "x_center": 1036.2987128363716,
-        "y_center": 805.4332207573784,
-        "smoothened_speed": 6.180416998558249
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "300": {
-        "x_center": 1032.0147026909722,
-        "y_center": 819.5042182074653,
-        "smoothened_speed": 6.075311000529728
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "301": {
-        "x_center": 1027.730692545573,
-        "y_center": 833.5752156575521,
-        "smoothened_speed": 5.970205002501208
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "302": {
-        "x_center": 1023.4466824001736,
-        "y_center": 847.6462131076389,
-        "smoothened_speed": 5.865099004472688
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "303": {
-        "x_center": 1019.1626722547743,
-        "y_center": 861.7172105577257,
-        "smoothened_speed": 5.759993006444168
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "304": {
         "x_center": 1014.878662109375,
         "y_center": 875.7882080078125,
-        "smoothened_speed": 5.654887008415647
+        "smoothened_speed": 5.654882065793316
     },
     "305": {
         "x_center": 1007.4453125,
         "y_center": 908.6370849609375,
-        "smoothened_speed": 12.389943008517278
+        "smoothened_speed": 12.389938065894947
     },
     "306": {
         "x_center": 1007.4449157714844,
         "y_center": 908.6356811523438,
-        "smoothened_speed": 9.682213666252155
+        "smoothened_speed": 9.682208723629824
     },
     "307": {
         "x_center": 1007.4390869140625,
         "y_center": 908.6475219726562,
-        "smoothened_speed": 9.682330994263964
+        "smoothened_speed": 9.68233213678567
     },
     "308": {
-        "x_center": 1001.8591512044271,
-        "y_center": 934.1789855957031,
-        "smoothened_speed": 11.424012349710033
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "309": {
-        "x_center": 996.2792154947916,
-        "y_center": 959.71044921875,
-        "smoothened_speed": 13.1656937051561
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "310": {
         "x_center": 990.6992797851562,
-        "y_center": 985.2419128417969,
-        "smoothened_speed": 14.907375060602169
+        "y_center": 985.2418518066406,
+        "smoothened_speed": 14.907371085421113
     },
     "311": {
         "x_center": 990.6996154785156,
         "y_center": 985.2525024414062,
-        "smoothened_speed": 11.967755020189275
+        "smoothened_speed": 11.967763245945706
     },
     "312": {
-        "x_center": 997.0291137695312,
-        "y_center": 1065.7753143310547,
-        "smoothened_speed": 14.322343667716412
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "313": {
-        "x_center": 1003.3586120605469,
-        "y_center": 1146.2981262207031,
-        "smoothened_speed": 16.676932315243548
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "314": {
-        "x_center": 1009.6881103515625,
-        "y_center": 1226.8209381103516,
-        "smoothened_speed": 19.031520962770685
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "315": {
         "x_center": 1016.0176086425781,
         "y_center": 1307.34375,
-        "smoothened_speed": 21.386109610297822
+        "smoothened_speed": 21.386117836054257
     },
     "316": {
         "x_center": 1015.9979553222656,
         "y_center": 1307.3256225585938,
-        "smoothened_speed": 21.391165214493334
+        "smoothened_speed": 21.39117344024977
     },
     "317": {
         "x_center": 973.4970703125,
         "y_center": 1113.6373291015625,
-        "smoothened_speed": 61.047814739774836
+        "smoothened_speed": 61.04782296553127
     },
     "318": {
         "x_center": 973.4981994628906,
         "y_center": 1113.6593627929688,
-        "smoothened_speed": 55.82540674631002
+        "smoothened_speed": 55.82541894724751
     },
     "319": {
         "x_center": 973.5007934570312,
@@ -1610,54 +1610,54 @@
         "smoothened_speed": 48.365251398237604
     },
     "322": {
-        "x_center": 971.8983237526634,
-        "y_center": 1150.9905728426847,
-        "smoothened_speed": 44.89125287470445
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "323": {
-        "x_center": 976.4406294389205,
-        "y_center": 1145.3700617009943,
-        "smoothened_speed": 41.417254351171295
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "324": {
-        "x_center": 980.9829351251775,
-        "y_center": 1139.749550559304,
-        "smoothened_speed": 37.94325582763814
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "325": {
-        "x_center": 985.5252408114346,
-        "y_center": 1134.1290394176137,
-        "smoothened_speed": 34.469257304104985
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "326": {
-        "x_center": 990.0675464976918,
-        "y_center": 1128.5085282759233,
-        "smoothened_speed": 30.995258780571834
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "327": {
-        "x_center": 994.6098521839489,
-        "y_center": 1122.888017134233,
-        "smoothened_speed": 27.52126025703868
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "328": {
-        "x_center": 999.152157870206,
-        "y_center": 1117.2675059925425,
-        "smoothened_speed": 24.047261733505525
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "329": {
-        "x_center": 1003.6944635564631,
-        "y_center": 1111.6469948508523,
-        "smoothened_speed": 20.57326320997237
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "330": {
-        "x_center": 1008.2367692427201,
-        "y_center": 1106.026483709162,
-        "smoothened_speed": 17.099264686439216
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "331": {
-        "x_center": 1012.7790749289773,
-        "y_center": 1100.4059725674715,
-        "smoothened_speed": 13.625266162906065
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "332": {
         "x_center": 1017.3213806152344,
@@ -1666,58 +1666,58 @@
     },
     "333": {
         "x_center": 1017.34716796875,
-        "y_center": 1094.6621704101562,
-        "smoothened_speed": 10.172046912390355
+        "y_center": 1094.6622314453125,
+        "smoothened_speed": 10.172034964041949
     },
     "334": {
-        "x_center": 1033.096171061198,
-        "y_center": 1056.9496154785156,
-        "smoothened_speed": 12.8952750170762
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "335": {
-        "x_center": 1048.8451741536458,
-        "y_center": 1019.237060546875,
-        "smoothened_speed": 15.618503121762043
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "336": {
         "x_center": 1064.5941772460938,
         "y_center": 981.5245056152344,
-        "smoothened_speed": 18.341731226447887
+        "smoothened_speed": 18.341723032855377
     },
     "337": {
         "x_center": 1064.5758056640625,
         "y_center": 981.5237426757812,
-        "smoothened_speed": 9.655881169463349
+        "smoothened_speed": 9.655872975870837
     },
     "338": {
         "x_center": 1064.5794067382812,
         "y_center": 981.5387268066406,
-        "smoothened_speed": 9.651038976609197
+        "smoothened_speed": 9.651030783016683
     },
     "339": {
         "x_center": 1088.4354248046875,
         "y_center": 929.8213500976562,
-        "smoothened_speed": 19.596601320991635
+        "smoothened_speed": 19.59659312739912
     },
     "340": {
         "x_center": 1088.4268188476562,
         "y_center": 929.8708801269531,
-        "smoothened_speed": 19.581463951478188
+        "smoothened_speed": 19.581467706234083
     },
     "341": {
-        "x_center": 1096.0749053955078,
-        "y_center": 914.5704650878906,
-        "smoothened_speed": 18.393290176085486
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "342": {
-        "x_center": 1103.7229919433594,
-        "y_center": 899.2700500488281,
-        "smoothened_speed": 17.205116400692788
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "343": {
-        "x_center": 1111.371078491211,
-        "y_center": 883.9696350097656,
-        "smoothened_speed": 16.016942625300086
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "344": {
         "x_center": 1119.0191650390625,
@@ -1730,54 +1730,54 @@
         "smoothened_speed": 14.826417965317955
     },
     "346": {
-        "x_center": 1125.7178011807528,
-        "y_center": 861.3043740012429,
-        "smoothened_speed": 15.007263388125034
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "347": {
-        "x_center": 1132.4193670099432,
-        "y_center": 853.9335771040483,
-        "smoothened_speed": 15.188108810932112
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "348": {
-        "x_center": 1139.1209328391335,
-        "y_center": 846.5627802068537,
-        "smoothened_speed": 15.368954233739192
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "349": {
-        "x_center": 1145.8224986683238,
-        "y_center": 839.1919833096591,
-        "smoothened_speed": 15.549799656546272
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "350": {
-        "x_center": 1152.5240644975142,
-        "y_center": 831.8211864124645,
-        "smoothened_speed": 15.730645079353351
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "351": {
-        "x_center": 1159.2256303267045,
-        "y_center": 824.4503895152699,
-        "smoothened_speed": 15.91149050216043
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "352": {
-        "x_center": 1165.927196155895,
-        "y_center": 817.0795926180753,
-        "smoothened_speed": 16.09233592496751
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "353": {
-        "x_center": 1172.6287619850852,
-        "y_center": 809.7087957208806,
-        "smoothened_speed": 16.27318134777459
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "354": {
-        "x_center": 1179.3303278142755,
-        "y_center": 802.3379988236861,
-        "smoothened_speed": 16.454026770581667
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "355": {
-        "x_center": 1186.031893643466,
-        "y_center": 794.9672019264915,
-        "smoothened_speed": 16.63487219338875
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "356": {
         "x_center": 1192.7334594726562,
@@ -1815,74 +1815,74 @@
         "smoothened_speed": 5.305482090304756
     },
     "363": {
-        "x_center": 1223.1334309895833,
-        "y_center": 783.8502685546875,
-        "smoothened_speed": 5.197363387092144
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "364": {
-        "x_center": 1228.6521769205729,
-        "y_center": 788.7971557617187,
-        "smoothened_speed": 5.089244683879532
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "365": {
-        "x_center": 1234.1709228515624,
-        "y_center": 793.74404296875,
-        "smoothened_speed": 4.981125980666921
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "366": {
-        "x_center": 1239.6896687825522,
-        "y_center": 798.6909301757812,
-        "smoothened_speed": 4.873007277454308
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "367": {
-        "x_center": 1245.2084147135417,
-        "y_center": 803.6378173828125,
-        "smoothened_speed": 4.764888574241696
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "368": {
-        "x_center": 1250.7271606445313,
-        "y_center": 808.5847045898438,
-        "smoothened_speed": 4.656769871029084
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "369": {
-        "x_center": 1256.2459065755208,
-        "y_center": 813.531591796875,
-        "smoothened_speed": 4.548651167816472
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "370": {
-        "x_center": 1261.7646525065104,
-        "y_center": 818.4784790039063,
-        "smoothened_speed": 4.44053246460386
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "371": {
-        "x_center": 1267.2833984375,
-        "y_center": 823.4253662109375,
-        "smoothened_speed": 4.332413761391248
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "372": {
-        "x_center": 1272.8021443684895,
-        "y_center": 828.3722534179688,
-        "smoothened_speed": 4.224295058178636
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "373": {
-        "x_center": 1278.320890299479,
-        "y_center": 833.319140625,
-        "smoothened_speed": 4.116176354966024
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "374": {
-        "x_center": 1283.8396362304688,
-        "y_center": 838.2660278320312,
-        "smoothened_speed": 4.008057651753412
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "375": {
-        "x_center": 1289.3583821614584,
-        "y_center": 843.2129150390625,
-        "smoothened_speed": 3.8999389485408003
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "376": {
-        "x_center": 1294.877128092448,
-        "y_center": 848.1598022460937,
-        "smoothened_speed": 3.791820245328188
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "377": {
         "x_center": 1300.3958740234375,
@@ -1910,64 +1910,64 @@
         "smoothened_speed": 3.6956921400235303
     },
     "382": {
-        "x_center": 1312.5391235351562,
-        "y_center": 854.2191537710337,
-        "smoothened_speed": 3.688183605657789
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "383": {
-        "x_center": 1316.169189453125,
-        "y_center": 848.3238361065204,
-        "smoothened_speed": 3.6806750712920473
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "384": {
-        "x_center": 1319.7992553710938,
-        "y_center": 842.4285184420072,
-        "smoothened_speed": 3.673166536926306
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "385": {
-        "x_center": 1323.4293212890625,
-        "y_center": 836.533200777494,
-        "smoothened_speed": 3.6656580025605647
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "386": {
-        "x_center": 1327.0593872070312,
-        "y_center": 830.6378831129807,
-        "smoothened_speed": 3.6581494681948232
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "387": {
-        "x_center": 1330.689453125,
-        "y_center": 824.7425654484675,
-        "smoothened_speed": 3.6506409338290817
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "388": {
-        "x_center": 1334.3195190429688,
-        "y_center": 818.8472477839543,
-        "smoothened_speed": 3.64313239946334
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "389": {
-        "x_center": 1337.9495849609375,
-        "y_center": 812.9519301194412,
-        "smoothened_speed": 3.6356238650975987
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "390": {
-        "x_center": 1341.5796508789062,
-        "y_center": 807.0566124549279,
-        "smoothened_speed": 3.628115330731857
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "391": {
-        "x_center": 1345.209716796875,
-        "y_center": 801.1612947904147,
-        "smoothened_speed": 3.620606796366116
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "392": {
-        "x_center": 1348.8397827148438,
-        "y_center": 795.2659771259015,
-        "smoothened_speed": 3.6130982620003746
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "393": {
-        "x_center": 1352.4698486328125,
-        "y_center": 789.3706594613882,
-        "smoothened_speed": 3.605589727634633
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "394": {
         "x_center": 1356.0999145507812,
@@ -1995,329 +1995,329 @@
         "smoothened_speed": 2.4388470350915123
     },
     "399": {
-        "x_center": 1362.9803568522136,
-        "y_center": 784.7619758374764,
-        "smoothened_speed": 2.4296620214461098
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "400": {
-        "x_center": 1365.0160115559895,
-        "y_center": 788.079463149562,
-        "smoothened_speed": 2.4204770078007076
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "401": {
-        "x_center": 1367.0516662597656,
-        "y_center": 791.3969504616477,
-        "smoothened_speed": 2.411291994155305
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "402": {
-        "x_center": 1369.0873209635417,
-        "y_center": 794.7144377737334,
-        "smoothened_speed": 2.4021069805099025
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "403": {
-        "x_center": 1371.1229756673176,
-        "y_center": 798.0319250858191,
-        "smoothened_speed": 2.3929219668645
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "404": {
-        "x_center": 1373.1586303710938,
-        "y_center": 801.3494123979049,
-        "smoothened_speed": 2.3837369532190977
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "405": {
-        "x_center": 1375.1942850748699,
-        "y_center": 804.6668997099905,
-        "smoothened_speed": 2.374551939573695
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "406": {
-        "x_center": 1377.2299397786458,
-        "y_center": 807.9843870220762,
-        "smoothened_speed": 2.3653669259282926
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "407": {
-        "x_center": 1379.2655944824219,
-        "y_center": 811.3018743341619,
-        "smoothened_speed": 2.3561819122828904
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "408": {
-        "x_center": 1381.301249186198,
-        "y_center": 814.6193616462476,
-        "smoothened_speed": 2.346996898637488
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "409": {
-        "x_center": 1383.3369038899739,
-        "y_center": 817.9368489583334,
-        "smoothened_speed": 2.3378118849920853
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "410": {
-        "x_center": 1385.37255859375,
-        "y_center": 821.254336270419,
-        "smoothened_speed": 2.328626871346683
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "411": {
-        "x_center": 1387.4082132975261,
-        "y_center": 824.5718235825047,
-        "smoothened_speed": 2.3194418577012805
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "412": {
-        "x_center": 1389.443868001302,
-        "y_center": 827.8893108945904,
-        "smoothened_speed": 2.310256844055878
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "413": {
-        "x_center": 1391.4795227050781,
-        "y_center": 831.2067982066761,
-        "smoothened_speed": 2.3010718304104754
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "414": {
-        "x_center": 1393.5151774088542,
-        "y_center": 834.5242855187619,
-        "smoothened_speed": 2.291886816765073
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "415": {
-        "x_center": 1395.5508321126301,
-        "y_center": 837.8417728308475,
-        "smoothened_speed": 2.2827018031196706
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "416": {
-        "x_center": 1397.5864868164062,
-        "y_center": 841.1592601429332,
-        "smoothened_speed": 2.273516789474268
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "417": {
-        "x_center": 1399.6221415201824,
-        "y_center": 844.476747455019,
-        "smoothened_speed": 2.264331775828866
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "418": {
-        "x_center": 1401.6577962239583,
-        "y_center": 847.7942347671046,
-        "smoothened_speed": 2.2551467621834633
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "419": {
-        "x_center": 1403.6934509277344,
-        "y_center": 851.1117220791904,
-        "smoothened_speed": 2.2459617485380607
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "420": {
-        "x_center": 1405.7291056315105,
-        "y_center": 854.429209391276,
-        "smoothened_speed": 2.2367767348926586
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "421": {
-        "x_center": 1407.7647603352864,
-        "y_center": 857.7466967033617,
-        "smoothened_speed": 2.227591721247256
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "422": {
-        "x_center": 1409.8004150390625,
-        "y_center": 861.0641840154474,
-        "smoothened_speed": 2.2184067076018534
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "423": {
-        "x_center": 1411.8360697428386,
-        "y_center": 864.3816713275331,
-        "smoothened_speed": 2.209221693956451
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "424": {
-        "x_center": 1413.8717244466145,
-        "y_center": 867.6991586396189,
-        "smoothened_speed": 2.2000366803110487
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "425": {
-        "x_center": 1415.9073791503906,
-        "y_center": 871.0166459517045,
-        "smoothened_speed": 2.190851666665646
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "426": {
-        "x_center": 1417.9430338541667,
-        "y_center": 874.3341332637902,
-        "smoothened_speed": 2.1816666530202435
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "427": {
-        "x_center": 1419.9786885579426,
-        "y_center": 877.651620575876,
-        "smoothened_speed": 2.1724816393748414
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "428": {
-        "x_center": 1422.0143432617188,
-        "y_center": 880.9691078879616,
-        "smoothened_speed": 2.163296625729439
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "429": {
-        "x_center": 1424.0499979654949,
-        "y_center": 884.2865952000474,
-        "smoothened_speed": 2.1541116120840362
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "430": {
-        "x_center": 1426.0856526692708,
-        "y_center": 887.604082512133,
-        "smoothened_speed": 2.1449265984386336
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "431": {
-        "x_center": 1428.1213073730469,
-        "y_center": 890.9215698242188,
-        "smoothened_speed": 2.1357415847932315
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "432": {
-        "x_center": 1430.156962076823,
-        "y_center": 894.2390571363045,
-        "smoothened_speed": 2.126556571147829
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "433": {
-        "x_center": 1432.1926167805989,
-        "y_center": 897.5565444483901,
-        "smoothened_speed": 2.1173715575024263
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "434": {
-        "x_center": 1434.228271484375,
-        "y_center": 900.8740317604759,
-        "smoothened_speed": 2.108186543857024
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "435": {
-        "x_center": 1436.2639261881511,
-        "y_center": 904.1915190725615,
-        "smoothened_speed": 2.0990015302116216
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "436": {
-        "x_center": 1438.299580891927,
-        "y_center": 907.5090063846473,
-        "smoothened_speed": 2.089816516566219
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "437": {
-        "x_center": 1440.3352355957031,
-        "y_center": 910.826493696733,
-        "smoothened_speed": 2.080631502920817
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "438": {
-        "x_center": 1442.3708902994792,
-        "y_center": 914.1439810088186,
-        "smoothened_speed": 2.0714464892754143
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "439": {
-        "x_center": 1444.4065450032551,
-        "y_center": 917.4614683209044,
-        "smoothened_speed": 2.0622614756300117
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "440": {
-        "x_center": 1446.4421997070312,
-        "y_center": 920.7789556329901,
-        "smoothened_speed": 2.0530764619846096
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "441": {
-        "x_center": 1448.4778544108074,
-        "y_center": 924.0964429450758,
-        "smoothened_speed": 2.043891448339207
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "442": {
-        "x_center": 1450.5135091145833,
-        "y_center": 927.4139302571615,
-        "smoothened_speed": 2.0347064346938044
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "443": {
-        "x_center": 1452.5491638183594,
-        "y_center": 930.7314175692471,
-        "smoothened_speed": 2.025521421048402
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "444": {
-        "x_center": 1454.5848185221355,
-        "y_center": 934.0489048813329,
-        "smoothened_speed": 2.0163364074029997
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "445": {
-        "x_center": 1456.6204732259114,
-        "y_center": 937.3663921934185,
-        "smoothened_speed": 2.007151393757597
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "446": {
-        "x_center": 1458.6561279296875,
-        "y_center": 940.6838795055043,
-        "smoothened_speed": 1.9979663801121945
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "447": {
-        "x_center": 1460.6917826334636,
-        "y_center": 944.00136681759,
-        "smoothened_speed": 1.9887813664667922
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "448": {
-        "x_center": 1462.7274373372395,
-        "y_center": 947.3188541296756,
-        "smoothened_speed": 1.9795963528213898
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "449": {
-        "x_center": 1464.7630920410156,
-        "y_center": 950.6363414417614,
-        "smoothened_speed": 1.9704113391759872
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "450": {
-        "x_center": 1466.7987467447917,
-        "y_center": 953.9538287538471,
-        "smoothened_speed": 1.9612263255305848
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "451": {
-        "x_center": 1468.8344014485676,
-        "y_center": 957.2713160659328,
-        "smoothened_speed": 1.9520413118851825
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "452": {
-        "x_center": 1470.8700561523438,
-        "y_center": 960.5888033780185,
-        "smoothened_speed": 1.94285629823978
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "453": {
-        "x_center": 1472.9057108561199,
-        "y_center": 963.9062906901041,
-        "smoothened_speed": 1.9336712845943773
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "454": {
-        "x_center": 1474.9413655598958,
-        "y_center": 967.2237780021899,
-        "smoothened_speed": 1.924486270948975
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "455": {
-        "x_center": 1476.9770202636719,
-        "y_center": 970.5412653142755,
-        "smoothened_speed": 1.9153012573035726
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "456": {
-        "x_center": 1479.012674967448,
-        "y_center": 973.8587526263613,
-        "smoothened_speed": 1.90611624365817
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "457": {
-        "x_center": 1481.0483296712239,
-        "y_center": 977.176239938447,
-        "smoothened_speed": 1.8969312300127676
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "458": {
-        "x_center": 1483.083984375,
-        "y_center": 980.4937272505326,
-        "smoothened_speed": 1.8877462163673653
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "459": {
-        "x_center": 1485.1196390787761,
-        "y_center": 983.8112145626184,
-        "smoothened_speed": 1.8785612027219627
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "460": {
-        "x_center": 1487.155293782552,
-        "y_center": 987.1287018747041,
-        "smoothened_speed": 1.8693761890765603
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "461": {
-        "x_center": 1489.1909484863281,
-        "y_center": 990.4461891867898,
-        "smoothened_speed": 1.860191175431158
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "462": {
-        "x_center": 1491.2266031901042,
-        "y_center": 993.7636764988755,
-        "smoothened_speed": 1.8510061617857554
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "463": {
-        "x_center": 1493.2622578938801,
-        "y_center": 997.0811638109611,
-        "smoothened_speed": 1.8418211481403528
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "464": {
         "x_center": 1495.2979125976562,
@@ -2330,178 +2330,178 @@
         "smoothened_speed": 1.8324966954367619
     },
     "466": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "467": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "468": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "469": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "470": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "471": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "472": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "473": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "474": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "475": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "476": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "477": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "478": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "479": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "480": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "481": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "482": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "483": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "484": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "485": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "486": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "487": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "488": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "489": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "490": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "491": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "492": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "493": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "494": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "495": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "496": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "497": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "498": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "499": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     },
     "500": {
-        "x_center": 1495.2937622070312,
-        "y_center": 1000.3956298828125,
-        "smoothened_speed": 1.8324966954367619
+        "x_center": null,
+        "y_center": null,
+        "smoothened_speed": null
     }
 }

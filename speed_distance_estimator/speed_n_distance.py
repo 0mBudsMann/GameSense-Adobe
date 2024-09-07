@@ -28,13 +28,12 @@ class SpeedAndDistance_Estimator():
                 # Calculate the distance covered between the frames
                 distance_covered = measure_distance(start_position, end_position)
 
-                time_elapsed = (last_frame - frame_num) / self.frame_rate
+                time_elapsed = (last_frame - frame_num)
 
                 if time_elapsed == 0:
                     continue
 
-                speed_meters_per_second = distance_covered / time_elapsed
-                speed_km_per_hour = speed_meters_per_second * 3.6
+                speed_pixels_per_frame = distance_covered / time_elapsed
 
                 if player_id not in total_distance:
                     total_distance[player_id] = 0
@@ -47,7 +46,7 @@ class SpeedAndDistance_Estimator():
                     if player_id not in detected_players[frame_num_batch]:
                         continue
 
-                    detected_players[frame_num_batch][player_id]['speed'] = speed_km_per_hour
+                    detected_players[frame_num_batch][player_id]['speed'] = speed_pixels_per_frame
                     detected_players[frame_num_batch][player_id]['distance'] = total_distance[player_id]
 
         return detected_players
@@ -69,8 +68,8 @@ class SpeedAndDistance_Estimator():
                     position[1] += 40
 
                     position = tuple(map(int, position))
-                    cv2.putText(frame, f"{speed:.2f} km/h", position, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-                    cv2.putText(frame, f"{distance:.2f} m", (position[0], position[1] + 20), cv2.FONT_HERSHEY_SIMPLEX,
+                    cv2.putText(frame, f"{speed:.2f} pixels/frame", position, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                    cv2.putText(frame, f"{distance:.2f} pixels", (position[0], position[1] + 20), cv2.FONT_HERSHEY_SIMPLEX,
                                 0.5, (0, 0, 0), 2)
             output_frames.append(frame)
 

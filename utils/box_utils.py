@@ -6,7 +6,7 @@ def get_center_of_box(box):
     return center_x, center_y
 
 def measure_distance(p1, p2):
-    return ((p1[2]-p2[2])**2 + (p1[3]-p2[3])**2)**0.5 / 100
+    return ((p1[2]-p2[2])**2 + (p1[3]-p2[3])**2)**0.5
 
 def get_foot_position(bbox):
     x1,y1,x2,y2 = bbox
