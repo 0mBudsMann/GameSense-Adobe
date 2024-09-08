@@ -143,28 +143,21 @@ def main():
     # Draw Boxes
     # ShuttleCock
     output_frames, tracking_data = real_time_detection_and_tracking(frames)
-    print(output_frames[0].shape)
 
     # Interpolation
     tracking_data = interpolate_shuttle_tracking(tracking_data)
-    print(tracking_data)
+
 
     output_frames = draw_shuttle_predictions(output_frames, tracking_data)
-    print(output_frames)
-    print(output_frames[0].shape)
-
 
     output_frames = track_players.draw_boxes(output_frames, detected_players)
-    print(output_frames[0].shape)
 
     # output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
 
     output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
-    print(output_frames[0].shape)
     # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
 
     output_frames = draw_court_and_net_on_frames(output_frames)
-    print(output_frames[0].shape)
     # output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data, rest_coords, listt)
     write_video(output_frames, output_video, 60)
 

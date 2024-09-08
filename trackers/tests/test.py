@@ -28,5 +28,6 @@ def interpolate_shuttle_tracking(json_path):
     return shuttle_positions_dict
 
 if __name__ == '__main__':
-    interpolated_shuttle_coordinates = interpolate_shuttle_tracking('../../result/shuttle_data/shuttle_data.json')
-    print(interpolated_shuttle_coordinates)
+    # interpolated_shuttle_coordinates = interpolate_shuttle_tracking('../../result/shuttle_data/shuttle_data.json')
+    # print(interpolated_shuttle_coordinates)
+    pass
