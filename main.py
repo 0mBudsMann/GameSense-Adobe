@@ -30,7 +30,7 @@ def main():
 
     read_from_record = args.buffer
     # input_video = args.video_path  # Get video from the user
-    input_video = 'utils/footages/10sec.mp4'
+    input_video = 'utils/footages/short_shuttle.mp4'
 
     # Read Video
     frames = read_video(input_video)
@@ -40,12 +40,6 @@ def main():
     # Players
     track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
     detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
-
-    # ShuttleCock
-    # track_shuttle = ShuttleTracker("models/shuttle_detection/weights/best.pt")
-    # detected_shuttle = track_shuttle.detect_frames(frames, read_from_record, record_path="record/shuttle_detections.pkl")
-    shuttle_tracking_data = real_time_detection_and_tracking(frames)
-    # print(shuttle_tracking_data)
 
     # Interpolate Shuttle Tracking
     # shuttle_tracking_data = interpolate_shuttle_tracking(shuttle_tracking_data)
@@ -58,13 +52,6 @@ def main():
 
     # Save Player Data
     track_players.save_player_data(detected_players, "result/player_data/player_data.json")
-
-    # Draw Boxes
-    output_frames = track_players.draw_boxes(frames, detected_players)
-    # output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
-
-    output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
-    # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
 
     # Court and Net Detection
     # Clear the polyfit RankWarning
@@ -153,8 +140,32 @@ def main():
     # Release the video capture object after processing the first frame
     video.release()
 
+    # Draw Boxes
+    # ShuttleCock
+    output_frames, tracking_data = real_time_detection_and_tracking(frames)
+    print(output_frames[0].shape)
+
+    # Interpolation
+    tracking_data = interpolate_shuttle_tracking(tracking_data)
+    print(tracking_data)
+
+    output_frames = draw_shuttle_predictions(output_frames, tracking_data)
+    print(output_frames)
+    print(output_frames[0].shape)
+
+
+    output_frames = track_players.draw_boxes(output_frames, detected_players)
+    print(output_frames[0].shape)
+
+    # output_frames = track_shuttle.draw_boxes(output_frames, detected_shuttle)
+
+    output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_players)
+    print(output_frames[0].shape)
+    # output_frames = speed_and_distance_estimation.draw_speed_and_distance(output_frames, detected_shuttle)
+
     output_frames = draw_court_and_net_on_frames(output_frames)
-    output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data)
+    print(output_frames[0].shape)
+    # output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data, rest_coords, listt)
     write_video(output_frames, output_video, 60)
 
 
