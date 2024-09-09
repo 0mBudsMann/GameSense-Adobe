@@ -2,6 +2,8 @@ import cv2
 
 def read_video(video_path):
     cap = cv2.VideoCapture(video_path, cv2.CAP_FFMPEG)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+
     frames = []
     while True:
         ret, frame = cap.read()
@@ -9,7 +11,7 @@ def read_video(video_path):
             break
         frames.append(frame)
     cap.release()
-    return frames
+    return frames, fps
 
 def write_video(frames, output_path, fps):
     height, width, _ = frames[0].shape

@@ -33,6 +33,7 @@ def main():
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
     parser.add_argument("--buffer", action='store_true', help="load data from buffer rather than inferencing again")
     parser.add_argument("--video_path", type=str, required=True, help="Path to the input video")
+    parser.add_argument("--nodrop_path", type=str, required=True, help="Path to the no drop video")
 
     args = parser.parse_args()
 
@@ -40,9 +41,10 @@ def main():
     bool_doubles = args.doubles
     # input_video = args.video_path  # Get video from the user
     input_video = args.video_path
+    nodrop_video = args.nodrop_path
 
     # Read Video
-    frames = read_video(input_video)
+    frames, video_fps = read_video(input_video)
     output_video = "output.mp4"
 
     # Detect speed and distance
@@ -152,7 +154,10 @@ def main():
 
     # Draw Boxes
     # ShuttleCock
-    output_frames, tracking_data = real_time_detection_and_tracking(frames)
+    sframes, svideo_fps = read_video(nodrop_video)
+    black = real_time_detection_and_tracking(sframes, svideo_fps, find_black_list = 1, black_list = [])
+    
+    output_frames, tracking_data = real_time_detection_and_tracking(frames, video_fps, find_black_list = 0, black_list = black)
 
     # Interpolation
     tracking_data = interpolate_shuttle_tracking(tracking_data)
@@ -169,7 +174,7 @@ def main():
 
     output_frames = draw_court_and_net_on_frames(output_frames)
     # output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data, rest_coords, listt)
-    write_video(output_frames, output_video, 60)
+    write_video(output_frames, output_video, video_fps)
 
 
 if __name__ == "__main__":

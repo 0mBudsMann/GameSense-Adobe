@@ -210,7 +210,7 @@ def identify_stationary_objects(threshold=10):
     grouped_coords_with_freq = group_coordinates_by_proximity(coords_with_freq, threshold)
 
     # Define a threshold for considering an object stationary based on frequency
-    stationary_threshold = 25  # You can adjust this value
+    stationary_threshold = 10  # You can adjust this value
 
     # Find coordinates that occur above the threshold and add to stationary_coords
     stationary_coords = [(coord,freq) for coord, freq in grouped_coords_with_freq if freq > stationary_threshold]
@@ -398,10 +398,9 @@ def is_consistently_increasing(y_coords, window_size=5):
 
     return all(recent_coords[i] < recent_coords[i+1] for i in range(window_size-1))
 
-def real_time_detection_and_tracking(frames):
+def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     global global_coord_frequency, stationary_coords, relay_flag, relay_start_frame
 
-    fps = 60
     print(f"FPS: {fps}")
 
     # Initialize Kalman filter (assuming one object for now)
@@ -417,7 +416,8 @@ def real_time_detection_and_tracking(frames):
     frame_count = 0
     shuttle_coords_queue = deque(maxlen=5)
     prev_k_frame = deque(maxlen=10)
-    black_list = [(1894.7992769129137, 303.175568075741), (2333.0154160860784, 1482.0646242436044), (1008.7924158432904, 313.01178965849033)]
+    black_list = black_list
+    # black_list = [(1894.7992769129137, 303.175568075741), (2333.0154160860784, 1482.0646242436044), (1008.7924158432904, 313.01178965849033)]
     lastx, lasty, lastframeno = None, None, None
 
     listt = {}
@@ -472,6 +472,7 @@ def real_time_detection_and_tracking(frames):
         if frame_count in listt and len(listt[frame_count]) == 1:
             coord = (listt[frame_count][0]['x_center'], listt[frame_count][0]['y_center'])
             shuttle_coords_queue.append(coord)
+            prev_k_frame.append(coord)
             y_coord_history.append(coord[1])
 
             # Relay start detection
@@ -483,7 +484,7 @@ def real_time_detection_and_tracking(frames):
                 relay_flag = 1
                 relay_start_frame = frame_count  # Track when the relay starts
                 # print(f"Relay start at frame {frame_count}")
-
+            print(f"shuttle_coords_queue: {shuttle_coords_queue}")
             if is_shuttle_in_rest(shuttle_coords_queue, 5):
                 rest_state_counter += 1
                 if rest_state_counter >= REST_THRESHOLD:
@@ -517,13 +518,13 @@ def real_time_detection_and_tracking(frames):
                 'relay_active': None,
             }
 
-        grouped_coords = group_similar_coordinates(current_coords, threshold=100)
+        grouped_coords = group_similar_coordinates(current_coords, threshold=10)
         rest_coords = group_similar_coordinates(rest_coords, threshold=10)
         if rest_coords:
             rest_coords = [rest_coords[0][0]]
 
         coord_counter.clear()
-        for coord, count in grouped_coords:
+        for coord, count in current_coords:
             coord_counter[coord] += count
 
         # Visualization
@@ -551,7 +552,9 @@ def real_time_detection_and_tracking(frames):
         # Draw rest state indicator
         if is_at_rest:
             if not scored:
-              shuttle_position = is_shuttle_in_court(coord, court_coords, net_coords)
+              coordabs = rest_coords[-1]
+              coordabs = (int(coordabs[0]), int(coordabs[1]))
+              shuttle_position = is_shuttle_in_court(coordabs, court_coords, net_coords)
               assign_points(shuttle_position, prev_k_frame.copy())
               scored = True
             last_rest_coord = rest_coords[-1]
@@ -581,7 +584,7 @@ def real_time_detection_and_tracking(frames):
         cv2.putText(frame, f"Player 1: {score[0]}", bottom_left_position, cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 5)
 
 
-        prev_k_frame.append(coord)
+        # prev_k_frame.append(coord)
         frame_count += 1
 
     out.release()
@@ -590,6 +593,21 @@ def real_time_detection_and_tracking(frames):
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)
 
+    if find_black_list:
+        stationary_coords = identify_stationary_objects()
+        print("Stationary coordinates detected:")
+        print(stationary_coords)
+        final = []
+        for cod, freq in stationary_coords:
+            final.append(cod)
+        
+        print(final)
+        global_coord_frequency = {}
+        stationary_coords = []
+        return final
+    
+    global_coord_frequency = {}
+    stationary_coords = []
     return frames, tracking_data
 
 def draw_shuttle_predictions(frames, tracking_data):
