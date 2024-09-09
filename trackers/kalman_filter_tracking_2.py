@@ -286,11 +286,11 @@ print(os.getcwd())
 with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
     data = json.load(f)
 
-court_coord = data["court_info"]
-net_coord = data["net_info"]
+court_coords = data["court_info"]
+net_coords = data["net_info"]
 
-print(f"court_coord = {court_coord},")
-print(f"net_coord = {net_coord},")
+print(f"court_coords = {court_coords},")
+print(f"net_coords = {net_coords},")
 def is_shuttle_in_court(shuttle_coord, court_coords, net_coords):
     """Check if the shuttle is inside the court using cv2.pointPolygonTest."""
     # Convert court coordinates to a numpy array of shape (n, 1, 2) required by cv2

@@ -3,11 +3,63 @@ import sys
 
 sys.path.append('../')
 from utils import measure_distance , get_foot_position
+import json
+
+with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
+    data = json.load(f)
+
+court_coord = data["court_info"]
+net_coord = data["net_info"]
 
 class SpeedAndDistance_Estimator():
     def __init__(self):
         self.frame_window = 5
         self.frame_rate = 60
+
+    def speed_n_distance_doubles(self, detected_players):
+        # To store the total distance traveled by each player
+        total_distance = {}
+
+        number_of_frames = len(detected_players)
+
+        for frame_num in range(0, number_of_frames, self.frame_window):
+            last_frame = min(frame_num + self.frame_window, number_of_frames - 1)
+
+            for player_id in detected_players[frame_num].keys():
+                if player_id not in detected_players[last_frame]:
+                    continue
+
+                elif detected_players[frame_num][player_id]['coordinates'][2] < net_coord[0][0] or detected_players[frame_num][player_id]['coordinates'][2] > net_coord[2][0] or detected_players[frame_num][player_id]['coordinates'][3] < court_coord[0][1] or detected_players[frame_num][player_id]['coordinates'][3] > court_coord[5][1]:
+                    continue
+
+                start_position = detected_players[frame_num][player_id]['coordinates']
+                end_position = detected_players[last_frame][player_id]['coordinates']
+
+                # Calculate the distance covered between the frames
+                distance_covered = measure_distance(start_position, end_position)
+
+                time_elapsed = (last_frame - frame_num)
+
+                if time_elapsed == 0:
+                    continue
+
+                speed_pixels_per_frame = distance_covered / time_elapsed
+
+                if player_id not in total_distance:
+                    total_distance[player_id] = 0
+
+                # Update the total distance covered by the player
+                total_distance[player_id] += distance_covered
+
+                # Update the speed and distance for each frame in the frame window
+                for frame_num_batch in range(frame_num, last_frame + 1):
+                    if player_id not in detected_players[frame_num_batch]:
+                        continue
+
+                    detected_players[frame_num_batch][player_id]['speed'] = speed_pixels_per_frame
+                    detected_players[frame_num_batch][player_id]['distance'] = total_distance[player_id]
+
+        return detected_players
 
     def speed_n_distance(self, detected_players):
         # To store the total distance traveled by each player

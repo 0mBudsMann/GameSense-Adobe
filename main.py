@@ -1,5 +1,12 @@
 from utils import (read_video, write_video)
-from trackers import (PlayerTracker, ShuttleTracker, real_time_detection_and_tracking, draw_shuttle_predictions, interpolate_shuttle_tracking)
+from trackers import (
+    PlayerTracker,
+    ShuttleTracker,
+    Doubles_Tracking,
+    real_time_detection_and_tracking,
+    draw_shuttle_predictions,
+    interpolate_shuttle_tracking
+)
 import argparse
 import cv2
 import copy
@@ -23,32 +30,35 @@ from speed_distance_estimator import SpeedAndDistance_Estimator
 
 def main():
     parser = argparse.ArgumentParser(description="A script for court and player tracking")
+    parser.add_argument("-doubles", action='store_true', help="doubles tracking")
     parser.add_argument("--buffer", action='store_true', help="load data from buffer rather than inferencing again")
-    # parser.add_argument("--video_path", type=str, required=True, help="Path to the input video")
+    parser.add_argument("--video_path", type=str, required=True, help="Path to the input video")
 
     args = parser.parse_args()
 
     read_from_record = args.buffer
+    bool_doubles = args.doubles
     # input_video = args.video_path  # Get video from the user
-    input_video = 'utils/footages/short_shuttle.mp4'
+    input_video = args.video_path
 
     # Read Video
     frames = read_video(input_video)
     output_video = "output.mp4"
 
-    # Inference and Tracking
-    # Players
-    track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
-    detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
-
-    # Interpolate Shuttle Tracking
-    # shuttle_tracking_data = interpolate_shuttle_tracking(shuttle_tracking_data)
-    # print(shuttle_tracking_data)
-
     # Detect speed and distance
     speed_and_distance_estimation = SpeedAndDistance_Estimator()
-    speed_and_distance_estimation.speed_n_distance(detected_players)
-    # speed_and_distance_estimation.speed_n_distance(detected_shuttle)
+
+    # Inference and Tracking
+    # Players
+    if bool_doubles:
+        track_players = Doubles_Tracking("models/player_detection/weights/doubles/yolov8m.pt")
+        detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
+        speed_and_distance_estimation.speed_n_distance_doubles(detected_players)
+    else:
+        track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
+        detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
+        speed_and_distance_estimation.speed_n_distance(detected_players)
+
 
     # Save Player Data
     track_players.save_player_data(detected_players, "result/player_data/player_data.json")
