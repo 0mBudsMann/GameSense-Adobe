@@ -387,6 +387,17 @@ def is_consistently_decreasing(y_coords, window_size=5):
 
     return all(recent_coords[i] > recent_coords[i+1] for i in range(window_size-1))
 
+def is_consistently_increasing(y_coords, window_size=5):
+    """
+    Check if y-coordinates are consistently decreasing over a window of frames.
+    """
+    print(y_coords)
+    if len(y_coords) < window_size:
+        return False
+    recent_coords = list(y_coords)[-window_size:]
+
+    return all(recent_coords[i] < recent_coords[i+1] for i in range(window_size-1))
+
 def real_time_detection_and_tracking(frames):
     global global_coord_frequency, stationary_coords, relay_flag, relay_start_frame
 
@@ -464,10 +475,14 @@ def real_time_detection_and_tracking(frames):
             y_coord_history.append(coord[1])
 
             # Relay start detection
-            if relay_flag == 0 and is_consistently_decreasing(y_coord_history):
+            if relay_flag == 0 and determine_shooter(prev_k_frame.copy())==1 and is_consistently_decreasing(y_coord_history):
                 relay_flag = 1
                 relay_start_frame = frame_count  # Track when the relay starts
-                print(f"Relay start at frame {frame_count}")
+                # print(f"Relay start at frame {frame_count}")
+            elif relay_flag==0 and determine_shooter(prev_k_frame.copy())==2 and is_consistently_increasing(y_coord_history):
+                relay_flag = 1
+                relay_start_frame = frame_count  # Track when the relay starts
+                # print(f"Relay start at frame {frame_count}")
 
             if is_shuttle_in_rest(shuttle_coords_queue, 5):
                 rest_state_counter += 1
