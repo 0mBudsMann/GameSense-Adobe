@@ -81,17 +81,17 @@ The **Badminton Game Analyzer** is a comprehensive software solution designed fo
 3. Run the analysis:
    For Singles match video
    ```bash
-   python main.py --video path_to_video
+   python main.py --video_path path_to_video
    ```
    
     For Doubles match video
     ```bash
-    python main.py -doubles --video path_to_video
+    python main.py -doubles --video_path path_to_video
    ```
    
     For loading data from buffer
     ```bash
-    python main.py --video path_to_video --buffer
+    python main.py --video_path path_to_video --buffer
     ```
    can be used with -doubles
 
