@@ -28,7 +28,7 @@ class NetDetect(object):
 
     def setup_RCNN(self):
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.__net_kpRCNN = torch.load('./models/court_and_net_detection/src/models/weights/net_kpRCNN.pth', device)
+        self.__net_kpRCNN = torch.load('models/court_and_net_detection/src/models/weights/net_kpRCNN.pth', device)
         self.__net_kpRCNN.to(self.device).eval()
 
     def del_RCNN(self):

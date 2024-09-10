@@ -19,8 +19,9 @@ from matplotlib import pyplot as plt
 import torch
 from ultralytics import YOLO
 
-# prompt: mount drive
-
+SINGLES_WIDTH = 5.18
+DOUBLES_WIDTH = 6.1
+VERTICAL_LENGTH = 13.4
 
 
 model = YOLO('models/shuttle_detection/weights/best.pt')
@@ -428,6 +429,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     rest_state_counter = 0
     REST_THRESHOLD = 3  # Number of consecutive frames to consider as "at rest"
 
+    points = {}
+
     for frame in frames:
 
         print(f"Processing frame {frame_count}")
@@ -458,7 +461,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 if not is_close_to_blacklist(coord, black_list, threshold=15):
                     current_coords.append(coord)
 
-                    speed = 0 if lastx is None else np.sqrt((coord[0] - lastx)**2 + (coord[1] - lasty)**2) / (frame_count - lastframeno)
+                    speed = 0 if lastx is None else np.sqrt(((coord[0] - lastx)**2)*(SINGLES_WIDTH / (court_coords[5][0] - court_coords[0][0])) + ((coord[1] - lasty)**2) * (VERTICAL_LENGTH / (court_coords[5][1] - court_coords[0][1]))) / ((frame_count - lastframeno)/ fps)
                     listt[frame_count].append({
                         'x_center': coord[0],
                         'y_center': coord[1],
@@ -583,12 +586,16 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
         # Draw Player 1's score (bottom-left)
         cv2.putText(frame, f"Player 1: {score[0]}", bottom_left_position, cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 5)
 
+        points[f"{frame_count}"] = {
+            'Player 1': score[0],
+            'Player 2': score[1]
+        }
 
         # prev_k_frame.append(coord)
         frame_count += 1
 
-    out.release()
-    cv2.destroyAllWindows()
+    with open('result/scoring/score.json', 'w') as json_file:
+        json.dump(points, json_file, indent=4)
 
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)

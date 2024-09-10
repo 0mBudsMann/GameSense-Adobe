@@ -14,7 +14,17 @@ import argparse
 
 import logging
 import traceback
+import json
 import warnings
+class CustomJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, int):  # Handle integer types
+            return str(obj)
+        # Add logic for other non-standard types
+        return super().default(obj)
+
+
+
 
 # Clear the polyfit RankWarning
 warnings.simplefilter('ignore', np.RankWarning)
@@ -30,17 +40,18 @@ parser.add_argument('--result_path',
                     help='result_path -> str type.')
 parser.add_argument('--force',
                     action='store_true',
-                    default=False,
+                    default=True,
                     help='force -> bool type.')
 
 args = parser.parse_args()
-print(args)
+
 
 folder_path = args.folder_path
 force = args.force
 result_path = args.result_path
 
 for root, dirs, files in os.walk(folder_path):
+    
     for file in files:
         _, ext = os.path.splitext(file)
         if ext.lower() in ['.mp4']:
@@ -65,7 +76,7 @@ for root, dirs, files in os.walk(folder_path):
             height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
             width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
             total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-
+            print("HEYY")
             # Write video information
             video_dict = {
                 "video_name": video_name,
@@ -96,9 +107,13 @@ for root, dirs, files in os.walk(folder_path):
             # Perform court and net detection on the first frame
             court_info, have_court = court_detect.get_court_info(frame)
             net_info, have_net = net_detect.get_net_info(frame)
+            court_lines = court_detect.hori_lines_in_court(frame)
+            
+
 
             if have_court:
                 normal_court_info = court_info
+                
                 begin_frame = 0  # Since we're only processing the first frame
                 next_frame = 1  # Placeholder as there's no further processing
             else:
@@ -123,10 +138,21 @@ for root, dirs, files in os.walk(folder_path):
                 "next_rally_frame": next_frame,
                 "court_info": normal_court_info,
                 "net_info": normal_net_info,
+                "line_info": court_lines
             }
+            import json
+            for key, value in court_dict.items():
+                if isinstance(value, list):
+                    for i in range(len(value)):
+                        if isinstance(value[i], list):
+                            for j in range(len(value[i])):
+                                if isinstance(value[i][j], int):
+                                    value[i][j] = str(value[i][j]) 
+            with open(f"{result_path}/courts/court_kp/{video_name}", 'w') as f:
+                json.dump(court_dict, f, cls=CustomJSONEncoder, indent=4)
 
-            write_json(court_dict, video_name,
-                       f"{result_path}/courts/court_kp", "w")
+            # write_json(court_dict, video_name, f"{result_path}/courts/court_kp", "w")
+
 
             # Release the video capture object after processing the first frame
             video.release()

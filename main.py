@@ -1,4 +1,4 @@
-from utils import (read_video, write_video)
+from utils import (read_video, write_video, read_video_few_frames)
 from trackers import (
     PlayerTracker,
     ShuttleTracker,
@@ -7,6 +7,7 @@ from trackers import (
     draw_shuttle_predictions,
     interpolate_shuttle_tracking
 )
+# from commentary import display_and_generate_commentary
 import argparse
 import cv2
 import copy
@@ -33,7 +34,7 @@ def main():
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
     parser.add_argument("--buffer", action='store_true', help="load data from buffer rather than inferencing again")
     parser.add_argument("--video_path", type=str, required=True, help="Path to the input video")
-    parser.add_argument("--nodrop_path", type=str, required=True, help="Path to the no drop video")
+    # parser.add_argument("--nodrop_path", type=str, required=True, help="Path to the no drop video")
 
     args = parser.parse_args()
 
@@ -41,7 +42,7 @@ def main():
     bool_doubles = args.doubles
     # input_video = args.video_path  # Get video from the user
     input_video = args.video_path
-    nodrop_video = args.nodrop_path
+    # nodrop_video = args.nodrop_path
 
     # Read Video
     frames, video_fps = read_video(input_video)
@@ -154,7 +155,7 @@ def main():
 
     # Draw Boxes
     # ShuttleCock
-    sframes, svideo_fps = read_video(nodrop_video)
+    sframes, svideo_fps = read_video_few_frames(input_video)
     black = real_time_detection_and_tracking(sframes, svideo_fps, find_black_list = 1, black_list = [])
     
     output_frames, tracking_data = real_time_detection_and_tracking(frames, video_fps, find_black_list = 0, black_list = black)
@@ -176,6 +177,8 @@ def main():
     # output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data, rest_coords, listt)
     write_video(output_frames, output_video, video_fps)
 
+    # Display output video and generate commentary
+    # display_and_generate_commentary('output.mp4')
 
 if __name__ == "__main__":
     main()
