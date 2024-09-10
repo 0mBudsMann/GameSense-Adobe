@@ -1,0 +1,4 @@
+# put in this folder
+# not good predictions with this model
+
+best.pt - https://mega.nz/file/mk83CASZ#Fkppo8kL7qflgaZ7p56MCK0nY51lAFIQkI4jWHUJVVg

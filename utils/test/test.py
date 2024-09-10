@@ -117,12 +117,12 @@ for i in ["train","valid","test"]:
 !pip install -q git+https://github.com/THU-MIG/yolov10.git
 
 !mkdir -p {HOME}/weights
-!wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10n.pt
-# !wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10s.pt
-# !wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10m.pt
-# !wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10b.pt
-# !wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10x.pt
-# !wget -P {HOME}/weights -q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10l.pt
+!wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10n.pt
+# !wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10s.pt
+# !wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10m.pt
+# !wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10b.pt
+# !wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10x.pt
+# !wget -P {HOME}/weights-q https://github.com/THU-MIG/yolov10/releases/download/v1.1/yolov10l.pt
 !ls -lh {HOME}/weights
 
 

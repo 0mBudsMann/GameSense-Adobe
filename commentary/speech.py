@@ -17,7 +17,7 @@ def generate_and_play_commentary(commentary_text):
         audio_segment = AudioSegment.from_mp3(audio_buffer)
         play(audio_segment)
 
-def shuttle_detection(video_source):
+def display_and_generate_commentary(video_source):
     cap = cv2.VideoCapture(video_source)
 
     while cap.isOpened():
@@ -44,9 +44,4 @@ def shuttle_detection(video_source):
     cv2.destroyAllWindows()
 
 def detect_shuttle(frame):
-
     return time.time() % 7 < 0.1
-
-if __name__ == "__main__":
-    video_source = "/Users/shubhamgupta/Downloads/output.mp4"
-    shuttle_detection(video_source)

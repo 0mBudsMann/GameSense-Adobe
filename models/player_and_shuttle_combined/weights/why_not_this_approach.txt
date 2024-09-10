@@ -1,0 +1,21 @@
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+    500/500      7.99G     0.6012     0.3241     0.8376         10        640: 100%|██████████| 102/102 [00:14<00:00,  7.21it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 15/15 [00:03<00:00,  3.89it/s]
+                   all       1862       2085      0.867      0.831      0.842      0.595
+
+500 epochs completed in 2.607 hours.
+Optimizer stripped from /home/shubham/Desktop/GameSense-Adobe/runs/detect/train31/weights/last.pt, 6.3MB
+Optimizer stripped from /home/shubham/Desktop/GameSense-Adobe/runs/detect/train31/weights/best.pt, 6.3MB
+
+Validating /home/shubham/Desktop/GameSense-Adobe/runs/detect/train31/weights/best.pt...
+Ultralytics YOLOv8.2.88 🚀 Python-3.10.12 torch-2.4.1+cu121 CUDA:0 (NVIDIA GeForce RTX 4090, 24111MiB)
+Model summary (fused): 168 layers, 3,006,233 parameters, 0 gradients, 8.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 15/15 [00:05<00:00,  2.92it/s]
+                   all       1862       2085      0.867      0.831      0.842      0.597
+               Player1        241        241       0.98      0.996      0.993      0.808
+               Player2        240        240      0.991      0.992      0.995      0.774
+               Shuttle       1604       1604       0.63      0.505      0.537      0.208   <-- bad predictions
+Speed: 0.1ms preprocess, 0.4ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to /home/shubham/Desktop/GameSense-Adobe/runs/detect/train31
+💡 Learn more at https://docs.ultralytics.com/modes/train

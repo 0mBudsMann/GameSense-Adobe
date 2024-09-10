@@ -17,7 +17,7 @@ court_info = np.array(court_info, np.int32)
 # Sort points by y-coordinate first, then x-coordinate
 court_info = sorted(court_info, key=lambda p: (p[1], p[0]))
 # Load the video file
-video_path = './videos/short.mp4'  # Replace with your video path
+video_path = '../../utils/footages/short.mp4'  # Replace with your video path
 cap = cv2.VideoCapture(video_path)
 
 # Read the first frame from the video

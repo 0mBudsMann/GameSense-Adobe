@@ -13,3 +13,4 @@ trackers/garbage/
 output.mp4
 models/player_detection/weights/doubles/
 trackers/tests/output.mp4
+models/player_and_shuttle_combined/weights/best.pt
