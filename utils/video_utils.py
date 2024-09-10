@@ -18,7 +18,7 @@ def read_video_few_frames(video_path):
     fps = cap.get(cv2.CAP_PROP_FPS)
 
     frames = []
-    for i in range(fps * 5):
+    for i in range(int(fps * 5)):
         ret, frame = cap.read()
         if not ret:
             break
