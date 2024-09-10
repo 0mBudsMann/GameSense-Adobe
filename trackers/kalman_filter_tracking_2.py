@@ -588,9 +588,6 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
         # prev_k_frame.append(coord)
         frame_count += 1
 
-    out.release()
-    cv2.destroyAllWindows()
-
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)
 
