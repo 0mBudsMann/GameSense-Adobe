@@ -19,8 +19,9 @@ from matplotlib import pyplot as plt
 import torch
 from ultralytics import YOLO
 
-# prompt: mount drive
-
+SINGLES_WIDTH = 5.18
+DOUBLES_WIDTH = 6.1
+VERTICAL_LENGTH = 13.4
 
 
 model = YOLO('models/shuttle_detection/weights/best.pt')
@@ -458,7 +459,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 if not is_close_to_blacklist(coord, black_list, threshold=15):
                     current_coords.append(coord)
 
-                    speed = 0 if lastx is None else np.sqrt((coord[0] - lastx)**2 + (coord[1] - lasty)**2) / (frame_count - lastframeno)
+                    speed = 0 if lastx is None else np.sqrt(((coord[0] - lastx)**2)*(SINGLES_WIDTH / court_coords[5][0] - court_coords[0][0]) + ((coord[1] - lasty)**2) * (VERTICAL_LENGTH / court_coords[5][1] - court_coords[0][1])) / ((frame_count - lastframeno)/ fps)
                     listt[frame_count].append({
                         'x_center': coord[0],
                         'y_center': coord[1],
