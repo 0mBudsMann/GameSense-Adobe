@@ -8,19 +8,31 @@ The **Badminton Game Analyzer** utilizes several user-defined functions and clas
 
 - **`PlayerTracker`**: Handles player detection and tracking in singles matches. This class identifies players, tracks their movements, and captures data on their positions and actions throughout the match.
 
+    For more information on the `PlayerTracker`, refer to the [PlayerTracker](trackers/README.md/#playertracker)
+
 - **`Doubles_Tracking`**: Similar to `PlayerTracker`, but tailored for doubles matches. It manages the tracking of all four players, providing insights into their movements, positions, and interactions on the court.
+
+    For more information on the `Doubles_Tracking`, refer to the [Doubles_Tracking](trackers/README.md/#doubles_tracking)
 
 - **`real_time_detection_and_tracking`**: Manages the detection and tracking of the shuttlecock, updates the match score, tracks penalties, and generates real-time commentary. It processes video frames in real-time to accurately annotate shuttlecock positions, match events, and provide live commentary on the game's progress.
 
-- **`interpolate_shuttle_tracking`**: Improves the visual representation of the shuttlecock's movement by smoothing its path. This is crucial for accurate tracking, especially when the shuttlecock moves quickly or becomes difficult to detect due to its small size.
+    For more information on the `real_time_detection_and_tracking`, refer to the [real_time_detection_and_tracking](trackers/README.md/#real_time_detection_and_tracking)
 
 - **`CourtDetect`**: Detects and visualizes court boundaries. This class processes video frames to identify the edges and boundaries of the court, which are essential for accurate game analysis.
 
+    For more information on the `CourtDetect`, refer to the [CourtDetect](models/court_and_net_detection/src/models/README.md/#courtdetect)
+
 - **`NetDetect`**: Identifies the net within the video frames. It works in conjunction with `CourtDetect` to provide a complete view of the court setup.
+
+    For more information on the `NetDetect`, refer to the [NetDetect](models/court_and_net_detection/src/models/README.md/#netdetect)
 
 - **`draw_court_and_net_on_frames`**: Annotates the frames with detected court boundaries and the net. This function ensures that the visual representation of the court and net is clear and accurate in the final output.
 
+    For more information on the `draw_court_and_net_on_frames`, refer to the [draw_court_and_net_on_frames](models/court_and_net_detection/src/models/README.md/#draw_court_and_net_on_frames)
+
 - **`SpeedAndDistance_Estimator`**: Calculates and annotates the speed and distance traveled by players. This class provides valuable metrics on player performance and movement throughout the game.
+
+    For more information on the `SpeedAndDistance_Estimator`, refer to the [SpeedAndDistance_Estimator](speed_distance_estimator\README.md/#speedanddistance_estimator)
 
 ## Features
 
