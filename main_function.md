@@ -32,7 +32,7 @@ The **Badminton Game Analyzer** utilizes several user-defined functions and clas
 
 - **`SpeedAndDistance_Estimator`**: Calculates and annotates the speed and distance traveled by players. This class provides valuable metrics on player performance and movement throughout the game.
 
-    For more information on the `SpeedAndDistance_Estimator`, refer to the [SpeedAndDistance_Estimator](speed_distance_estimator\README.md/#speedanddistance_estimator)
+    For more information on the `SpeedAndDistance_Estimator`, refer to the [SpeedAndDistance_Estimator](speed_distance_estimator/README.md/#speedanddistance_estimator)
 
 ## Features
 
