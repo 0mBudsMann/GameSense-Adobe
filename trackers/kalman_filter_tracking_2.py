@@ -429,6 +429,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     rest_state_counter = 0
     REST_THRESHOLD = 3  # Number of consecutive frames to consider as "at rest"
 
+    points = {}
+
     for frame in frames:
 
         print(f"Processing frame {frame_count}")
@@ -584,9 +586,16 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
         # Draw Player 1's score (bottom-left)
         cv2.putText(frame, f"Player 1: {score[0]}", bottom_left_position, cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 5)
 
+        points[f"{frame_count}"] = {
+            'Player 1': score[0],
+            'Player 2': score[1]
+        }
 
         # prev_k_frame.append(coord)
         frame_count += 1
+
+    with open('result/scoring/score.json', 'w') as json_file:
+        json.dump(points, json_file, indent=4)
 
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)

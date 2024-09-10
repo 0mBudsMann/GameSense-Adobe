@@ -5,9 +5,14 @@ from gtts import gTTS
 import io
 from pydub import AudioSegment
 from pydub.playback import play
+import json
 
 frame_lock = threading.Lock()
 current_frame = None
+
+with open('result/scoring/score.json', 'r') as f:
+    data = json.load(f)
+
 
 def generate_and_play_commentary(commentary_text):
     tts = gTTS(text=commentary_text, lang='en')

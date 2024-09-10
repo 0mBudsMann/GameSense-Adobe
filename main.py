@@ -7,6 +7,7 @@ from trackers import (
     draw_shuttle_predictions,
     interpolate_shuttle_tracking
 )
+# from commentary import display_and_generate_commentary
 import argparse
 import cv2
 import copy
@@ -176,6 +177,8 @@ def main():
     # output_frames = draw_shuttle_predictions(output_frames, shuttle_tracking_data, rest_coords, listt)
     write_video(output_frames, output_video, video_fps)
 
+    # Display output video and generate commentary
+    # display_and_generate_commentary('output.mp4')
 
 if __name__ == "__main__":
     main()
