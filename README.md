@@ -3,6 +3,38 @@
 ## Introduction
 The **Badminton Game Analyzer** is a comprehensive software solution designed for real-time analysis of badminton games using cutting-edge computer vision algorithms and machine learning techniques. The system focuses on accurately detecting players, court boundaries, and the net, while also tracking the shuttlecock's movement to provide a detailed analysis of gameplay. In addition, it automates scoring based on player actions and game events, leveraging Region-based Convolutional Neural Networks (RCNN) and a custom-trained YOLOv8m model.
 
+## Model Weights Download Instructions
+
+Due to the large size of the model weights files, we have hosted them on cloud services. Please follow the instructions below to download and place the weights in the correct directories.
+
+### 1. Weights for Court and Net Detection
+
+Download the weights files from the following link: [Court and Net Detection Weights](https://mega.nz/folder/upVAFDzD#McZgcaED3fe7XTtxdkvxjA)
+
+**Instructions:**
+
+1. Download `court_kpRCNN.pth` and `net_kpRCNN.pth`.
+2. Place them in the directory `models/court_and_net_detection/src/models/weights`.
+
+### 2. Weights for Single Player Detection
+
+Download the weights file from the following link: [Single Player Detection Weight](https://mega.nz/file/SgNFzSJK#2cWSOMqG3VM5beTuapqiSLDiIM5Q7ZgoyB34SqKtvFA) in `models/player_detection/weights/only_player`
+
+### 3. Weights for Doubles Player Detection
+
+```bash
+   cd models/player_detection/weights/doubles
+
+   wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt
+```
+
+### 4. Weights for Shuttle Detection
+
+- Download the weights file from the following link: [Shuttle Detection Weight](https://drive.google.com/file/d/1wT6zbOz8UsEG0yizwUnJ3kLedQdIhfZg/view)
+
+- Place `best.pt` in the directory `models/shuttle_detection/weights`.
+
+
 ## Features
 - **Player Detection**: Utilizes advanced object detection models to track player positions in real-time.
 - **Court and Net Detection**: Accurately identifies court boundaries and the net to define gameplay areas.
