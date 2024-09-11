@@ -415,7 +415,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     scored = False
     coord_counter = Counter()
     frame_count = 0
-    shuttle_coords_queue = deque(maxlen=5)
+    shuttle_coords_queue = deque(maxlen=15)
     prev_k_frame = deque(maxlen=10)
     black_list = black_list
     # black_list = [(1894.7992769129137, 303.175568075741), (2333.0154160860784, 1482.0646242436044), (1008.7924158432904, 313.01178965849033)]
