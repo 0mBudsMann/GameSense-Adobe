@@ -28,7 +28,7 @@
   Kalman filtering is used to smooth out the shuttlecock's trajectory and reduce false positives. It predicts the shuttlecock's position in the next frame, which helps in filtering out inaccurate detections.
 
 - **Additional False Positive Filtering**  
-  To further address false positives, we randomly selected frames from the video and ran inference to find coordinates with high shuttlecock detection frequency. These high-frequency coordinates were added to a blacklist, identifying them as either stationary shuttlecocks or false positives.
+  To further address false positives, we randomly selected frames from the video and ran inference to find coordinates with high shuttlecock detection frequency. These high-frequency coordinates implies shuttle is found at these points in very large numbers of frames which is practically not possible, so, were added to a blacklist, identifying them as either stationary shuttlecocks or false positives.
 
 - **Rest State Detection**  
   We developed an algorithm to determine if the shuttlecock is at rest. For a sequence of 15 frames where the shuttlecock is detected, if the maximum distance between any two detections is below a certain threshold, we conclude the shuttlecock is stationary.
