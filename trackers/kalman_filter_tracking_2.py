@@ -283,15 +283,15 @@ def is_shuttle_in_rest(shuttle_coords_queue, number_of_past_frames, threshold=5)
         return True  # Shuttle is at rest
     else:
         return False  # Shuttle is moving
-print(os.getcwd())
+# print(os.getcwd())
 with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
     data = json.load(f)
 
 court_coords = data["court_info"]
 net_coords = data["net_info"]
 
-print(f"court_coords = {court_coords},")
-print(f"net_coords = {net_coords},")
+# print(f"court_coords = {court_coords},")
+# print(f"net_coords = {net_coords},")
 def is_shuttle_in_court(shuttle_coord, court_coords, net_coords):
     """Check if the shuttle is inside the court using cv2.pointPolygonTest."""
     # Convert court coordinates to a numpy array of shape (n, 1, 2) required by cv2
@@ -381,7 +381,7 @@ def is_consistently_decreasing(y_coords, window_size=5):
     """
     Check if y-coordinates are consistently decreasing over a window of frames.
     """
-    print(y_coords)
+    # print(y_coords)
     if len(y_coords) < window_size:
         return False
     recent_coords = list(y_coords)[-window_size:]
@@ -392,7 +392,7 @@ def is_consistently_increasing(y_coords, window_size=5):
     """
     Check if y-coordinates are consistently decreasing over a window of frames.
     """
-    print(y_coords)
+    # print(y_coords)
     if len(y_coords) < window_size:
         return False
     recent_coords = list(y_coords)[-window_size:]
@@ -400,8 +400,8 @@ def is_consistently_increasing(y_coords, window_size=5):
     return all(recent_coords[i] < recent_coords[i+1] for i in range(window_size-1))
 
 def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
-    global global_coord_frequency, stationary_coords, relay_flag, relay_start_frame
-
+    global global_coord_frequency, stationary_coords, relay_flag, relay_start_frame, score
+    print(f"function call: {score}")
     print(f"FPS: {fps}")
 
     # Initialize Kalman filter (assuming one object for now)
@@ -487,7 +487,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 relay_flag = 1
                 relay_start_frame = frame_count  # Track when the relay starts
                 # print(f"Relay start at frame {frame_count}")
-            print(f"shuttle_coords_queue: {shuttle_coords_queue}")
+            # print(f"shuttle_coords_queue: {shuttle_coords_queue}")
             if is_shuttle_in_rest(shuttle_coords_queue, 5):
                 rest_state_counter += 1
                 if rest_state_counter >= REST_THRESHOLD:
@@ -558,7 +558,9 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
               coordabs = rest_coords[-1]
               coordabs = (int(coordabs[0]), int(coordabs[1]))
               shuttle_position = is_shuttle_in_court(coordabs, court_coords, net_coords)
+              print(f"Score before assigning: {score}")
               assign_points(shuttle_position, prev_k_frame.copy())
+              print(f"Score after assigning: {score}")
               scored = True
             last_rest_coord = rest_coords[-1]
             text_position = (int(last_rest_coord[0]), int(last_rest_coord[1]) - 30)
@@ -599,16 +601,17 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
 
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)
-
+        
+    score = [0,0]
     if find_black_list:
         stationary_coords = identify_stationary_objects()
-        print("Stationary coordinates detected:")
-        print(stationary_coords)
+        # print("Stationary coordinates detected:")
+        # print(stationary_coords)
         final = []
         for cod, freq in stationary_coords:
             final.append(cod)
         
-        print(final)
+        print(f"black_listed points: {final}")
         global_coord_frequency = {}
         stationary_coords = []
         return final
@@ -637,8 +640,8 @@ def draw_shuttle_predictions_frame(frame, tracking_data, i):
         y = tracking_data[i]['y_center']
         speed = tracking_data[i]['smoothened_speed']
 
-        print("lol")
-        print(x, y)
+        # print("lol")
+        # print(x, y)
         cv2.rectangle(frame, (int(x) - dummy, int(y) - dummy),
                       (int(x) + dummy, int(y) + dummy), (0, 255, 0), 2)
 
@@ -658,7 +661,7 @@ def interpolate_shuttle_tracking(tracking_data):
         for frame_data in tracking_data.values()
     ]
 
-    print(len(shuttle_coordinates_frames))
+    # print(len(shuttle_coordinates_frames))
 
     # Convert the coordinates into a pandas DataFrame
     df_shuttle_positions = pd.DataFrame(shuttle_coordinates_frames, columns=['x_center', 'y_center', 'smoothened_speed'])
