@@ -644,7 +644,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 net_frame = frame_count
                 
         if net_ke_pas:
-            text_position[1] += 90
+            text_position = (text_position[0], text_position[1] + 90)
             cv2.putText(frame, 'Shuttle hit the net', text_position, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2)
             if frame_count == net_frame + 10:
                 net_ke_pas = False
