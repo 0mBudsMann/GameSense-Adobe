@@ -83,7 +83,7 @@ class Doubles_Tracking:
 
                     cv2.rectangle(frame, (x1, y1), (x2, y2), box_color, box_thickness)
 
-                    text = f"Team 1"
+                    text = f"Team 2"
                     text_size, _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_thickness)
                     text_w, text_h = text_size
                     cv2.rectangle(frame, (x1, y1 - text_h - 10), (x1 + text_w, y1), box_color, cv2.FILLED)
@@ -99,7 +99,7 @@ class Doubles_Tracking:
 
                     cv2.rectangle(frame, (x1, y1), (x2, y2), box_color, box_thickness)
 
-                    text = f"Team 2"
+                    text = f"Team 1"
                     text_size, _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_thickness)
                     text_w, text_h = text_size
                     cv2.rectangle(frame, (x1, y1 - text_h - 10), (x1 + text_w, y1), box_color, cv2.FILLED)
