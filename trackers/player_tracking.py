@@ -43,15 +43,20 @@ class PlayerTracker:
 
         player_dict = {}
 
-        for box in results.boxes:
-            track_id = int(box.id.tolist()[0])
-            result = box.xyxy.tolist()[0]
-            object_class_id = box.cls.tolist()[0]
+        if results.boxes is None:
+            return player_dict
 
-            player_dict[track_id] = {
-                'coordinates': result,
-                'class_id': object_class_id
-            }
+        for box in results.boxes:
+            if box.id is None:
+
+                track_id = int(box.id.tolist()[0])
+                result = box.xyxy.tolist()[0]
+                object_class_id = box.cls.tolist()[0]
+
+                player_dict[track_id] = {
+                    'coordinates': result,
+                    'class_id': object_class_id
+                }
 
         return player_dict
 
