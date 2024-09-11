@@ -502,7 +502,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     points = {}
 
     for frame in frames:
-        if scored and relay_start_frame==None:
+        if scored and relay_flag:
             scored = False
 
         print(f"Processing frame {frame_count}")
