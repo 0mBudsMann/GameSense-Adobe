@@ -1,6 +1,7 @@
 # GameSense-Adobe
 
-[evaluators' documentation](evaluators'%20docs/README.md) contain brief about what we have done for evaluation purposes.
+**[evaluators' documentation](evaluators'%20docs/README.md) contains a brief of what all we have done for evaluation purposes. Kindly refer to it**.
+
 ## Accuracy
 
 We have attached a [MEGA link](#) containing different test cases and their corresponding outputs. Please note that for the **Adobe test case**, we provided two outputs. The original test case had low-quality video, which led to net detection failure. To address this, we recorded the same video from YouTube in higher quality. As you can see in the second output, net detection works flawlessly in the better-quality video.
