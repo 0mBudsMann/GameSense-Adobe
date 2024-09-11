@@ -2,15 +2,14 @@ utils/footages/
 .DS_Store
 .idea/
 .vscode/
-models/player_detection/yolov8m-pose.pt
-models/shuttle_detection/weights/best.pt
-models/shuttle_detection/weights/last.pt
+# models/player_detection/yolov8m-pose.pt
+# models/shuttle_detection/weights/best.pt
+# models/shuttle_detection/weights/last.pt
 output.mp4
 models/court_and_net_detection/src/models/weights/
 models/court_and_net_detection/videos/
 venv/
 trackers/garbage/
 output.mp4
-models/player_detection/weights/doubles/
 trackers/tests/output.mp4
 models/player_and_shuttle_combined/weights/best.pt
