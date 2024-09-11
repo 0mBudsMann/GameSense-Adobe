@@ -85,7 +85,7 @@ class PlayerTracker:
 
                 else:
 
-                    box_color = (255, 0, 255)
+                    box_color = (255, 0, 0)
                     text_color = (36, 255, 12)
                     box_thickness = 3
                     text_thickness = 3
