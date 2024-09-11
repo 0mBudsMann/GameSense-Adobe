@@ -485,7 +485,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     scored = False
     coord_counter = Counter()
     frame_count = 0
-    shuttle_coords_queue = deque(maxlen=15)
+    shuttle_coords_queue = deque(maxlen=10)
     prev_k_frame = deque(maxlen=10)
     black_list = black_list
     # black_list = [(1894.7992769129137, 303.175568075741), (2333.0154160860784, 1482.0646242436044), (1008.7924158432904, 313.01178965849033)]
@@ -500,7 +500,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     REST_THRESHOLD = 3  # Number of consecutive frames to consider as "at rest"
 
     points = {}
-
+    net_ke_pas = False
     for frame in frames:
         if scored and relay_flag:
             scored = False
@@ -560,7 +560,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 relay_start_frame = frame_count  # Track when the relay starts
                 # print(f"Relay start at frame {frame_count}")
             # print(f"shuttle_coords_queue: {shuttle_coords_queue}")
-            if is_shuttle_in_rest(shuttle_coords_queue, 5):
+            if is_shuttle_in_rest(shuttle_coords_queue, 10):
                 rest_state_counter += 1
                 if rest_state_counter >= REST_THRESHOLD:
                     is_at_rest = True
@@ -625,7 +625,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
 
         # Draw rest state indicator
-        net_ke_pas = False
+        
         if is_at_rest:
             coordabs = rest_coords[-1]
             coordabs = (float(coordabs[0]), float(coordabs[1]))
@@ -637,8 +637,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
               scored = True
             last_rest_coord = rest_coords[-1]
             text_position = (int(last_rest_coord[0]), int(last_rest_coord[1]) - 30)
-            cv2.putText(frame, 'Shuttle is at rest', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 4)
-            cv2.putText(frame, 'Shuttle is at rest', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+            cv2.putText(frame, f'Shuttle is at rest: {shuttle_position}', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 4)
+            cv2.putText(frame, f'Shuttle is at rest: {shuttle_position}', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
             if check_shuttle_in_net_rectangle(coordabs, court_coords[2], court_coords[3], above=30, below=50):
                 net_ke_pas = True
                 net_frame = frame_count
@@ -646,7 +646,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
         if net_ke_pas:
             text_position = (text_position[0], text_position[1] + 90)
             cv2.putText(frame, 'Shuttle hit the net net net net net', text_position, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2)
-            if frame_count == (net_frame + 20):
+            if frame_count >= (net_frame + 20):
                 net_ke_pas = False
         
         # Calculate relay time
