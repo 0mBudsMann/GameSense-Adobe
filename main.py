@@ -34,20 +34,21 @@ class CustomJSONEncoder(json.JSONEncoder):
             return str(obj)
         # Add logic for other non-standard types
         return super().default(obj)
-def convert_to_number(item):
-    if isinstance(item, str):
+def convert_to_number(obj):
+    if isinstance(obj, dict):
+        return {k: convert_to_number(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_to_number(item) for item in obj]
+    elif isinstance(obj, str):
         try:
-            return int(item)
+            return int(obj)
         except ValueError:
             try:
-                return float(item)
+                return float(obj)
             except ValueError:
-                return item
-    elif isinstance(item, list):
-        return [convert_to_number(i) for i in item]
-    elif isinstance(item, dict):
-        return {k: convert_to_number(v) for k, v in item.items()}
-    return item
+                return obj
+    else:
+        return obj
 def main():
     parser = argparse.ArgumentParser(description="A script for court and player tracking")
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
@@ -175,13 +176,7 @@ def main():
     }
     print(court_dict)
     import json
-    for key, value in court_dict.items():
-        if isinstance(value, list):
-            for i in range(len(value)):
-                if isinstance(value[i], list):
-                    for j in range(len(value[i])):
-                        if isinstance(value[i][j], int):
-                            value[i][j] = str(value[i][j]) 
+    
     with open(f"{result_path}/courts/court_kp/coordinates.json", 'w') as f:
         json.dump(court_dict, f, cls=CustomJSONEncoder, indent=4)
  
@@ -220,8 +215,7 @@ def main():
     write_video(output_frames, output_video, video_fps)
 
     # Display output video and generate commentary
-    if bool_speech:
-        display_and_generate_commentary('output.mp4')
+    
 
 if __name__ == "__main__":
     main()
