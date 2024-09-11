@@ -3,6 +3,7 @@
 ## Introduction
 The **Badminton Game Analyzer** is a comprehensive software solution designed for real-time analysis of badminton games using cutting-edge computer vision algorithms and machine learning techniques. The system focuses on accurately detecting players, court boundaries, and the net, while also tracking the shuttlecock's movement to provide a detailed analysis of gameplay. In addition, it automates scoring based on player actions and game events, leveraging Region-based Convolutional Neural Networks (RCNN) and a custom-trained YOLOv8m model.
 
+## For understanding working and flow of our model read [main_function.md](main_function.md)
 ## Model Weights Download Instructions
 
 Due to the large size of the model weights files, we have hosted them on cloud services. Please follow the instructions below to download and place the weights in the correct directories.
@@ -39,7 +40,7 @@ Download the weights file from the following link: [Single Player Detection Weig
 - **Player Detection**: Utilizes advanced object detection models to track player positions in real-time.
 - **Court and Net Detection**: Accurately identifies court boundaries and the net to define gameplay areas.
 - **Shuttle Analysis**: Tracks shuttlecock trajectory, speed, and placement to provide insights into gameplay strategy.
-- **Automated Scoring**: Automatically updates scores based on real-time events such as shuttle hits and misses, using a custom RCNN model.
+- **Automated Scoring**: Automatically updates scores based on real-time events such as shuttle hits and misses.
 - **Real-time Tracking**: Implements a YOLOv8m-based detection pipeline optimized for detecting fast-moving objects like the shuttlecock.
 - **Custom-trained Models**: Both RCNN and YOLOv8m models are custom-trained to enhance the precision of detection specific to badminton gameplay.
 - **Speed and Distance Estimation**: Estimates shuttlecock speed and distance traveled to analyze player performance and game dynamics.
