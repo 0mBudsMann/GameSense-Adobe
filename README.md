@@ -1,6 +1,12 @@
 # GameSense-Adobe
 
-[evaluator's docs](evaluators'%20docs/README.md) contain brief about what we have done for evaluation purpose and limitations.
+[evaluators' documentation](evaluators'%20docs/README.md) contain brief about what we have done for evaluation purposes.
+## Accuracy
+
+We have attached a [MEGA link](#) containing different test cases and their corresponding outputs. Please note that for the **Adobe test case**, we provided two outputs. The original test case had low-quality video, which led to net detection failure. To address this, we recorded the same video from YouTube in higher quality. As you can see in the second output, net detection works flawlessly in the better-quality video.
+
+This demonstrates the importance of video quality in the accuracy of our system, but also shows how our model performs robustly under optimal conditions.
+
 ## Introduction
 The **Badminton Game Analyzer** is a comprehensive software solution designed for real-time analysis of badminton games using cutting-edge computer vision algorithms and machine learning techniques. The system focuses on accurately detecting players, court boundaries, and the net, while also tracking the shuttlecock's movement to provide a detailed analysis of gameplay. In addition, it automates scoring based on player actions and game events, leveraging Region-based Convolutional Neural Networks (RCNN) and a custom-trained YOLOv8m model.
 
