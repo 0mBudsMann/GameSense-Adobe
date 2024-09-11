@@ -80,3 +80,12 @@
   
   The relay time stops when the shuttlecock comes to rest. We record the number of relays and the duration of each relay period to provide detailed insights into the game’s dynamics.
 
+# 5) REAL-TIME COMMENTARY GENERATION
+
+- **Commentary Generation**  
+  As any player scores a point, the system sends a request to groq(a cloud-based AI using llama3-8b-8192) to generate real-time commentary. The commentary is based on the points scored. This feature enhances the user experience by providing live updates and insights into the game.
+
+- **Speech Output**
+
+  Now the generated commentary is converted to speech using Google Text-to-Speech (gtts) and played using the playsound library. This feature adds an interactive element to the game analysis, making it more engaging for users.
+

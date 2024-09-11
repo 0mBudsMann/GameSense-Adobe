@@ -88,6 +88,10 @@ Download the weights file from the following link: [Single Player Detection Weig
     |-- kalman_filter_tracker.py
     |-- kalman_filter_tracker_2.py (contains all the rules for the game and the kalman filter for shuttle tracking (Implemented))
 |
+|-- commentary/
+    |-- __init__.py
+    |-- groq_config.py (config file for sending a prompt request to groq using llama3-8b-8192 for generating commentary)
+    |-- speech.py (contains all the functions for text to speech conversion using gtts and playsound)
 |-- Trash/ (code no longer in use)
 |      
 |-- utils/
@@ -114,19 +118,23 @@ Download the weights file from the following link: [Single Player Detection Weig
 3. Run the analysis:
    For Singles match video
    ```bash
-   python main.py --video_path path_to_video
+   python3 main.py --video_path path_to_video
    ```
    
     For Doubles match video
     ```bash
-    python main.py -doubles --video_path path_to_video
+    python3 main.py -doubles --video_path path_to_video
    ```
    
     For loading data from buffer
     ```bash
-    python main.py --video_path path_to_video --buffer
+    python3 main.py --video_path path_to_video --buffer
     ```
    can be used with -doubles
+4. For displaying output and generating realtime Speech/Commentary for the video
+   ```bash
+   python3 main.py --video_path path_to_video -speech
+   ```
 
 ## Model Training
 1. Player Detection

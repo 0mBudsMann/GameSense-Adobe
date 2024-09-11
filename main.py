@@ -7,7 +7,7 @@ from trackers import (
     draw_shuttle_predictions,
     interpolate_shuttle_tracking
 )
-# from commentary import display_and_generate_commentary
+from commentary import display_and_generate_commentary
 import argparse
 import cv2
 import copy
@@ -28,12 +28,15 @@ import warnings
 import json
 from speed_distance_estimator import SpeedAndDistance_Estimator
 
+
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, int):  # Handle integer types
             return str(obj)
         # Add logic for other non-standard types
         return super().default(obj)
+
+
 def convert_to_number(obj):
     if isinstance(obj, dict):
         return {k: convert_to_number(v) for k, v in obj.items()}
@@ -49,6 +52,8 @@ def convert_to_number(obj):
                 return obj
     else:
         return obj
+
+
 def main():
     parser = argparse.ArgumentParser(description="A script for court and player tracking")
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
@@ -59,7 +64,7 @@ def main():
 
     args = parser.parse_args()
 
-    read_from_record = False
+    read_from_record = args.buffer
     bool_doubles = args.doubles
     # input_video = args.video_path  # Get video from the user
     input_video = args.video_path
@@ -70,32 +75,12 @@ def main():
     frames, video_fps = read_video(input_video)
     output_video = "output.mp4"
 
-    # Detect speed and distance
-    speed_and_distance_estimation = SpeedAndDistance_Estimator()
-
-    # Inference and Tracking
-    # Players
-    if bool_doubles:
-        track_players = Doubles_Tracking("models/player_detection/weights/doubles/yolov8m.pt")
-        detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
-        speed_and_distance_estimation.speed_n_distance_doubles(detected_players)
-    else:
-        track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
-        detected_players = track_players.detect_frames(frames, read_from_record, record_path="record/player_detections.pkl")
-        speed_and_distance_estimation.speed_n_distance(detected_players)
-
-
-    # Save Player Data
-    track_players.save_player_data(detected_players, "result/player_data/player_data.json")
-
     # Court and Net Detection
     # Clear the polyfit RankWarning
     warnings.simplefilter('ignore', np.RankWarning)
 
     video_name = os.path.basename(input_video).split('.')[0]
     result_path = "result/court_and_net/"
-
-    
 
     full_video_path = os.path.join(f"{result_path}/videos", video_name)
     if not os.path.exists(full_video_path):
@@ -118,7 +103,7 @@ def main():
         "width": width,
         "total_frames": total_frames
     }
-    
+
     write_json(video_dict, video_name, full_video_path)
 
     # Initialize detection classes
@@ -136,18 +121,15 @@ def main():
     if not ret:
         print("Error: Could not read the first frame.")
         video.release()
-        
 
     # Perform court and net detection on the first frame
     court_info, have_court = court_detect.get_court_info(frame)
     net_info, have_net = net_detect.get_net_info(frame)
     court_lines = court_detect.hori_lines_in_court(frame)
-    
-
 
     if have_court:
         normal_court_info = court_info
-        
+
         begin_frame = 0  # Since we're only processing the first frame
         next_frame = 1  # Placeholder as there's no further processing
     else:
@@ -176,30 +158,48 @@ def main():
     }
     print(court_dict)
     import json
-    
+
     with open(f"{result_path}/courts/court_kp/coordinates.json", 'w') as f:
         json.dump(court_dict, f, cls=CustomJSONEncoder, indent=4)
- 
+
     with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
         data = json.load(f)
         data = convert_to_number(data)
 
     # write_json(court_dict, video_name, f"{result_path}/courts/court_kp", "w")
 
-
     # Release the video capture object after processing the first frame
     video.release()
+
+    # Detect speed and distance
+    speed_and_distance_estimation = SpeedAndDistance_Estimator()
+
+    # Inference and Tracking
+    # Players
+    if bool_doubles:
+        track_players = Doubles_Tracking("models/player_detection/weights/doubles/yolov8m.pt")
+        detected_players = track_players.detect_frames(frames, read_from_record,
+                                                       record_path="record/player_detections.pkl")
+        speed_and_distance_estimation.speed_n_distance_doubles(detected_players)
+    else:
+        track_players = PlayerTracker("models/player_detection/weights/only_player/best.pt")
+        detected_players = track_players.detect_frames(frames, read_from_record,
+                                                       record_path="record/player_detections.pkl")
+        speed_and_distance_estimation.speed_n_distance(detected_players)
+
+    # Save Player Data
+    track_players.save_player_data(detected_players, "result/player_data/player_data.json")
 
     # Draw Boxes
     # ShuttleCock
     sframes, svideo_fps = read_video_few_frames(input_video)
-    black = real_time_detection_and_tracking(sframes, svideo_fps, find_black_list = 1, black_list = [])
-    
-    output_frames, tracking_data = real_time_detection_and_tracking(frames, video_fps, find_black_list = 0, black_list = black)
+    black = real_time_detection_and_tracking(sframes, svideo_fps, find_black_list=1, black_list=[])
+
+    output_frames, tracking_data = real_time_detection_and_tracking(frames, video_fps, find_black_list=0,
+                                                                    black_list=black)
 
     # Interpolation
     tracking_data = interpolate_shuttle_tracking(tracking_data)
-
 
     output_frames = draw_shuttle_predictions(output_frames, tracking_data)
 
@@ -215,7 +215,8 @@ def main():
     write_video(output_frames, output_video, video_fps)
 
     # Display output video and generate commentary
-    
+    if bool_speech:
+        display_and_generate_commentary(output_video, input_video, "result/player_data/player_data.json")
 
 if __name__ == "__main__":
     main()

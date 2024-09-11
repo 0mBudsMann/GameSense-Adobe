@@ -43,6 +43,7 @@ You can run the Badminton Game Analyzer from the command line with the following
 - `--video_path`: Path to the input video (required).
 - `-doubles`: Use this flag if you want to enable doubles tracking (optional).
 - `--buffer`: Load data from buffer rather than performing inference again (optional).
+- `-speech`: Enable ai generated commentary and speech output (optional) (download ffmpeg before running this command).
 
 ### How It Works
 

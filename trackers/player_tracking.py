@@ -43,12 +43,8 @@ class PlayerTracker:
 
         player_dict = {}
 
-        if results.boxes is None:
-            return player_dict
-
         for box in results.boxes:
-            if box.id is None:
-
+            if box is not None:
                 track_id = int(box.id.tolist()[0])
                 result = box.xyxy.tolist()[0]
                 object_class_id = box.cls.tolist()[0]
