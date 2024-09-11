@@ -34,6 +34,10 @@ The **Badminton Game Analyzer** utilizes several user-defined functions and clas
 
     For more information on the `SpeedAndDistance_Estimator`, refer to the [SpeedAndDistance_Estimator](speed_distance_estimator/README.md/#speedanddistance_estimator)
 
+- **`display_and_generate_commentary`**: Generates and adds realtime commentary on occurance of events like scoring points, penalties, shuttle hitting net etc.
+
+  For more information on the `display_and_generate_commentary`, refer to the [display_and_generate_commentary](commentary/README.md)
+  
 ## Getting Started
 
 ### Usage
@@ -66,3 +70,5 @@ You can run the Badminton Game Analyzer from the command line with the following
 7. **Interpolation**: The shuttlecock's tracking path is smoothed using `interpolate_shuttle_tracking` to provide a more visually accurate representation.
 
 8. **Output Video**: All annotated frames are compiled into a final video with the same FPS as the input.
+
+9. **Real-time Commentary**: Already generated commentary using threading, are now added to video at respective timestamp.
