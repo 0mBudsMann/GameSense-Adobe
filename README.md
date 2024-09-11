@@ -3,6 +3,7 @@
 ## Introduction
 The **Badminton Game Analyzer** is a comprehensive software solution designed for real-time analysis of badminton games using cutting-edge computer vision algorithms and machine learning techniques. The system focuses on accurately detecting players, court boundaries, and the net, while also tracking the shuttlecock's movement to provide a detailed analysis of gameplay. In addition, it automates scoring based on player actions and game events, leveraging Region-based Convolutional Neural Networks (RCNN) and a custom-trained YOLOv8m model.
 
+## For understanding working and flow of our model read [main_function.md](main_function.md)
 ## Model Weights Download Instructions
 
 Due to the large size of the model weights files, we have hosted them on cloud services. Please follow the instructions below to download and place the weights in the correct directories.
