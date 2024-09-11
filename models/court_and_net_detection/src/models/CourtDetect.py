@@ -11,7 +11,7 @@ import os
 import json
 
 print(os.getcwd())
-print(os.path.exists("./models/court_and_net_detection/src/models/weights"))
+print(os.path.exists("./src/models/weights"))
 
 class CourtDetect(object):
     '''
@@ -30,7 +30,7 @@ class CourtDetect(object):
 
     def setup_RCNN(self):
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.__court_kpRCNN = torch.load('models/court_and_net_detection/src/models/weights/court_kpRCNN.pth', device)
+        self.__court_kpRCNN = torch.load('/home/om/Desktop/GameSense-Adobe/models/court_and_net_detection/src/models/weights/court_kpRCNN.pth', device)
         self.__court_kpRCNN.to(self.device).eval()
 
     def del_RCNN(self):

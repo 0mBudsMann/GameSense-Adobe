@@ -7,7 +7,7 @@ from trackers import (
     draw_shuttle_predictions,
     interpolate_shuttle_tracking
 )
-from commentary import display_and_generate_commentary
+# from commentary import display_and_generate_commentary
 import argparse
 import cv2
 import copy
@@ -58,7 +58,7 @@ def main():
 
     args = parser.parse_args()
 
-    read_from_record = args.buffer
+    read_from_record = False
     bool_doubles = args.doubles
     # input_video = args.video_path  # Get video from the user
     input_video = args.video_path
@@ -173,7 +173,17 @@ def main():
         "net_info": normal_net_info,
         "line_info": court_lines
     }
-    # court_dict = convert_to_number(court_dict)
+    print(court_dict)
+    import json
+    for key, value in court_dict.items():
+        if isinstance(value, list):
+            for i in range(len(value)):
+                if isinstance(value[i], list):
+                    for j in range(len(value[i])):
+                        if isinstance(value[i][j], int):
+                            value[i][j] = str(value[i][j]) 
+    with open(f"{result_path}/courts/court_kp/coordinates.json", 'w') as f:
+        json.dump(court_dict, f, cls=CustomJSONEncoder, indent=4)
  
     with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
         data = json.load(f)

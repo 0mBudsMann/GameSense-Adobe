@@ -140,6 +140,7 @@ for root, dirs, files in os.walk(folder_path):
                 "net_info": normal_net_info,
                 "line_info": court_lines
             }
+            print(court_dict)
             import json
             for key, value in court_dict.items():
                 if isinstance(value, list):
