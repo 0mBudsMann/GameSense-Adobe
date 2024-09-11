@@ -107,416 +107,416 @@
     "21": {
         "x_center": 1041.7958984375,
         "y_center": 394.45135498046875,
-        "smoothened_speed": 0.013557875513175093
+        "smoothened_speed": 0.013554621197794714
     },
     "22": {
         "x_center": 1045.7960205078125,
         "y_center": 362.3724670410156,
-        "smoothened_speed": 80.34280803391765
+        "smoothened_speed": 80.79657980925597
     },
     "23": {
         "x_center": 1045.7942504882812,
         "y_center": 362.36558532714844,
-        "smoothened_speed": 60.27011618713245
+        "smoothened_speed": 60.61051719829501
     },
     "24": {
         "x_center": 1047.7275390625,
         "y_center": 338.41558837890625,
-        "smoothened_speed": 84.1598606150806
+        "smoothened_speed": 84.63586954266349
     },
     "25": {
         "x_center": 1047.7217407226562,
         "y_center": 338.41746520996094,
-        "smoothened_speed": 84.16512445351425
+        "smoothened_speed": 84.64113402130195
     },
     "26": {
         "x_center": 1047.7255859375,
         "y_center": 338.4091491699219,
-        "smoothened_speed": 84.17251542746172
+        "smoothened_speed": 84.64859380992527
     },
     "27": {
         "x_center": 1052.4913330078125,
         "y_center": 304.82017517089844,
-        "smoothened_speed": 86.47163436756878
+        "smoothened_speed": 86.96023381428127
     },
     "28": {
         "x_center": 1052.4970703125,
         "y_center": 304.83245849609375,
-        "smoothened_speed": 86.48016375757445
+        "smoothened_speed": 86.96880508496061
     },
     "29": {
         "x_center": 1054.757797241211,
         "y_center": 295.48066902160645,
-        "smoothened_speed": 81.02669847263203
+        "smoothened_speed": 81.48406937253517
     },
     "30": {
         "x_center": 1057.0185241699219,
         "y_center": 286.12887954711914,
-        "smoothened_speed": 75.57323318768962
+        "smoothened_speed": 75.99933366010973
     },
     "31": {
         "x_center": 1059.2792510986328,
         "y_center": 276.77709007263184,
-        "smoothened_speed": 70.11976790274723
+        "smoothened_speed": 70.51459794768428
     },
     "32": {
         "x_center": 1061.5399780273438,
         "y_center": 267.42530059814453,
-        "smoothened_speed": 64.66630261780482
+        "smoothened_speed": 65.02986223525885
     },
     "33": {
         "x_center": 1061.5390014648438,
         "y_center": 267.4354705810547,
-        "smoothened_speed": 64.6763071174752
+        "smoothened_speed": 65.03995253462838
     },
     "34": {
         "x_center": 1064.3987426757812,
         "y_center": 258.49813079833984,
-        "smoothened_speed": 78.24347462993026
+        "smoothened_speed": 78.68143643262756
     },
     "35": {
         "x_center": 1064.3939208984375,
         "y_center": 258.50988006591797,
-        "smoothened_speed": 27.762096263309996
+        "smoothened_speed": 27.91536898809062
     },
     "36": {
         "x_center": 1067.3635864257812,
         "y_center": 246.0409698486328,
-        "smoothened_speed": 46.578649488890775
+        "smoothened_speed": 46.83667050616657
     },
     "37": {
         "x_center": 1067.38134765625,
         "y_center": 246.05807495117188,
-        "smoothened_speed": 32.47778684634655
+        "smoothened_speed": 32.65731676581697
     },
     "38": {
         "x_center": 1067.3627319335938,
         "y_center": 246.03511810302734,
-        "smoothened_speed": 32.499787352452984
+        "smoothened_speed": 32.6794000196717
     },
     "39": {
         "x_center": 1071.0602010091145,
         "y_center": 242.99363454182944,
-        "smoothened_speed": 29.76342346695435
+        "smoothened_speed": 29.92453026722542
     },
     "40": {
         "x_center": 1074.7576700846355,
         "y_center": 239.9521509806315,
-        "smoothened_speed": 27.02705958145572
+        "smoothened_speed": 27.169660514779146
     },
     "41": {
         "x_center": 1078.4551391601562,
         "y_center": 236.9106674194336,
-        "smoothened_speed": 24.290695695957087
+        "smoothened_speed": 24.41479076233287
     },
     "42": {
         "x_center": 1078.4657592773438,
         "y_center": 236.86078643798828,
-        "smoothened_speed": 24.34793269729275
+        "smoothened_speed": 24.47235192634703
     },
     "43": {
         "x_center": 1078.4658813476562,
         "y_center": 236.86246490478516,
-        "smoothened_speed": 5.514960564363457
+        "smoothened_speed": 5.534546155388919
     },
     "44": {
         "x_center": 1083.7252807617188,
         "y_center": 236.9828643798828,
-        "smoothened_speed": 9.524819717449656
+        "smoothened_speed": 9.535823225500646
     },
     "45": {
         "x_center": 1083.7202758789062,
         "y_center": 236.99773406982422,
-        "smoothened_speed": 9.510176234388632
+        "smoothened_speed": 9.52113401031299
     },
     "46": {
         "x_center": 1088.0614624023438,
         "y_center": 239.0412139892578,
-        "smoothened_speed": 8.66490223795365
+        "smoothened_speed": 8.66363619026487
     },
     "47": {
         "x_center": 1088.0660400390625,
         "y_center": 239.026611328125,
-        "smoothened_speed": 8.611839593710439
+        "smoothened_speed": 8.610274677775596
     },
     "48": {
         "x_center": 1091.3535766601562,
         "y_center": 243.30105590820312,
-        "smoothened_speed": 15.497238067767324
+        "smoothened_speed": 15.527610939706841
     },
     "49": {
         "x_center": 1091.3511352539062,
         "y_center": 243.27352905273438,
-        "smoothened_speed": 11.499654177810594
+        "smoothened_speed": 11.538727858496001
     },
     "50": {
         "x_center": 1091.39697265625,
         "y_center": 243.2774887084961,
-        "smoothened_speed": 11.51269174867338
+        "smoothened_speed": 11.551574387985063
     },
     "51": {
         "x_center": 1094.7319259643555,
         "y_center": 248.92183208465576,
-        "smoothened_speed": 12.052236274429394
+        "smoothened_speed": 12.09584797742375
     },
     "52": {
         "x_center": 1098.066879272461,
         "y_center": 254.56617546081543,
-        "smoothened_speed": 12.591780800185408
+        "smoothened_speed": 12.640121566862437
     },
     "53": {
         "x_center": 1101.4018325805664,
         "y_center": 260.2105188369751,
-        "smoothened_speed": 13.131325325941422
+        "smoothened_speed": 13.184395156301123
     },
     "54": {
         "x_center": 1104.7367858886719,
         "y_center": 265.85486221313477,
-        "smoothened_speed": 13.670869851697436
+        "smoothened_speed": 13.72866874573981
     },
     "55": {
         "x_center": 1108.0717391967773,
         "y_center": 271.49920558929443,
-        "smoothened_speed": 14.21041437745345
+        "smoothened_speed": 14.272942335178499
     },
     "56": {
         "x_center": 1111.4066925048828,
         "y_center": 277.1435489654541,
-        "smoothened_speed": 14.749958903209466
+        "smoothened_speed": 14.817215924617186
     },
     "57": {
         "x_center": 1114.7416458129883,
         "y_center": 282.78789234161377,
-        "smoothened_speed": 15.28950342896548
+        "smoothened_speed": 15.361489514055872
     },
     "58": {
         "x_center": 1118.0765991210938,
         "y_center": 288.43223571777344,
-        "smoothened_speed": 15.829047954721494
+        "smoothened_speed": 15.905763103494559
     },
     "59": {
         "x_center": 1118.0853881835938,
         "y_center": 288.4269256591797,
-        "smoothened_speed": 15.817305200993314
+        "smoothened_speed": 15.893924091096869
     },
     "60": {
         "x_center": 1122.3130493164062,
         "y_center": 305.08106994628906,
-        "smoothened_speed": 34.11210320382237
+        "smoothened_speed": 34.296567171991015
     },
     "61": {
         "x_center": 1122.3258666992188,
         "y_center": 305.0901184082031,
-        "smoothened_speed": 34.08754076539281
+        "smoothened_speed": 34.27182102871494
     },
     "62": {
         "x_center": 1122.3199462890625,
         "y_center": 305.09410095214844,
-        "smoothened_speed": 34.05938066574908
+        "smoothened_speed": 34.24374975963183
     },
     "63": {
         "x_center": 1132.2987060546875,
         "y_center": 328.34979248046875,
-        "smoothened_speed": 60.91985555377901
+        "smoothened_speed": 61.24979880266248
     },
     "64": {
         "x_center": 1132.2967529296875,
         "y_center": 328.321533203125,
-        "smoothened_speed": 60.951823134400286
+        "smoothened_speed": 61.28198142638589
     },
     "65": {
         "x_center": 1134.5781860351562,
         "y_center": 340.0304311116536,
-        "smoothened_speed": 59.69546737565423
+        "smoothened_speed": 60.01880528363547
     },
     "66": {
         "x_center": 1136.859619140625,
         "y_center": 351.7393290201823,
-        "smoothened_speed": 58.43911161690817
+        "smoothened_speed": 58.755629140885056
     },
     "67": {
         "x_center": 1139.1410522460938,
         "y_center": 363.44822692871094,
-        "smoothened_speed": 57.18275585816211
+        "smoothened_speed": 57.49245299813464
     },
     "68": {
         "x_center": 1141.4224853515625,
         "y_center": 375.15712483723956,
-        "smoothened_speed": 55.92640009941606
+        "smoothened_speed": 56.22927685538422
     },
     "69": {
         "x_center": 1143.7039184570312,
         "y_center": 386.86602274576825,
-        "smoothened_speed": 54.67004434067
+        "smoothened_speed": 54.9661007126338
     },
     "70": {
         "x_center": 1145.9853515625,
         "y_center": 398.5749206542969,
-        "smoothened_speed": 53.41368858192394
+        "smoothened_speed": 53.702924569883386
     },
     "71": {
         "x_center": 1145.9847412109375,
         "y_center": 398.5879669189453,
-        "smoothened_speed": 53.41650042393185
+        "smoothened_speed": 53.705797143835206
     },
     "72": {
         "x_center": 1152.6525268554688,
         "y_center": 421.707763671875,
-        "smoothened_speed": 88.45261721138894
+        "smoothened_speed": 88.93514678361589
     },
     "73": {
         "x_center": 1152.6486206054688,
         "y_center": 421.7297821044922,
-        "smoothened_speed": 52.783322618303394
+        "smoothened_speed": 53.0759892578442
     },
     "74": {
         "x_center": 1152.6487426757812,
         "y_center": 421.7151336669922,
-        "smoothened_speed": 52.76288680425059
+        "smoothened_speed": 53.055437774808944
     },
     "75": {
         "x_center": 1158.8233642578125,
         "y_center": 456.3959045410156,
-        "smoothened_speed": 87.33761494294458
+        "smoothened_speed": 87.82456501226837
     },
     "76": {
         "x_center": 1158.8214111328125,
         "y_center": 456.3951416015625,
-        "smoothened_speed": 87.31993158876523
+        "smoothened_speed": 87.80677203584905
     },
     "77": {
         "x_center": 1163.7910766601562,
         "y_center": 483.9862365722656,
-        "smoothened_speed": 93.824609998834
+        "smoothened_speed": 94.35147803587645
     },
     "78": {
         "x_center": 1163.7854614257812,
         "y_center": 483.98304748535156,
-        "smoothened_speed": 93.79789378886407
+        "smoothened_speed": 94.32458976025303
     },
     "79": {
         "x_center": 1163.7918701171875,
         "y_center": 483.98931884765625,
-        "smoothened_speed": 93.78653981095997
+        "smoothened_speed": 94.31315359841722
     },
     "80": {
         "x_center": 1160.0565856933595,
         "y_center": 498.65484008789065,
-        "smoothened_speed": 90.78230403570839
+        "smoothened_speed": 91.29189967068308
     },
     "81": {
         "x_center": 1156.3213012695312,
         "y_center": 513.320361328125,
-        "smoothened_speed": 87.77806826045682
+        "smoothened_speed": 88.27064574294893
     },
     "82": {
         "x_center": 1152.5860168457032,
         "y_center": 527.9858825683593,
-        "smoothened_speed": 84.77383248520525
+        "smoothened_speed": 85.24939181521479
     },
     "83": {
         "x_center": 1148.850732421875,
         "y_center": 542.6514038085937,
-        "smoothened_speed": 81.76959670995367
+        "smoothened_speed": 82.22813788748064
     },
     "84": {
         "x_center": 1145.1154479980469,
         "y_center": 557.3169250488281,
-        "smoothened_speed": 78.7653609347021
+        "smoothened_speed": 79.2068839597465
     },
     "85": {
         "x_center": 1141.3801635742188,
         "y_center": 571.9824462890625,
-        "smoothened_speed": 75.76112515945053
+        "smoothened_speed": 76.18563003201237
     },
     "86": {
         "x_center": 1137.6448791503906,
         "y_center": 586.6479675292969,
-        "smoothened_speed": 72.75688938419896
+        "smoothened_speed": 73.16437610427822
     },
     "87": {
         "x_center": 1133.9095947265625,
         "y_center": 601.3134887695312,
-        "smoothened_speed": 69.75265360894738
+        "smoothened_speed": 70.14312217654408
     },
     "88": {
         "x_center": 1130.1743103027343,
         "y_center": 615.9790100097656,
-        "smoothened_speed": 66.74841783369581
+        "smoothened_speed": 67.12186824880993
     },
     "89": {
         "x_center": 1126.4390258789062,
         "y_center": 630.64453125,
-        "smoothened_speed": 63.74418205844423
+        "smoothened_speed": 64.1006143210758
     },
     "90": {
         "x_center": 1126.4542236328125,
         "y_center": 630.6414489746094,
-        "smoothened_speed": 63.75483883499807
+        "smoothened_speed": 64.11125648456526
     },
     "91": {
         "x_center": 1126.4659423828125,
         "y_center": 630.6361083984375,
-        "smoothened_speed": 22.21858062095968
+        "smoothened_speed": 22.341732751403363
     },
     "92": {
         "x_center": 1114.956075032552,
         "y_center": 646.3006184895834,
-        "smoothened_speed": 30.581069115191795
+        "smoothened_speed": 30.743685427065003
     },
     "93": {
         "x_center": 1103.4462076822917,
         "y_center": 661.9651285807291,
-        "smoothened_speed": 38.943557609423905
+        "smoothened_speed": 39.14563810272665
     },
     "94": {
         "x_center": 1091.9363403320312,
         "y_center": 677.629638671875,
-        "smoothened_speed": 47.306046103656016
+        "smoothened_speed": 47.54759077838829
     },
     "95": {
         "x_center": 1091.93994140625,
         "y_center": 677.6316833496094,
-        "smoothened_speed": 47.299561524627386
+        "smoothened_speed": 47.541072683207304
     },
     "96": {
         "x_center": 1085.5211181640625,
         "y_center": 689.5536448160807,
-        "smoothened_speed": 46.693881260546405
+        "smoothened_speed": 46.93073895745092
     },
     "97": {
         "x_center": 1079.102294921875,
         "y_center": 701.4756062825521,
-        "smoothened_speed": 46.08820099646542
+        "smoothened_speed": 46.32040523169454
     },
     "98": {
         "x_center": 1072.6834716796875,
         "y_center": 713.3975677490234,
-        "smoothened_speed": 45.48252073238443
+        "smoothened_speed": 45.71007150593815
     },
     "99": {
         "x_center": 1066.2646484375,
         "y_center": 725.3195292154948,
-        "smoothened_speed": 44.87684046830345
+        "smoothened_speed": 45.09973778018177
     },
     "100": {
         "x_center": 1059.8458251953125,
         "y_center": 737.2414906819662,
-        "smoothened_speed": 44.27116020422247
+        "smoothened_speed": 44.489404054425385
     },
     "101": {
         "x_center": 1053.427001953125,
         "y_center": 749.1634521484375,
-        "smoothened_speed": 43.66547994014148
+        "smoothened_speed": 43.879070328669
     },
     "102": {
         "x_center": 1053.426025390625,
         "y_center": 749.15087890625,
-        "smoothened_speed": 43.6718064944883
+        "smoothened_speed": 43.88551699820994
     },
     "103": {
         "x_center": 1053.4347534179688,
         "y_center": 749.1492309570312,
-        "smoothened_speed": 43.66690400841934
+        "smoothened_speed": 43.880589960072435
     }
 }

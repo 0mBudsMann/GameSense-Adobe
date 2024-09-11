@@ -6,22 +6,28 @@ import io
 from pydub import AudioSegment
 from pydub.playback import play
 import json
+from .groq_config import generate_commentary
 
 frame_lock = threading.Lock()
 current_frame = None
 
-with open('../result/scoring/score.json', 'r') as f:
+with open('result/scoring/score.json', 'r') as f:
     data = json.load(f)
 
 last_score = {"Player 1": 0, "Player 2": 0}
 
 def generate_and_play_commentary(commentary_text):
-    tts = gTTS(text=commentary_text, lang='en')
+
+    message = generate_commentary(commentary_text)
+    print("Commentary: ", message)
+
+    tts = gTTS(text=message, lang='en')
     with io.BytesIO() as audio_buffer:
         tts.write_to_fp(audio_buffer)
         audio_buffer.seek(0)
         audio_segment = AudioSegment.from_mp3(audio_buffer)
-        play(audio_segment)
+        faster_audio = audio_segment.speedup(playback_speed=1.5)
+        play(faster_audio)
 
 def display_and_generate_commentary(video_source):
     cap = cv2.VideoCapture(video_source)
@@ -60,7 +66,3 @@ def detect_score_change(frame):
         threading.Thread(target=generate_and_play_commentary, args=(commentary_text,)).start()
 
     last_score = current_score
-
-if __name__ == '__main__':
-    video_source = '../output.mp4'
-    display_and_generate_commentary(video_source)

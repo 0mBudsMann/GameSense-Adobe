@@ -4,6 +4,11 @@ from ultralytics import YOLO
 import cv2
 import pickle as pkl
 
+with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
+    data = json.load(f)
+
+court_coord = data["court_info"]
+net_coord = data["net_info"]
 
 class PlayerTracker:
     def __init__(self, model_path):
@@ -59,19 +64,36 @@ class PlayerTracker:
                 result = data['coordinates']
                 x1, y1, x2, y2 = map(int, result)
 
-                box_color = (0, 0, 255)
-                text_color = (36, 255, 12)
-                box_thickness = 3
-                text_thickness = 3
-                font_scale = 1
+                if y2 < net_coord[1][1]:
 
-                cv2.rectangle(frame, (x1, y1), (x2, y2), box_color, box_thickness)
+                    box_color = (0, 0, 255)
+                    text_color = (36, 255, 12)
+                    box_thickness = 3
+                    text_thickness = 3
+                    font_scale = 1
 
-                text = f"Player {track_id}"
-                text_size, _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_thickness)
-                text_w, text_h = text_size
-                cv2.rectangle(frame, (x1, y1 - text_h - 10), (x1 + text_w, y1), box_color, cv2.FILLED)
-                cv2.putText(frame, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_color, text_thickness)
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), box_color, box_thickness)
+
+                    text = f"Player 2"
+                    text_size, _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_thickness)
+                    text_w, text_h = text_size
+                    cv2.rectangle(frame, (x1, y1 - text_h - 10), (x1 + text_w, y1), box_color, cv2.FILLED)
+                    cv2.putText(frame, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_color, text_thickness)
+
+                else:
+                    box_color = (255, 0, 0)
+                    text_color = (36, 255, 12)
+                    box_thickness = 3
+                    text_thickness = 3
+                    font_scale = 1
+
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), box_color, box_thickness)
+
+                    text = f"Player 1"
+                    text_size, _ = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_thickness)
+                    text_w, text_h = text_size
+                    cv2.rectangle(frame, (x1, y1 - text_h - 10), (x1 + text_w, y1), box_color, cv2.FILLED)
+                    cv2.putText(frame, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, text_color, text_thickness)
 
             output_frames.append(frame)
 

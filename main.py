@@ -7,7 +7,7 @@ from trackers import (
     draw_shuttle_predictions,
     interpolate_shuttle_tracking
 )
-# from commentary import display_and_generate_commentary
+from commentary import display_and_generate_commentary
 import argparse
 import cv2
 import copy
@@ -34,6 +34,7 @@ def main():
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
     parser.add_argument("--buffer", action='store_true', help="load data from buffer rather than inferencing again")
     parser.add_argument("--video_path", type=str, required=True, help="Path to the input video")
+    parser.add_argument("-speech", action='store_true', help="Display and Generate speech")
     # parser.add_argument("--nodrop_path", type=str, required=True, help="Path to the no drop video")
 
     args = parser.parse_args()
@@ -43,6 +44,7 @@ def main():
     # input_video = args.video_path  # Get video from the user
     input_video = args.video_path
     # nodrop_video = args.nodrop_path
+    bool_speech = args.speech
 
     # Read Video
     frames, video_fps = read_video(input_video)
@@ -178,7 +180,8 @@ def main():
     write_video(output_frames, output_video, video_fps)
 
     # Display output video and generate commentary
-    # display_and_generate_commentary('output.mp4')
+    if bool_speech:
+        display_and_generate_commentary('output.mp4')
 
 if __name__ == "__main__":
     main()
