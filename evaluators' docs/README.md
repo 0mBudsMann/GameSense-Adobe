@@ -64,7 +64,7 @@
   We calculate the Euclidean distance between the player’s positions in successive frames to determine the distance covered in pixels. This pixel-based distance is then scaled into meters using the court dimensions, providing actual distance values for player movement analysis.
 
 
-# 4) EVENTS DETECTION
+# 4) EVENTS DETECTION, SCORING AND MATRIX
 
 
 - **Shuttlecock Rest Detection**  
@@ -89,24 +89,40 @@
 
   Now the generated commentary is converted to speech using Google Text-to-Speech (gtts) and played using the playsound library. This feature adds an interactive element to the game analysis, making it more engaging for users.
 
-# Limitations
+# 6) REALTIME PROCESSING
+- **Threading for Speed Optimization**  
+  We implemented threading to handle independent tasks like shuttlecock tracking, player detection, and event analysis concurrently. This speeds up processing by running multiple operations in parallel, ensuring the system can analyze frames in real-time.
 
-1. **Court Swap Identification**:
-   * **Limitation**: The model is currently unable to detect when players swap courts in badminton, leading to inaccurate player tracking and potential misattribution of game events to the wrong player.
-   * **Suggested Solution**: Integrating positional tracking with color-based or attire-based identification for each player could help the model distinguish between players, even after they swap sides.
+- **Immediate Scoring and Relay Updates**  
+  As soon as the frame where the shuttlecock comes to rest is processed, the system instantly determines whether a score has been made, which player’s court the shuttlecock is in, and updates the score accordingly. Relay information, including active relay time, is also updated as soon as the frame is processed, allowing for immediate feedback and continuous real-time tracking.
 
-2. **Score Detection in Dynamic Camera Angles**:
-   * **Limitation**: The model requires 10-15 consecutive frames to accurately detect the score. If the camera angle changes before this frame threshold is met, the model fails to detect the score. Since we require some minimum number of frames to conclude that shuttle is at rest.
+- **YOLO for Fast Detection**  
+  YOLO was used for both shuttlecock and player detection due to its speed and efficiency. Its ability to rapidly process each frame ensures that we can detect player movements and shuttlecock positions in near real-time, essential for fast-paced sports like badminton.
 
-3. **Shuttle Detection in Frames**:
-   * **Limitation**: Due to the small size and high velocity of the shuttlecock, the model struggles to detect it consistently across all frames.
+- **Efficient Resource Utilization**  
+  With threading and YOLO’s fast detection capabilities, we optimized the system to be both resource-efficient and responsive, ensuring smooth and fast real-time analysis of scoring, player movement, and relay dynamics.
 
-4. **Service Line Detection**:
-   * **Limitation**: The model is currently unable to accurately detect the service line, which is crucial for determining valid serves.
-   * **Suggested Solution**: Implement line detection algorithms such as Hough Transform or deep learning-based segmentation models trained specifically for badminton courts.
+- **Minimizing Latency**  
+  Through efficient task management and the use of high-performance algorithms, we minimized latency, ensuring that all detections, calculations, and updates—such as scoring and relay time—are delivered in real-time, providing instant feedback during live game analysis.
 
-5. **Complex Rule Implementation**:
-   * **Limitation**: The model does not currently support the detection of complex badminton rules such as cross-court service, ensuring the server’s feet remain grounded during the serve, or detecting if the shuttle is hit more than once.
-   * **Suggested Solution**: 
-      * For **cross-court service detection**, we need to simultaneously track player and shuttle but due to limitation of shuttle detection model we are unable to do so.
-      * For **leg detection during service**, body pose estimation models can be integrated to detect the position of the player’s legs and confirm whether they are grounded. Pose detection takes more inference time hindering realtime behaviour of our model.
+# 7) ROBUSTNESS
+We have detailed all the algorithms used in this project, including YOLO for fast detection, RCNN for accurate detection, Kalman filtering to remove false positives, and custom algorithms for shuttlecock rest detection, scoring, and relay tracking. These methods ensure high accuracy and reliability, making the system robust for real-time badminton analysis. Many algorithms have been mentioned earlier, and the fact that both accuracy and realtime go together in sync is what makes the algorithms used robust
+
+# 8) PLAYER MOVEMENT MATRIX
+
+To analyze player movement, we calculated the Euclidean distance between the players' positions across successive frames. Using the standard dimensions of the badminton court (13.41 meters length, 6.1 meters width), we scaled the pixel-based distances into real-world meters. This allowed us to create a movement matrix, showing the distances players covered during the game.
+
+For scaling and accuracy, we referred to the research paper from IIIT Hyderabad, "Towards Real-Time Analysis of Broadcast Badminton Videos." The matrix provides valuable insights into player movement patterns, helping track speed and distance throughout the match.
+
+# 9) Advanced AI metrics
+
+We implemented an **Advanced AI Matrix** for real-time commentary generation. When a player scores a point, the system communicates with **Groq**, a cloud-based AI leveraging **LLaMA3-8b-8192**, to instantly generate context-aware commentary. This advanced AI matrix enhances the overall experience by delivering live, intelligent insights based on in-game events, adding a sophisticated layer of interaction and engagement during the match.
+
+# 10) DOUBLES (BONUS)
+
+For doubles matches, we utilized YOLO dataset for detecting multiple players on the court. Please note this is different from dataset we used for single person detection. This ensures that both players from each team are accurately tracked and analyzed in real-time, maintaining the same level of precision used in singles matches.
+
+We have provided a test case for doubles in the output, showcasing the system’s ability to handle multiple players simultaneously. This demonstrates the robustness of our player detection and tracking algorithms, even in more complex scenarios like doubles games. Our system seamlessly adapts to the increased complexity of movement and interaction between four players.
+
+
+
