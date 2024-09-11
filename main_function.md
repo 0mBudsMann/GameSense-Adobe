@@ -6,23 +6,23 @@ Welcome to the **Badminton Game Analyzer**! This software provides real-time ana
 
 The **Badminton Game Analyzer** utilizes several user-defined functions and classes to perform its analysis:
 
-- **`PlayerTracker`**: Handles player detection and tracking in singles matches. This class identifies players, tracks their movements, and captures data on their positions and actions throughout the match.
+- **`PlayerTracker`**: Handles player detection and tracking in singles matches using custom YOLOv8m model. This class identifies players, tracks their movements, and captures data on their positions and actions throughout the match.
 
     For more information on the `PlayerTracker`, refer to the [PlayerTracker](trackers/README.md/#playertracker)
 
-- **`Doubles_Tracking`**: Similar to `PlayerTracker`, but tailored for doubles matches. It manages the tracking of all four players, providing insights into their movements, positions, and interactions on the court.
+- **`Doubles_Tracking`**: Similar to `PlayerTracker`, but tailored for doubles matches using custom YOLOv8m model. It manages the tracking of all four players, providing insights into their movements, positions, and interactions on the court.
 
     For more information on the `Doubles_Tracking`, refer to the [Doubles_Tracking](trackers/README.md/#doubles_tracking)
 
-- **`real_time_detection_and_tracking`**: Manages the detection and tracking of the shuttlecock, updates the match score, tracks penalties, and generates real-time commentary. It processes video frames in real-time to accurately annotate shuttlecock positions, match events, and provide live commentary on the game's progress.
+- **`real_time_detection_and_tracking`**: Manages the detection and tracking of the shuttlecock using custom YOLOv8m model, updates the match score, tracks penalties, and generates real-time commentary. It processes video frames in real-time to accurately annotate shuttlecock positions, match events, and provide live commentary on the game's progress.
 
     For more information on the `real_time_detection_and_tracking`, refer to the [real_time_detection_and_tracking](trackers/README.md/#real_time_detection_and_tracking)
 
-- **`CourtDetect`**: Detects and visualizes court boundaries. This class processes video frames to identify the edges and boundaries of the court, which are essential for accurate game analysis.
+- **`CourtDetect`**: Detects and visualizes court boundaries using custom RCNN model. This class processes video frames to identify the edges and boundaries of the court, which are essential for accurate game analysis.
 
     For more information on the `CourtDetect`, refer to the [CourtDetect](models/court_and_net_detection/src/models/README.md/#courtdetect)
 
-- **`NetDetect`**: Identifies the net within the video frames. It works in conjunction with `CourtDetect` to provide a complete view of the court setup.
+- **`NetDetect`**: Identifies the net within the video frames using custom RCNN model. It works in conjunction with `CourtDetect` to provide a complete view of the court setup.
 
     For more information on the `NetDetect`, refer to the [NetDetect](models/court_and_net_detection/src/models/README.md/#netdetect)
 
@@ -34,14 +34,6 @@ The **Badminton Game Analyzer** utilizes several user-defined functions and clas
 
     For more information on the `SpeedAndDistance_Estimator`, refer to the [SpeedAndDistance_Estimator](speed_distance_estimator/README.md/#speedanddistance_estimator)
 
-## Features
-
-- **Player Detection & Tracking**: Identifies and tracks players in both singles and doubles matches.
-- **Shuttlecock Tracking**: Monitors the shuttlecock's movement and provides smooth tracking paths.
-- **Court & Net Detection**: Accurately detects and visualizes court boundaries and the net.
-- **Speed & Distance Estimation**: Calculates and annotates the speed and distance traveled by players.
-- **Automated Scoring**: Automatically updates the match score and tracks penalties.
-
 ## Getting Started
 
 ### Usage
@@ -51,12 +43,6 @@ You can run the Badminton Game Analyzer from the command line with the following
 - `--video_path`: Path to the input video (required).
 - `-doubles`: Use this flag if you want to enable doubles tracking (optional).
 - `--buffer`: Load data from buffer rather than performing inference again (optional).
-
-Here's an example command to run the analyzer:
-
-```bash
-python main.py --video_path path/to/your/video.mp4 -doubles
-```
 
 ### How It Works
 
