@@ -364,6 +364,50 @@ def assign_points(shuttle_position, prev_k_frame):
         else:
             score[1] += 1
 
+def check_shuttle_in_net_rectangle(rest_coord, net_start, net_end, above=30, below=50):
+    """
+    Checks if the shuttle came to rest by touching the net and falling.
+
+    Parameters:
+    rest_coord: Tuple (x, y) - The final rest coordinate of the shuttle.
+    net_start: Tuple (x, y) - The start coordinate of the net (court_coords[2]).
+    net_end: Tuple (x, y) - The end coordinate of the net (court_coords[3]).
+    above: int - Distance above the net line in pixels (default is 30 pixels).
+    below: int - Distance below the net line in pixels (default is 50 pixels).
+
+    Returns:
+    bool - True if the shuttle touched the net and fell, False otherwise.
+    """
+
+    # Calculate the midpoint of the net line
+    net_start = np.array(net_start)
+    net_end = np.array(net_end)
+    
+    net_length = np.linalg.norm(net_end - net_start)
+    
+    if net_length == 0:
+        raise ValueError("Net length is zero. Invalid net coordinates.")
+
+    # Calculate the unit direction vector of the net line
+    net_direction = (net_end - net_start) / net_length
+
+    # Define the vertical extension range (30 above and 50 below the net line)
+    rectangle_top = net_start[1] - above
+    rectangle_bottom = net_start[1] + below
+
+    # Define left and right edges (x coordinates are the same as net_start and net_end)
+    left_x = min(net_start[0], net_end[0])
+    right_x = max(net_start[0], net_end[0])
+
+    # Check if the shuttle is within the bounds of this rectangle
+    shuttle_x, shuttle_y = rest_coord
+
+    if left_x <= shuttle_x <= right_x and rectangle_top <= shuttle_y <= rectangle_bottom:
+        return True  # Shuttle touched the net and fell
+    else:
+        return False  # Shuttle did not touch the net or fell outside
+
+
 import cv2
 import numpy as np
 import pandas as pd
@@ -458,6 +502,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     points = {}
 
     for frame in frames:
+        if scored and relay_start_frame==None:
+            scored = False
 
         print(f"Processing frame {frame_count}")
 
@@ -579,10 +625,11 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 140, 255), 2)
 
         # Draw rest state indicator
+        net_ke_pas = False
         if is_at_rest:
+            coordabs = rest_coords[-1]
+            coordabs = (int(coordabs[0]), int(coordabs[1]))
             if not scored:
-              coordabs = rest_coords[-1]
-              coordabs = (int(coordabs[0]), int(coordabs[1]))
               shuttle_position = is_shuttle_in_court(coordabs, court_coords, net_coords)
               print(f"Score before assigning: {score}")
               assign_points(shuttle_position, prev_k_frame.copy())
@@ -592,7 +639,16 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
             text_position = (int(last_rest_coord[0]), int(last_rest_coord[1]) - 30)
             cv2.putText(frame, 'Shuttle is at rest', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 4)
             cv2.putText(frame, 'Shuttle is at rest', text_position, cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-
+            if check_shuttle_in_net_rectangle(coordabs, court_coords[2], court_coords[3], above=30, below=50):
+                net_ke_pas = True
+                net_frame = frame_count
+                
+        if net_ke_pas:
+            text_position[1] += 90
+            cv2.putText(frame, 'Shuttle hit the net', text_position, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2)
+            if frame_count == net_frame + 10:
+                net_ke_pas = False
+        
         # Calculate relay time
         if relay_flag == 1 and relay_start_frame is not None:
             relay_duration = frame_count - relay_start_frame
