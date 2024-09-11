@@ -296,13 +296,13 @@ def is_shuttle_in_court(shuttle_coord, court_coords, net_coords):
     """Check if the shuttle is inside the court using cv2.pointPolygonTest."""
     # Convert court coordinates to a numpy array of shape (n, 1, 2) required by cv2
     # Court-1 (towards camera)
-    court1 = court_coords[4:] + court_coords[2:4]
+    court1 = court_coords[2:]
     court_polygon = np.array(court1, dtype=np.int32).reshape((-1, 1, 2))
     # Check if the point is inside the polygon
     result1 = cv2.pointPolygonTest(court_polygon, shuttle_coord, False)
 
     # Court-2 (away from camera)
-    court2 = court_coords[:2] + court_coords[2:4]
+    court2 = court_coords[:4]
     court_polygon = np.array(court2, dtype=np.int32).reshape((-1, 1, 2))
     # Check if the point is inside the polygon
     result2 = cv2.pointPolygonTest(court_polygon, shuttle_coord, False)
@@ -628,7 +628,7 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
         net_ke_pas = False
         if is_at_rest:
             coordabs = rest_coords[-1]
-            coordabs = (int(coordabs[0]), int(coordabs[1]))
+            coordabs = (float(coordabs[0]), float(coordabs[1]))
             if not scored:
               shuttle_position = is_shuttle_in_court(coordabs, court_coords, net_coords)
               print(f"Score before assigning: {score}")
@@ -645,8 +645,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
                 
         if net_ke_pas:
             text_position = (text_position[0], text_position[1] + 90)
-            cv2.putText(frame, 'Shuttle hit the net', text_position, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2)
-            if frame_count == net_frame + 10:
+            cv2.putText(frame, 'Shuttle hit the net net net net net', text_position, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2)
+            if frame_count == (net_frame + 20):
                 net_ke_pas = False
         
         # Calculate relay time
