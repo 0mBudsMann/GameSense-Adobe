@@ -1,5 +1,6 @@
 # GameSense-Adobe
 
+[evaluator's docs](evaluators'%20docs/README.md) contain brief about what we have done for evaluation purpose and limitations.
 ## Introduction
 The **Badminton Game Analyzer** is a comprehensive software solution designed for real-time analysis of badminton games using cutting-edge computer vision algorithms and machine learning techniques. The system focuses on accurately detecting players, court boundaries, and the net, while also tracking the shuttlecock's movement to provide a detailed analysis of gameplay. In addition, it automates scoring based on player actions and game events, leveraging Region-based Convolutional Neural Networks (RCNN) and a custom-trained YOLOv8m model.
 
