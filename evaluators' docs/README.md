@@ -89,3 +89,24 @@
 
   Now the generated commentary is converted to speech using Google Text-to-Speech (gtts) and played using the playsound library. This feature adds an interactive element to the game analysis, making it more engaging for users.
 
+# Limitations
+
+1. **Court Swap Identification**:
+   * **Limitation**: The model is currently unable to detect when players swap courts in badminton, leading to inaccurate player tracking and potential misattribution of game events to the wrong player.
+   * **Suggested Solution**: Integrating positional tracking with color-based or attire-based identification for each player could help the model distinguish between players, even after they swap sides.
+
+2. **Score Detection in Dynamic Camera Angles**:
+   * **Limitation**: The model requires 10-15 consecutive frames to accurately detect the score. If the camera angle changes before this frame threshold is met, the model fails to detect the score. Since we require some minimum number of frames to conclude that shuttle is at rest.
+
+3. **Shuttle Detection in Frames**:
+   * **Limitation**: Due to the small size and high velocity of the shuttlecock, the model struggles to detect it consistently across all frames.
+
+4. **Service Line Detection**:
+   * **Limitation**: The model is currently unable to accurately detect the service line, which is crucial for determining valid serves.
+   * **Suggested Solution**: Implement line detection algorithms such as Hough Transform or deep learning-based segmentation models trained specifically for badminton courts.
+
+5. **Complex Rule Implementation**:
+   * **Limitation**: The model does not currently support the detection of complex badminton rules such as cross-court service, ensuring the server’s feet remain grounded during the serve, or detecting if the shuttle is hit more than once.
+   * **Suggested Solution**: 
+      * For **cross-court service detection**, we need to simultaneously track player and shuttle but due to limitation of shuttle detection model we are unable to do so.
+      * For **leg detection during service**, body pose estimation models can be integrated to detect the position of the player’s legs and confirm whether they are grounded. Pose detection takes more inference time hindering realtime behaviour of our model.
