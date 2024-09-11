@@ -68,7 +68,7 @@ class PlayerTracker:
                 result = data['coordinates']
                 x1, y1, x2, y2 = map(int, result)
 
-                if y2 < net_coord[1][1]:
+                if (y2 + y1) / 2 < court_coord[2][1]:
 
                     box_color = (0, 0, 255)
                     text_color = (36, 255, 12)
