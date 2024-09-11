@@ -112,10 +112,16 @@ Download the weights file from the following link: [Single Player Detection Weig
    cd GameSense-Adobe
    ```
 2. Install dependencies:
+
+   For linux
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the analysis:
+   For macOS
+   ```bash
+   pip install -r requirements_mac.txt
+   ```
+4. Run the analysis:
    For Singles match video
    ```bash
    python3 main.py --video_path path_to_video
@@ -131,10 +137,12 @@ Download the weights file from the following link: [Single Player Detection Weig
     python3 main.py --video_path path_to_video --buffer
     ```
    can be used with -doubles
-4. For displaying output and generating realtime Speech/Commentary for the video
+5. For displaying output and generating realtime Speech/Commentary for the video
    ```bash
    python3 main.py --video_path path_to_video -speech
    ```
+
+6. Output video will be with name `output.mp4`
 
 ## Model Training
 1. Player Detection
