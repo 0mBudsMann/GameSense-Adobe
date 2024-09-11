@@ -82,13 +82,12 @@
 
 # 5) REAL-TIME COMMENTARY GENERATION
 
-- **Commentary Generation**
-
-As any player scores a point, the system initiates a request to Groq, a cloud-based AI utilizing the llama3-8b-8192 model, to generate real-time commentary. This process is handled in a separate thread to ensure that it runs concurrently with other tasks. The commentary is dynamically created based on the points scored, enhancing the user experience by providing live updates and insights into the game.
+- **Commentary Generation**  
+  As any player scores a point, the system sends a request to groq(a cloud-based AI using llama3-8b-8192) to generate real-time commentary. The commentary is based on the points scored. This feature enhances the user experience by providing live updates and insights into the game.
 
 - **Speech Output**
 
-Once the commentary is generated, it is converted to speech using Google Text-to-Speech (gtts). The speech synthesis and playback are managed in their own thread using the `playsound` library. This threading approach ensures that the commentary audio is played back smoothly and interactively, adding an engaging element to the game analysis without disrupting other processes.
+  Now the generated commentary is converted to speech using Google Text-to-Speech (gtts) and played using the playsound library. This feature adds an interactive element to the game analysis, making it more engaging for users.
 
 # 6) REALTIME PROCESSING
 - **Threading for Speed Optimization**  
@@ -124,6 +123,12 @@ We implemented an **Advanced AI Matrix** for real-time commentary generation. Wh
 For doubles matches, we utilized YOLO dataset for detecting multiple players on the court. Please note this is different from dataset we used for single person detection. This ensures that both players from each team are accurately tracked and analyzed in real-time, maintaining the same level of precision used in singles matches.
 
 We have provided a test case for doubles in the output, showcasing the system’s ability to handle multiple players simultaneously. This demonstrates the robustness of our player detection and tracking algorithms, even in more complex scenarios like doubles games. Our system seamlessly adapts to the increased complexity of movement and interaction between four players.
+
+# 11) ACCURACY:
+
+We have attached a [MEGA link](#) containing different test cases and their corresponding outputs. Please note that for the **Adobe test case**, we provided two outputs. The original test case had low-quality video, which led to net detection failure. To address this, we recorded the same video from YouTube in higher quality. As you can see in the second output, net detection works flawlessly in the better-quality video.
+
+This demonstrates the importance of video quality in the accuracy of our system, but also shows how our model performs robustly under optimal conditions.
 
 
 
