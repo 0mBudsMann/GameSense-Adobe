@@ -25,10 +25,29 @@ from models.court_and_net_detection.om import draw_court_and_net_on_frames
 import logging
 import traceback
 import warnings
-
+import json
 from speed_distance_estimator import SpeedAndDistance_Estimator
 
-
+class CustomJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, int):  # Handle integer types
+            return str(obj)
+        # Add logic for other non-standard types
+        return super().default(obj)
+def convert_to_number(item):
+    if isinstance(item, str):
+        try:
+            return int(item)
+        except ValueError:
+            try:
+                return float(item)
+            except ValueError:
+                return item
+    elif isinstance(item, list):
+        return [convert_to_number(i) for i in item]
+    elif isinstance(item, dict):
+        return {k: convert_to_number(v) for k, v in item.items()}
+    return item
 def main():
     parser = argparse.ArgumentParser(description="A script for court and player tracking")
     parser.add_argument("-doubles", action='store_true', help="doubles tracking")
@@ -73,9 +92,7 @@ def main():
     video_name = os.path.basename(input_video).split('.')[0]
     result_path = "result/court_and_net/"
 
-    if is_video_detect(video_name):
-        print(f"Video {video_name} has already been processed. Skipping.")
-        return
+    
 
     full_video_path = os.path.join(f"{result_path}/videos", video_name)
     if not os.path.exists(full_video_path):
@@ -88,7 +105,8 @@ def main():
     height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
     width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
     total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-
+    print(height)
+    print("HEYY")
     # Write video information
     video_dict = {
         "video_name": video_name,
@@ -97,6 +115,7 @@ def main():
         "width": width,
         "total_frames": total_frames
     }
+    
     write_json(video_dict, video_name, full_video_path)
 
     # Initialize detection classes
@@ -114,14 +133,18 @@ def main():
     if not ret:
         print("Error: Could not read the first frame.")
         video.release()
-        return
+        
 
     # Perform court and net detection on the first frame
     court_info, have_court = court_detect.get_court_info(frame)
     net_info, have_net = net_detect.get_net_info(frame)
+    court_lines = court_detect.hori_lines_in_court(frame)
+    
+
 
     if have_court:
         normal_court_info = court_info
+        
         begin_frame = 0  # Since we're only processing the first frame
         next_frame = 1  # Placeholder as there's no further processing
     else:
@@ -146,9 +169,16 @@ def main():
         "next_rally_frame": next_frame,
         "court_info": normal_court_info,
         "net_info": normal_net_info,
+        "line_info": court_lines
     }
+    # court_dict = convert_to_number(court_dict)
+ 
+    with open('result/court_and_net/courts/court_kp/coordinates.json', 'r') as f:
+        data = json.load(f)
+        data = convert_to_number(data)
 
-    write_json(court_dict, "coordinates", f"{result_path}/courts/court_kp", "w")
+    # write_json(court_dict, video_name, f"{result_path}/courts/court_kp", "w")
+
 
     # Release the video capture object after processing the first frame
     video.release()

@@ -16,7 +16,23 @@ def get_center_of_box(box):
     return center_x, center_y
 
 def measure_distance(p1, p2):
-    return (((p1[2]-p2[2])**2)*(SINGLES_WIDTH / (court_coord[5][0] - court_coord[0][0])) + ((p1[3]-p2[3])**2)*(VERTICAL_LENGTH / (court_coord[5][1] - court_coord[0][1])))**0.5
+    global court_coord, SINGLES_WIDTH, VERTICAL_LENGTH
+
+    # Convert court coordinates to float if they're not already
+    court_coord = [[float(x) for x in coord] for coord in court_coord]
+
+    # Get foot positions of players
+    x1, y1 = get_foot_position(p1)
+    x2, y2 = get_foot_position(p2)
+
+    width_pixels = court_coord[5][0] - court_coord[0][0]
+    height_pixels = court_coord[5][1] - court_coord[0][1]
+
+    x_distance = abs(x1 - x2) * (SINGLES_WIDTH / width_pixels)
+    y_distance = abs(y1 - y2) * (VERTICAL_LENGTH / height_pixels)
+
+    return (x_distance**2 + y_distance**2)**0.5
+
 
 def get_foot_position(bbox):
     x1,y1,x2,y2 = bbox

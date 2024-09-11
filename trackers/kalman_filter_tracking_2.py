@@ -398,6 +398,32 @@ def is_consistently_increasing(y_coords, window_size=5):
     recent_coords = list(y_coords)[-window_size:]
 
     return all(recent_coords[i] < recent_coords[i+1] for i in range(window_size-1))
+def calculate_speed(coord, lastx, lasty, lastframeno, frame_count, fps):
+    if lastx is None:
+        return 0
+    
+    # Ensure all values are float
+    coord = [float(coord[0]), float(coord[1])]
+    lastx, lasty = float(lastx), float(lasty)
+    
+    # Calculate court scaling factors
+    width_scale = SINGLES_WIDTH / (court_coords[5][0] - court_coords[0][0])
+    height_scale = VERTICAL_LENGTH / (court_coords[5][1] - court_coords[0][1])
+    
+    # Calculate distance
+    dx = (coord[0] - lastx) * width_scale
+    dy = (coord[1] - lasty) * height_scale
+    distance = np.sqrt(dx**2 + dy**2)
+    
+    # Calculate time difference
+    time_diff = (frame_count - lastframeno) / fps
+    
+    # Calculate speed
+    speed = distance / time_diff if time_diff > 0 else 0
+    
+    return speed
+
+#
 
 def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
     global global_coord_frequency, stationary_coords, relay_flag, relay_start_frame, score
@@ -460,8 +486,8 @@ def real_time_detection_and_tracking(frames, fps, find_black_list, black_list):
             if row['class_id'] == 0:
                 if not is_close_to_blacklist(coord, black_list, threshold=15):
                     current_coords.append(coord)
-
-                    speed = 0 if lastx is None else np.sqrt(((coord[0] - lastx)**2)*(SINGLES_WIDTH / (court_coords[5][0] - court_coords[0][0])) + ((coord[1] - lasty)**2) * (VERTICAL_LENGTH / (court_coords[5][1] - court_coords[0][1]))) / ((frame_count - lastframeno)/ fps)
+                    
+                    speed = calculate_speed(coord, lastx, lasty, lastframeno, frame_count, fps)
                     listt[frame_count].append({
                         'x_center': coord[0],
                         'y_center': coord[1],
@@ -638,6 +664,8 @@ def draw_shuttle_predictions_frame(frame, tracking_data, i):
     if i in tracking_data:
         x = tracking_data[i]['x_center']
         y = tracking_data[i]['y_center']
+        if np.isnan(x) or np.isnan(y):
+            return frame  
         speed = tracking_data[i]['smoothened_speed']
 
         # print("lol")
@@ -661,21 +689,28 @@ def interpolate_shuttle_tracking(tracking_data):
         for frame_data in tracking_data.values()
     ]
 
-    # print(len(shuttle_coordinates_frames))
-
     # Convert the coordinates into a pandas DataFrame
     df_shuttle_positions = pd.DataFrame(shuttle_coordinates_frames, columns=['x_center', 'y_center', 'smoothened_speed'])
 
+    # Convert columns to numeric type
+    for col in df_shuttle_positions.columns:
+        df_shuttle_positions[col] = pd.to_numeric(df_shuttle_positions[col], errors='coerce')
+
     # Interpolate missing values
     df_shuttle_positions = df_shuttle_positions.interpolate(method='linear')
-    df_shuttle_positions = df_shuttle_positions.bfill()
 
+    # Fill any remaining NaN values (at the start or end) with the nearest valid value
+    df_shuttle_positions = df_shuttle_positions.bfill().ffill()
+
+    # Convert the DataFrame back to a dictionary
     tracking_data = df_shuttle_positions.to_dict(orient='index')
 
+    # Save the interpolated data to a JSON file
     with open('result/shuttle_data/shuttle_data.json', 'w') as json_file:
         json.dump(tracking_data, json_file, indent=4)
 
     return tracking_data
+
 
 # Run the real-time shuttlecock detection and tracking
 
