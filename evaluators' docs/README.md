@@ -82,12 +82,13 @@
 
 # 5) REAL-TIME COMMENTARY GENERATION
 
-- **Commentary Generation**  
-  As any player scores a point, the system sends a request to groq(a cloud-based AI using llama3-8b-8192) to generate real-time commentary. The commentary is based on the points scored. This feature enhances the user experience by providing live updates and insights into the game.
+- **Commentary Generation**
+
+As any player scores a point, the system initiates a request to Groq, a cloud-based AI utilizing the llama3-8b-8192 model, to generate real-time commentary. This process is handled in a separate thread to ensure that it runs concurrently with other tasks. The commentary is dynamically created based on the points scored, enhancing the user experience by providing live updates and insights into the game.
 
 - **Speech Output**
 
-  Now the generated commentary is converted to speech using Google Text-to-Speech (gtts) and played using the playsound library. This feature adds an interactive element to the game analysis, making it more engaging for users.
+Once the commentary is generated, it is converted to speech using Google Text-to-Speech (gtts). The speech synthesis and playback are managed in their own thread using the `playsound` library. This threading approach ensures that the commentary audio is played back smoothly and interactively, adding an engaging element to the game analysis without disrupting other processes.
 
 # 6) REALTIME PROCESSING
 - **Threading for Speed Optimization**  
