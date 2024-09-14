@@ -1,4 +1,6 @@
-# GameSense-Adobe
+# This is the submission which scored the first price in Adobe GameSense 2024. [Presentation] (https://www.canva.com/design/DAGQXG-kAeM/G-zlmDUM_tPdNwQcoXrICg/edit?utm_content=DAGQXG-kAeM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) in 
+
+## GameSense-Adobe
 
 **[evaluators' documentation](evaluators'%20docs/README.md) contains a brief of what all we have done for evaluation purposes. Kindly refer to it**.
 All the weights can be downloaded form corresponsing mega links uploaded in links.txt of that corresponsing folder in which it is required
