@@ -1,4 +1,4 @@
-# This is the submission which scored the first price in Adobe GameSense 2024. [Presentation] (https://www.canva.com/design/DAGQXG-kAeM/G-zlmDUM_tPdNwQcoXrICg/edit?utm_content=DAGQXG-kAeM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) in 
+# This is the submission which scored the first price in Adobe GameSense 2024. [Presentation](https://www.canva.com/design/DAGQXG-kAeM/G-zlmDUM_tPdNwQcoXrICg/edit?utm_content=DAGQXG-kAeM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## GameSense-Adobe
 
