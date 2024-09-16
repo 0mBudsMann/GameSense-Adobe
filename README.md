@@ -172,6 +172,6 @@ Download the weights file from the following link: [Single Player Detection Weig
 We used our college GPU's for training the models. (RTX 4090 24 GB)
 
 ## Contributors
-- [Jarviss77](https://github.com/Jarviss77)
-- [OmBudsMann](https://github.com/0mBudsMann)
-- [breakthe-rule](https://github.com/breakthe-rule)
+- Shubham Gupta [Jarviss77](https://github.com/Jarviss77)
+- Om Buddhadev [OmBudsMann](https://github.com/0mBudsMann)
+- Tanay Falor [breakthe-rule](https://github.com/breakthe-rule)
