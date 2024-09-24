@@ -7,7 +7,7 @@ All the weights can be downloaded form corresponsing mega links uploaded in link
 
 ## Accuracy
 
-We have attached a [MEGA link](#) containing different test cases and their corresponding outputs. Please note that for the **Adobe test case**, we provided two outputs. The original test case had low-quality video, which led to net detection failure. To address this, we recorded the same video from YouTube in higher quality. As you can see in the second output, net detection works flawlessly in the better-quality video.
+We have attached a [MEGA link](https://mega.nz/folder/a9UUSYgD#U5cDKoQ-X-qfaXyBDOPsNQ)) containing different test cases and their corresponding outputs. Please note that for the **Adobe test case**, we provided two outputs. The original test case had low-quality video, which led to net detection failure. To address this, we recorded the same video from YouTube in higher quality. As you can see in the second output, net detection works flawlessly in the better-quality video.
 
 This demonstrates the importance of video quality in the accuracy of our system, but also shows how our model performs robustly under optimal conditions.
 
