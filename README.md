@@ -175,5 +175,5 @@ We used our college GPU's for training the models. (RTX 4090 24 GB)
 
 ## Contributors
 - Shubham Gupta [Jarviss77](https://github.com/Jarviss77)
-- Om Buddhadev [OmBudsMann](https://github.com/0mBudsMann)
+- Om Buddhadev [OmBudsMan](https://github.com/0mBudsMan)
 - Tanay Falor [breakthe-rule](https://github.com/breakthe-rule)
