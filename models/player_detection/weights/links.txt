@@ -1,8 +1,8 @@
 // download and put the weights in the respective folders
 
 // only_player
-last.pt - https://mega.nz/file/6lk3UawY#ndydTgmrSpdiHSK8wcyfuf_SY8Bd1SLf_ARHOYOQqyc
-best.pt - https://mega.nz/file/SgNFzSJK#2cWSOMqG3VM5beTuapqiSLDiIM5Q7ZgoyB34SqKtvFA
+last.pt - https://drive.google.com/file/d/1asXMlvhZLqdhV7kNa9HSJx9N6Lv5yzfH/view?usp=share_link
+best.pt - https://drive.google.com/file/d/1SNO0WUQp_2zg7pn4SsYUBkTDhs9vIgJT/view?usp=share_link
 
 // shuttle_player_racquet
 
